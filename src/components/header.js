@@ -13,9 +13,13 @@ export function Header() {
 
             <nav className="navbar navbar-light">
 
-              <div className='flex-column align-items-start justify-content-start ml-10'>
+              {/* <div className='flex-column align-items-start justify-content-start ml-10'>
                 <a className="navbar-brand" href="./">LIFE IS TOO SHORT FOR SHIT FILMS</a>
                 <h2 className='line-spacing-paragraph mr-60 pt-5 pt-lg-5'>Life is already too short, don't waste it watching garbage</h2>
+              </div> */}
+
+              <div className='flex-column align-items-start justify-content-start ml-10'>
+                
               </div>
 
               <div className='hamburger-nav'>
@@ -23,17 +27,11 @@ export function Header() {
               </div>
 
               <div className="web-nav nav-parent pt-lg-10">
-                <NavLink exact to='/' className='nav-item'>
-                  HOME
-                </NavLink>
-                <NavLink exact to='/allfilms'  className='nav-item'>
-                  ALL FILMS
-                </NavLink>
                 <NavLink exact to='/rating'  className='nav-item'>
-                  RATING
+                  ABOUT
                 </NavLink>
                 <NavLink exact to='/about' className='nav-item'>
-                  ABOUT
+                  RESUME
                 </NavLink>
               </div>
 

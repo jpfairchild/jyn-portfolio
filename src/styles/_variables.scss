@@ -23,7 +23,7 @@ $white-900: rgba(255, 255, 255, 0.9);
 $white: rgba(255, 255, 255, 1);
 
 // brand
-$sf-bg-dark: #232323;
+$sf-bg-dark: #090909;
 $sf-bg-light: #f3f3f3;
 $black: #1e1e1e;
 $red: #ee3f4c;
@@ -48,7 +48,8 @@ $enable-shadows: false;
 
 // font + text
 $link-hover-decoration: none;
-$font-family-recursive: 'Recursive', sans-serif;
+$font-family-opensans: 'OpenSans', sans-serif;
+$font-family-ailerons: 'Ailerons', sans-serif;
 $font-size-lg: rempx(16);
 $font-size-sm: rempx(14);
 $line-height-base: 2; // 32px

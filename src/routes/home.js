@@ -6,6 +6,9 @@ import { Header } from '../components/header';
 import { ReviewCard } from '../components/reviewcard';
 import reviewOrder from "../json/_reviewOrder.json";
 
+//svgs
+import herolines from "../illustrations/home_lines.svg";
+import namelines from "../illustrations/name_lines.svg";
 
 function Home() {
 
@@ -15,10 +18,19 @@ function Home() {
     <div className="container">
       <Header />
 
+      <div className='row hero-banner'>
+        <div className='d-md-flex flex-md-equal w-100'>
+          <img className='svglines' src={herolines} alt='bglines' />
+          <h1 className='name top_absolute'>Jyn Fairchild</h1>
+          <img className='namelines mid_absolute' src={namelines} alt='namelines' />
+          <h3 className='role bot_absolute'>DESIGNER</h3>
+        </div>
+      </div>
+
       <div className='row'>
         <div className="d-md-flex flex-md-equal w-100">
 
-        <Link to={'./review/' + reviewOrder.mostRecent[0]}>
+        <Link to={'./project/flow'}>
           <ReviewCard reviewTitle={reviewOrder.mostRecent[0]}/>
         </Link>
 

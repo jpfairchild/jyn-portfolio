@@ -19,8 +19,8 @@
 body {
   margin: 0px;
   list-style: none;
-  background-color: $white;
-  font-family: $font-family-recursive;
+  background-color: $sf-bg-dark;
+  font-family: $font-family-opensans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,35 +55,101 @@ a {
 // Nav
 
 .navbar {
-  font-family: $font-family-recursive;
-  color: $black;
+  font-family: $font-family-opensans;
+  color: $white-400;
   flex-wrap: inherit;
+  margin-right: rempx(30);
 }
 
 .navbar-brand {
-  font-weight: 600;
   padding-bottom: 0;
 }
 
 .nav-item {
   margin-left: rempx(50);
-  opacity: .5;
+  font-weight: 800;
+  font-size: rempx(14);
+  letter-spacing: rempx(2);
+  opacity: 1;
 
   &.active {
+    font-weight: 800;
     opacity: 1;
   }
+}
+
+// Hero
+
+.hero-banner {
+  margin: rempx(100) 0 rempx(100) 0;
+  position: relative;
+}
+
+// Svgs in Hero
+
+.svglines {
+  width: rempx(761);
+  height: rempx(263);
+  margin: 0 auto;
+}
+
+.namelines {
+  width: rempx(376);
+  height: rempx(7);
+  margin: 0 auto;
+}
+
+// Hero on Home Text
+
+.name {
+  font-family: $font-family-ailerons;
+  font-weight: 300;
+  font-size: rempx(32);
+  color: $white;
+  text-align: center;
+}
+
+.role {
+  font-family: $font-family-opensans;
+  font-weight: 700;
+  font-size: rempx(14);
+  color: $white;
+  text-align: center;
+  letter-spacing: rempx(2);
+  color: $white-500;
+}
+
+.top_absolute {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mid_absolute {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bot_absolute {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Text
 
 h1 {
-  font-family: $font-family-recursive;
+  font-family: $font-family-opensans;
   font-weight: 800;
   font-size: rempx(24);
 }
 
 h2 {
-  font-family: $font-family-recursive;
+  font-family: $font-family-opensans;
   font-weight: 400;
   font-size: rempx(16);
   margin-top: inherit;
@@ -91,7 +157,7 @@ h2 {
 }
 
 h5 {
-  font-family: $font-family-recursive;
+  font-family: $font-family-opensans;
   font-weight: 300;
   font-size: rempx(40);
 }
@@ -128,17 +194,107 @@ p {
 }
 
 //img
+
 .img-fluid {
   margin-left: auto;
   margin-right: auto;
 }
 
 //line
+
 hr {
   border-color: $gray-100;
 }
 
+// ------------- image overlay ------------- //
+
+.card-group > .overlay-card {
+  margin-bottom: 0;
+}
+.overlay-card {
+  border: none;
+  border-radius: 4px;
+
+  &.-work {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &.-disabled > .image {
+    filter: blur(7.2px);
+  }
+
+  > .image {
+    width: calc(70%);
+    margin-top: calc(10%);
+    margin-left: calc(15%);
+  }
+
+  > .card-img-overlay {
+    padding: 0;
+  }
+}
+
+.img-overlay {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  // background-color: rgba(black, 0.34);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  .logo {
+    visibility: hidden;
+  }
+
+  &:hover {
+    background-color: rgba(black, 0.45);
+    > .arrow {
+      right: rempx(40);
+      opacity: 1;
+    }
+    > .logo {
+      visibility: visible;
+      align-self: center;
+      justify-content: center;
+      max-width: calc(35%);
+  
+      &.-tall {
+        max-width: calc(20%);
+      }
+    }
+  }
+
+  > .placeholder {
+    position: absolute;
+    top: calc(50% - 3em);
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  > .arrow {
+    position: absolute;
+    bottom: rempx(30);
+    right: rempx(120);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    rect {
+      fill: #fff;
+    }
+  }
+}
+
+
 //all films page
+
 //table
 .table {
   margin-left: rempx(20);
