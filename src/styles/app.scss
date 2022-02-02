@@ -341,8 +341,9 @@ td a {
   box-shadow: none;
 }
 
-//cards
-.movie-card {
+// ------------ Project Cards ------------ //
+
+.project-card {
   position: relative;
   height: rempx(580);
   margin: rempx(5);
@@ -351,20 +352,20 @@ td a {
   border-radius: rempx(0);
 
   &:hover {
-    .movie-img {
+    .project-img {
       opacity: .8;
     }
   }
 }
 
-.movie-card-text {
+.project-card-text {
   position: relative;
   z-index: 2;
   padding-left: rempx(40);
   padding-right: rempx(40);
 }
 
-.movie-img{
+.project-img{
   position: absolute;
   z-index: 1;
   top: 0;

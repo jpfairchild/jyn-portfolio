@@ -7,12 +7,11 @@ import ScrollToTop from "../components/scrollintoview";
 
 //top level pages
 const Home = lazy(() => import('./home'));
-const allFilms = lazy(() => import('./allfilms'));
-const Rating = lazy(() => import('./rating'));
+const Resume = lazy(() => import('./resume'));
 const About = lazy(() => import('./about'));
 
 //reviews
-const Review = lazy(() => import('../components/reviewpage'));
+const Project = lazy(() => import('../components/projectpage'));
 
 //routes
 function App() {
@@ -26,11 +25,10 @@ function App() {
               <Suspense fallback={<Loader />} key='suspense'>
                 <Switch key={location.pathname}>
                   <Route exact path='/' component={Home} />
-                  <Route exact path='/allfilms' component={allFilms} />
-                  <Route exact path='/rating' component={Rating} />
                   <Route exact path='/about' component={About} />
+                  <Route exact path='/resume' component={Resume} />
                   {/* Expose all routes underneath /review/<whatever> and load your reviewpage component for that */}
-                  <Route path='/review/:article' component={Review} />
+                  <Route path='/project/:article' component={Project} />
                 </Switch>
                 
               </Suspense>

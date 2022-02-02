@@ -10,18 +10,14 @@ export function Footer() {
         <div className='arriflex'></div>
 
         <div className='d-flex flex-column flex-lg-row pb-30 pb-lg-50 mr-lg-50 justify-content-center'>
-          <Link to='/' className='nav-item mb-20 mb-lg-20'>
-            HOME
-          </Link>
-          <Link to='/allfilms' className='nav-item mb-20 mb-lg-20'>
-            ALL FILMS
-          </Link>
-          <Link to='/rating'className='nav-item mb-20 mb-lg-20'>
-            RATING
-          </Link>
-          <Link to='/about' className='nav-item mb-20 mb-lg-20'>
-            ABOUT
-          </Link>
+          <div className="web-nav nav-parent pt-lg-20">
+            <Link exact to='/rating'  className='nav-item'>
+              ABOUT
+            </Link>
+            <Link exact to='/about' className='nav-item'>
+              RESUME
+            </Link>
+          </div>
         </div>
 
       </footer>

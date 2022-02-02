@@ -26,7 +26,7 @@ export function Header() {
                 <Menu />
               </div>
 
-              <div className="web-nav nav-parent pt-lg-10">
+              <div className="web-nav nav-parent pt-lg-20">
                 <NavLink exact to='/rating'  className='nav-item'>
                   ABOUT
                 </NavLink>
