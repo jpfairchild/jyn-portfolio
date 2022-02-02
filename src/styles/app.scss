@@ -1,0 +1,438 @@
+@import 'functions';
+@import 'fonts';
+@import 'variables';
+@import 'normalize.css';
+@import '~bootstrap/scss/bootstrap.scss'; 
+
+
+//Essentials
+
+.row {
+  margin-left: rempx(5);
+  margin-right: rempx(5);
+}
+
+.col-12 {
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  list-style: none;
+  background-color: $white;
+  font-family: $font-family-recursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+  position: relative;
+  padding-top: rempx(40);
+  bottom: 0;
+  width: 100%;
+  height: rempx(40);            /* Footer height */
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+  max-width: none;
+}
+
+.header-title {
+  margin-top: rempx(30);
+  margin-bottom: rempx(30);
+}
+
+// Nav
+
+.navbar {
+  font-family: $font-family-recursive;
+  color: $black;
+  flex-wrap: inherit;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  padding-bottom: 0;
+}
+
+.nav-item {
+  margin-left: rempx(50);
+  opacity: .5;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+// Text
+
+h1 {
+  font-family: $font-family-recursive;
+  font-weight: 800;
+  font-size: rempx(24);
+}
+
+h2 {
+  font-family: $font-family-recursive;
+  font-weight: 400;
+  font-size: rempx(16);
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
+
+h5 {
+  font-family: $font-family-recursive;
+  font-weight: 300;
+  font-size: rempx(40);
+}
+
+.text-xl {
+  font-size: rempx(70);
+  font-weight: 300;
+}
+
+.line-spacing-title {
+  line-height: rempx(60);
+}
+
+.line-spacing-paragraph {
+  line-height: rempx(30);
+}
+
+p {
+  line-height: rempx(10);
+}
+
+.ptable {
+  padding: rempx(14);
+  padding-top: rempx(20);
+  font-size: rempx(24);
+  font-weight: 600;
+}
+
+.ptable-means {
+  padding: rempx(14);
+  padding-top: rempx(20);
+  font-size: rempx(18);
+  font-weight: 400;
+}
+
+//img
+.img-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//line
+hr {
+  border-color: $gray-100;
+}
+
+//all films page
+//table
+.table {
+  margin-left: rempx(20);
+  margin-right: rempx(20);
+  font-size: rempx(16);
+
+  td {
+    padding: rempx(2);
+    padding-top: rempx(12);
+  }
+}
+
+td a { 
+  display: block; 
+  padding: rempx(10); 
+}
+
+.table-number-link a {
+  display: block; 
+  padding: rempx(10);
+  color: inherit;
+}
+
+//review page
+.review-card {
+  height: rempx(660);
+  max-width: rempx(835);
+  background-color: $sf-bg-dark;
+}
+
+.review-width {
+  margin: 0 auto;
+  max-width: rempx(800);
+}
+
+//buttons
+.btn-custom {
+  border-radius: 0px;
+  letter-spacing: 1px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+//cards
+.movie-card {
+  position: relative;
+  height: rempx(580);
+  margin: rempx(5);
+  min-width: rempx(100);
+  background-color: $black;
+  border-radius: rempx(0);
+
+  &:hover {
+    .movie-img {
+      opacity: .8;
+    }
+  }
+}
+
+.movie-card-text {
+  position: relative;
+  z-index: 2;
+  padding-left: rempx(40);
+  padding-right: rempx(40);
+}
+
+.movie-img{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: .355s;
+}
+
+.first-review {
+  margin-top: rempx(0);
+}
+
+//flex
+.flex-equal > * {
+  flex: 1;
+}
+
+.d-md-flex {
+  display: flex !important;
+}
+
+.flex-md-equal > * {
+  flex: 1;
+}
+
+.hamburger-nav {
+  display: none !important;
+}
+
+//Begin Response
+@media (max-width: 1015px) {
+
+  .hamburger-nav {
+    display: block !important;
+  }
+
+  .d-lg-block {
+    display: none !important;
+  }
+
+  .web-nav {
+    display: none !important;
+  }
+
+  .flex-md-equal > * {
+    flex: 1;
+  }
+
+  .d-md-flex {
+    display: block !important;
+  }
+
+  .movie-card {
+    margin: rempx(5);
+  }
+
+  //Table
+  .table {
+    font-size: rempx(14);
+    td {
+      padding: rempx(2);
+    }
+  }
+
+  .table-col-width {
+    width: 30px;
+  } 
+
+  .navbar-expand .navbar-nav .nav-link {
+    padding-left: rempx(6);
+    padding-right: rempx(6);
+  }
+
+  .ham-nav__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1022;
+
+    .ham-close {
+      position: absolute;
+      top: rempx(30);
+      right: rempx(35);
+      margin-right: rempx(-20);
+      margin-left: rempx(20);
+      user-select: none;
+    }
+
+    .ham-nav__background {
+      width: 100vw;
+      background-color: $white;
+    }
+
+    .ham-nav__body {
+      height: calc(100% - 106px);
+      overflow-y: auto;
+    }
+
+    .ham-link {
+      color: $black;
+      margin: rempx(30) 0;
+
+      svg {
+        vertical-align: sub;
+      }
+
+      svg rect {
+        fill: $black;
+      }
+    }
+  }
+
+  // hamburger icon courtesy of Flippin' burgers
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .line {
+      transition: all 500ms;
+      fill: none;
+      stroke: #000;
+      stroke-width: 5.5;
+      stroke-linecap: round;
+    }
+
+    &.dark .line {
+      stroke: $black;
+    }
+
+    .top {
+      stroke-dasharray: 40 121;
+    }
+
+    .bottom {
+      stroke-dasharray: 40 121;
+    }
+
+    &.active {
+      transform: rotate(45deg);
+      margin-top: rempx(0);
+
+      .line {
+        stroke: $black;
+      }
+
+      .top {
+        stroke-dashoffset: -68px;
+      }
+
+      .bottom {
+        stroke-dashoffset: -68px;
+      }
+    }
+  }
+}
+
+//Tablet
+@media (max-width: 574px) {
+  .ham-nav__container {
+    position: absolute;
+    top: rempx(15);
+  }
+
+    .ham-close {
+      position: absolute;
+      top: rempx(20);
+    }
+}
+
+//iPhone
+@media (max-width: 400px) {
+
+  h5 {
+    font-size: rempx(34);
+    font-weight: 300;
+  }
+
+  .text-xl {
+    font-size: rempx(50);
+    width: rempx(100);
+  }
+
+  .nav-item {
+    margin-left: rempx(40);
+    margin-bottom: rempx(20);
+    opacity: .5;
+  
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .movie-card {
+    position: relative;
+    height: rempx(420);
+    min-width: rempx(100);
+    background-color: $black;
+    border-radius: rempx(0);
+  
+    &:hover {
+      .movie-img {
+        opacity: .8;
+      }
+    }
+  }
+
+  .review-card {
+    height: rempx(460);
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $sf-bg-dark;
+  }
+
+  .row {
+    margin-left: rempx(0);
+    margin-right: rempx(0);
+  }
+
+}

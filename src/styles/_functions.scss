@@ -1,0 +1,28 @@
+@function rempx($pixels) {
+  @return $pixels / 16 * 1rem;
+}
+
+@mixin colorcycle($props...) {
+  $propLen: length($props);
+  $colorsList: #e2b255, #81bf50, #50bf97, #5d9dfe, #6d62e5;
+  $colorStep: 100 / (length($colorsList) + 1);
+
+  0%,
+  100% {
+  }
+
+  @for $i from 1 through $propLen {
+    #{nth($props, $i)}: #e76868;
+  }
+
+  @for $i from 1 through length($colorsList) {
+    $color: nth($colorsList, $i);
+    $percent: $colorStep * $i;
+
+    #{round($percent)}% {
+      @for $i from 1 through $propLen {
+        #{nth($props, $i)}: $color;
+      }
+    }
+  }
+}

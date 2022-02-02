@@ -1,0 +1,106 @@
+// rem base: 16px
+
+// 50 shades of grey
+$gray-100: rgba(0, 0, 0, 0.1);
+$gray-200: rgba(0, 0, 0, 0.2);
+$gray-300: rgba(0, 0, 0, 0.3);
+$gray-400: rgba(0, 0, 0, 0.4);
+$gray-500: rgba(0, 0, 0, 0.5);
+$gray-600: rgba(0, 0, 0, 0.6);
+$gray-700: rgba(0, 0, 0, 0.7);
+$gray-800: rgba(0, 0, 0, 0.8);
+$gray-900: rgba(0, 0, 0, 0.9);
+
+$white-100: rgba(255, 255, 255, 0.1);
+$white-200: rgba(255, 255, 255, 0.2);
+$white-300: rgba(255, 255, 255, 0.3);
+$white-400: rgba(255, 255, 255, 0.4);
+$white-500: rgba(255, 255, 255, 0.5);
+$white-600: rgba(255, 255, 255, 0.6);
+$white-700: rgba(255, 255, 255, 0.7);
+$white-800: rgba(255, 255, 255, 0.8);
+$white-900: rgba(255, 255, 255, 0.9);
+$white: rgba(255, 255, 255, 1);
+
+// brand
+$sf-bg-dark: #232323;
+$sf-bg-light: #f3f3f3;
+$black: #1e1e1e;
+$red: #ee3f4c;
+$gl-gradient: linear-gradient(90deg, #60b4df 0%, #8b94e9 120%);
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #ea3e3e;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+// brand
+$secondary: #fff;
+$text-disabled: rgba(0, 0, 0, 0.3);
+$enable-responsive-font-sizes: true;
+$enable-shadows: false;
+
+// font + text
+$link-hover-decoration: none;
+$font-family-recursive: 'Recursive', sans-serif;
+$font-size-lg: rempx(16);
+$font-size-sm: rempx(14);
+$line-height-base: 2; // 32px
+$line-height-lg: rempx(40);
+$letter-spacing-lg: 0.16em;
+$letter-spacing-sm: 0.04em;
+$letter-spacing-xl: 0.46em;
+$h1-font-size: rempx(85);
+$h2-font-size: rempx(32);
+$h3-font-size: rempx(24);
+$h4-font-size: rempx(18);
+$headings-margin-bottom: rempx(20);
+$headings-line-height: 1;
+
+// secondary fonts
+// $headings-font-family: 'Reem Kufi', $font-family-sans-serif;
+// $second-heading-font-family: 'Bellota Text', $font-family-sans-serif;
+
+$small-font-size: 58.33%;
+
+// nav
+$navbar-nav-link-padding-x: rempx(30);
+
+// transition
+$transition-base: all 0.3s ease;
+$btn-transition: $transition-base;
+
+// spacings
+$spacers: (
+  1: rempx(1),
+  2: rempx(2),
+  3: rempx(3),
+  5: rempx(5),
+  10: rempx(10),
+  15: rempx(15),
+  20: rempx(20),
+  30: rempx(30),
+  35: rempx(35),
+  40: rempx(40),
+  50: rempx(50),
+  60: rempx(60),
+  80: rempx(80),
+  100: rempx(100),
+  120: rempx(120),
+  130: rempx(130),
+  140: rempx(140),
+  150: rempx(150),
+  160: rempx(160),
+  200: rempx(200)
+);
+$grid-gutter-width: rempx(80);
+
+// forms
+$input-height-lg: rempx(56);
+$input-placeholder-color: $gray-300 !default;
