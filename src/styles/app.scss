@@ -56,7 +56,6 @@ a {
 
 .navbar {
   font-family: $font-family-opensans;
-  color: $white-400;
   flex-wrap: inherit;
   margin-right: rempx(30);
 }
@@ -66,16 +65,22 @@ a {
 }
 
 .nav-item {
-  margin-left: rempx(50);
-  font-weight: 800;
+  color: $white-400;
+  font-weight: 700;
   font-size: rempx(11);
   letter-spacing: rempx(2);
+  margin-left: rempx(50);
   opacity: 1;
 
   &.active {
-    font-weight: 800;
+    font-weight: 400;
     opacity: 1;
   }
+  
+}
+
+.nav-item:hover {
+  color: $white-900;
 }
 
 // Hero
@@ -121,7 +126,7 @@ a {
 
 .top_absolute {
   position: absolute;
-  top: 36%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -354,6 +359,8 @@ td a {
   &:hover {
     .project-img {
       opacity: 1;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
     }
   }
 }
@@ -376,7 +383,9 @@ td a {
   background-repeat: no-repeat;
   background-position: center;
   transition: .355s;
-  opacity: 20%;
+  opacity: 40%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .first-review {

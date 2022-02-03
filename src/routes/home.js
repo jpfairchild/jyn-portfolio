@@ -41,11 +41,11 @@ function Home() {
       <div className='row'>
         <div className="col-12 w-100 d-md-flex flex-md-equal justify-content-center">
 
-          <Link to={'./review/' + projectOrder.mostRecent[1]}>
+          <Link to={'./project/google' + projectOrder.mostRecent[1]}>
             <ProjectCard className='col-6' projectName={projectOrder.mostRecent[1]}/>
           </Link>
           
-          <Link to={'./review/' + projectOrder.mostRecent[2]}>
+          <Link to={'./project/bantam' + projectOrder.mostRecent[2]}>
             <ProjectCard className='col-6' projectName={projectOrder.mostRecent[2]}/>
           </Link>
 
@@ -55,15 +55,15 @@ function Home() {
       <div className='row'>
         <div className="d-md-flex flex-md-equal w-100">
 
-          <Link to={{pathname:'./review/' + projectOrder.mostRecent[3]}}>
+          <Link to={{pathname:'./project/flow' + projectOrder.mostRecent[3]}}>
             <ProjectCard projectName={projectOrder.mostRecent[3]}/>
           </Link>
 
-          {/* <Link to={'./review/' + projectOrder.mostRecent[4]}>
+          {/* <Link to={'./project/flow' + projectOrder.mostRecent[4]}>
             <ProjectCard projectName={projectOrder.mostRecent[4]}/>
           </Link>
 
-          <Link to={'./review/' + projectOrder.mostRecent[0]}>
+          <Link to={'./project/flow' + projectOrder.mostRecent[0]}>
             <ProjectCard projectName={projectOrder.mostRecent[0]}/>
           </Link> */}
 
