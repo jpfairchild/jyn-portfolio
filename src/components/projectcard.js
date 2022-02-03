@@ -18,7 +18,7 @@ export function ProjectCard({ projectName }) {
     async function getFile() {
       
       const reviewFile = await import(`../json/${projectName}.json`);
-      const reviewImage = await import(`../images/${projectName}_card.jpg`);
+      const reviewImage = await import(`../images/${projectName}_card.svg`);
 
       //React State Updates
       //Default sets the dynamic import to the state
@@ -37,7 +37,7 @@ export function ProjectCard({ projectName }) {
   });
 
   return (
-    <div className="project-card pt-3 pt-md-3 px-5 px-md-5 text-left text-white overflow-hidden">
+    <div className="project-card overflow-hidden">
       {/* <div className="movie-card-text my-20 py-20 d-md-flex flex-md-equal">
         <h5 className='line-spacing-title'>{reviewData.movietitle}</h5>
         <h5 className='text-right'>{reviewData.rating}</h5>

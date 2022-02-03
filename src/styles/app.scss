@@ -68,7 +68,7 @@ a {
 .nav-item {
   margin-left: rempx(50);
   font-weight: 800;
-  font-size: rempx(14);
+  font-size: rempx(11);
   letter-spacing: rempx(2);
   opacity: 1;
 
@@ -81,7 +81,7 @@ a {
 // Hero
 
 .hero-banner {
-  margin: rempx(100) 0 rempx(100) 0;
+  margin: rempx(100) 0 rempx(140) 0;
   position: relative;
 }
 
@@ -104,7 +104,7 @@ a {
 .name {
   font-family: $font-family-ailerons;
   font-weight: 300;
-  font-size: rempx(32);
+  font-size: rempx(22);
   color: $white;
   text-align: center;
 }
@@ -112,7 +112,7 @@ a {
 .role {
   font-family: $font-family-opensans;
   font-weight: 700;
-  font-size: rempx(14);
+  font-size: rempx(11);
   color: $white;
   text-align: center;
   letter-spacing: rempx(2);
@@ -121,21 +121,21 @@ a {
 
 .top_absolute {
   position: absolute;
-  top: 38%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .mid_absolute {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .bot_absolute {
   position: absolute;
-  top: 70%;
+  top: 64%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -345,15 +345,15 @@ td a {
 
 .project-card {
   position: relative;
-  height: rempx(580);
+  height: rempx(220);
   margin: rempx(5);
   min-width: rempx(100);
-  background-color: $black;
+  background-color: #131313;
   border-radius: rempx(0);
 
   &:hover {
     .project-img {
-      opacity: .8;
+      opacity: 1;
     }
   }
 }
@@ -366,15 +366,17 @@ td a {
 }
 
 .project-img{
-  position: absolute;
+  position: relative;
   z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   transition: .355s;
+  opacity: 20%;
 }
 
 .first-review {
