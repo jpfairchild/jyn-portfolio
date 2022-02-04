@@ -83,6 +83,39 @@ a {
   color: $white-900;
 }
 
+.project-nav {
+  margin-bottom: rempx(150); 
+}
+
+// Flex
+
+.flex-parent {
+  display: flex;
+  width: 100%;
+}
+
+.flex-child-66 {
+  width: 100%;
+}
+
+.flex-child-33 {
+  width: 50%;
+}
+
+.flex-equal > * {
+  flex: 1;
+}
+
+.d-md-flex {
+  display: flex !important;
+}
+
+.flex-md-equal > * {
+  flex: 1;
+}
+
+
+
 // Hero
 
 .hero-banner {
@@ -102,6 +135,32 @@ a {
   width: rempx(376);
   height: rempx(7);
   margin: 0 auto;
+}
+
+.flurish-horizontal {
+  margin-left: rempx(30);
+  margin-right: rempx(12);
+}
+
+.flurish-vertical {
+  rotate: 270deg;
+  margin-right: rempx(0);
+  margin-top: rempx(60);
+
+}
+
+.flurish-parent {
+  height: 100%;
+}
+
+.flurish-text-vertical {
+  font-family: $font-family-opensans;
+  font-weight: 700;
+  font-size: rempx(11);
+  letter-spacing: rempx(2);
+  color: $white-500;
+  margin-top: rempx(18);
+  transform: rotate(270deg);
 }
 
 // Hero on Home Text
@@ -124,21 +183,30 @@ a {
   color: $white-500;
 }
 
-.top_absolute {
+.flurish-text {
+  font-family: $font-family-opensans;
+  font-weight: 700;
+  font-size: rempx(11);
+  letter-spacing: rempx(2);
+  color: $white-500;
+  margin-top: rempx(18);
+}
+
+.top-absolute {
   position: absolute;
   top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.mid_absolute {
+.mid-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.bot_absolute {
+.bot-absolute {
   position: absolute;
   top: 64%;
   left: 50%;
@@ -151,6 +219,26 @@ h1 {
   font-family: $font-family-opensans;
   font-weight: 800;
   font-size: rempx(24);
+}
+
+.pp-ts {
+  margin-right: rempx(80);
+}
+
+.pp-title {
+  font-family: $font-family-ailerons;
+  font-weight: 800;
+  font-size: rempx(28);
+  min-width: rempx(370);
+  color: $white-800;
+}
+
+.pp-sub-text {
+  font-family: $font-family-opensans;
+  font-weight: 700;
+  font-size: rempx(11);
+  letter-spacing: rempx(2);
+  color: $white-300;
 }
 
 h2 {
@@ -181,7 +269,41 @@ h5 {
 }
 
 p {
+  font-family: $font-family-opensans;
+  font-size: rempx(12);
   line-height: rempx(10);
+  letter-spacing: rempx(.4);
+  color: $text-paragraph;
+}
+
+.project-page-p {
+  text-justify: left;
+  font-size: rempx(14);
+  line-height: rempx(26);
+  max-width: rempx(380);
+  min-width: rempx(370);
+  opacity: 1;
+}
+
+.project-page-mid-role {
+  text-justify: left;
+  margin: 0 auto;
+  font-size: rempx(14);
+  line-height: rempx(26);
+
+  // Padding
+  max-width: rempx(380);
+  min-width: rempx(370);
+  padding-left: rempx(40);
+  margin-top: rempx(100);
+  margin-bottom: rempx(100);
+  opacity: 1;
+}
+
+.project-page-title-description {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: rempx(160);
 }
 
 .ptable {
@@ -198,17 +320,22 @@ p {
   font-weight: 400;
 }
 
-//img
+// Img
 
 .img-fluid {
   margin-left: auto;
   margin-right: auto;
 }
 
-//line
+// line
 
 hr {
   border-color: $gray-100;
+}
+
+// Padding
+.phone-between-padding {
+  padding-top: rempx(.05);
 }
 
 // ------------- image overlay ------------- //
@@ -297,45 +424,8 @@ hr {
   }
 }
 
+// Buttons
 
-//all films page
-
-//table
-.table {
-  margin-left: rempx(20);
-  margin-right: rempx(20);
-  font-size: rempx(16);
-
-  td {
-    padding: rempx(2);
-    padding-top: rempx(12);
-  }
-}
-
-td a { 
-  display: block; 
-  padding: rempx(10); 
-}
-
-.table-number-link a {
-  display: block; 
-  padding: rempx(10);
-  color: inherit;
-}
-
-//review page
-.review-card {
-  height: rempx(660);
-  max-width: rempx(835);
-  background-color: $sf-bg-dark;
-}
-
-.review-width {
-  margin: 0 auto;
-  max-width: rempx(800);
-}
-
-//buttons
 .btn-custom {
   border-radius: 0px;
   letter-spacing: 1px;
@@ -346,7 +436,7 @@ td a {
   box-shadow: none;
 }
 
-// ------------ Project Cards ------------ //
+// ------------ Project Cards (logos on home) ------------ //
 
 .project-card {
   position: relative;
@@ -372,7 +462,8 @@ td a {
   padding-right: rempx(40);
 }
 
-.project-img{
+// logo
+.project-img {
   position: relative;
   z-index: 1;
   top: 0;
@@ -386,31 +477,47 @@ td a {
   opacity: 40%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+
 }
 
 .first-review {
   margin-top: rempx(0);
 }
 
-//flex
-.flex-equal > * {
-  flex: 1;
+// ---------- Bld Project Page ---------- //
+
+.image-set {
+  justify-content: center;
 }
 
-.d-md-flex {
-  display: flex !important;
+.image-project-page {
+  height: rempx(600);
 }
 
-.flex-md-equal > * {
-  flex: 1;
+.flex-images {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: $sf-bg-images;
+  padding-top: rempx(40);
+  padding-left: rempx(40);
+
 }
+
+// ---------- Hamburger ---------- //
 
 .hamburger-nav {
   display: none !important;
 }
 
-//Begin Response
-@media (max-width: 1015px) {
+// ---------- iPad ---------- //
+// ---------- Start of Pixel ----------//
+@media (max-width: 1360px) {
+  .flurish-d-none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1190px) {
 
   .hamburger-nav {
     display: block !important;
@@ -420,9 +527,9 @@ td a {
     display: none !important;
   }
 
-  .web-nav {
-    display: none !important;
-  }
+  // .web-nav {
+  //   display: none !important;
+  // }
 
   .flex-md-equal > * {
     flex: 1;
@@ -436,17 +543,33 @@ td a {
     margin: rempx(5);
   }
 
-  //Table
-  .table {
-    font-size: rempx(14);
-    td {
-      padding: rempx(2);
-    }
+  .image-project-page {
+    height: rempx(500);
+    margin-right: rempx(40);
+  }
+  
+  .flex-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rempx(40);
+
   }
 
-  .table-col-width {
-    width: 30px;
-  } 
+  .project-page-title-description {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: rempx(600);
+    margin-bottom: rempx(100);
+
+  }
+
+  .pp-ts {
+    justify-content: center;
+    max-width: rempx(370);
+    margin-right: rempx(0);
+    margin-bottom: rempx(20);
+  }
 
   .navbar-expand .navbar-nav .nav-link {
     padding-left: rempx(6);
@@ -493,6 +616,7 @@ td a {
   }
 
   // hamburger icon courtesy of Flippin' burgers
+
   .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -541,20 +665,28 @@ td a {
   }
 }
 
-//Tablet
+// ---------- Tablet ---------- //
+
 @media (max-width: 574px) {
   .ham-nav__container {
     position: absolute;
     top: rempx(15);
   }
 
-    .ham-close {
-      position: absolute;
-      top: rempx(20);
-    }
+  .ham-close {
+    position: absolute;
+    top: rempx(20);
+  }
+
+  .project-page-title-description {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
 }
 
-//iPhone
+// ---------- iPhone ---------- //
+
 @media (max-width: 400px) {
 
   h5 {
@@ -565,6 +697,39 @@ td a {
   .text-xl {
     font-size: rempx(50);
     width: rempx(100);
+  }
+
+  .project-nav {
+    margin-left: rempx(0);
+  }
+
+  .project-page-title-description {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  
+  .project-page-p {
+    margin-left: rempx(40);
+    max-width: rempx(400);
+    min-width: rempx(200);
+  }
+
+  .pp-ts {
+    padding-left: rempx(20);
+    max-width: rempx(400);
+    min-width: rempx(200);
+  }
+
+  .pp-title {
+    padding-left: rempx(20);
+    max-width: rempx(400);
+    min-width: rempx(200);
+    line-height: rempx(38);
+  }
+
+  .pp-sub-text {
+    padding-left: rempx(20);
   }
 
   .nav-item {

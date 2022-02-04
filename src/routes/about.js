@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '../components/header';
+import { Header } from '../components/header_home';
 import { Footer } from '../components/footer';
 import '../styles/app.scss';
 
@@ -8,7 +8,6 @@ function About() {
   return (
     <div className="container">
       <Header />
-      {/* arriflex img */}
 
       {/* paragraph */}
       <div className='row pt-40 pt-lg-40 justify-content-center'>

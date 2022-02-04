@@ -24,6 +24,7 @@ $white: rgba(255, 255, 255, 1);
 
 // brand
 $sf-bg-dark: #090909;
+$sf-bg-images: #191919;
 $sf-bg-light: #f3f3f3;
 $black: #1e1e1e;
 $red: #ee3f4c;
@@ -41,7 +42,7 @@ $teal: #20c997;
 $cyan: #17a2b8;
 
 // brand
-$secondary: #fff;
+$text-paragraph: #8D8D8D;
 $text-disabled: rgba(0, 0, 0, 0.3);
 $enable-responsive-font-sizes: true;
 $enable-shadows: false;
@@ -63,10 +64,6 @@ $h3-font-size: rempx(24);
 $h4-font-size: rempx(18);
 $headings-margin-bottom: rempx(20);
 $headings-line-height: 1;
-
-// secondary fonts
-// $headings-font-family: 'Reem Kufi', $font-family-sans-serif;
-// $second-heading-font-family: 'Bellota Text', $font-family-sans-serif;
 
 $small-font-size: 58.33%;
 

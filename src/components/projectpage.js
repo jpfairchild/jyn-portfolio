@@ -1,142 +1,102 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../components/footer';
+import { Header } from '../components/header_project';
 import '../styles/app.scss';
 
+// Svgs
+import flurish from "../illustrations/flurish_lines.svg";
 
-//Page Function
-function Review({ match }) {
+// Images
+import image1 from '../images/bld_nav_min.png';
+import image2 from '../images/bld_nav_max.png';
+import image3 from '../images/bld_time.png';
+import image4 from '../images/bld_kanban.png';
+import image5 from '../images/bld_chat.png';
+import image6 from '../images/bld_pivot.png';
+import image7 from '../images/bld_invoice.png';
 
-  //Show Hide Spoiler Button
-  const [showResults, setShowResults] = useState(false);
-  const onClick = () => setShowResults(true);
 
-  //Set States for Data to be imported
-
-  //json
-  const [reviewData, setReviewData] = useState({});
-  //image
-  const [reviewImage, setReviewImage] = useState(undefined);
-
-  // const [Var, FunctionSetVar] = useState(InitialState);
-
-  //React 
-  useEffect(() => {
-    async function getFile() {
-      
-      const article = match.params.article;
-      const reviewFile = await import(`../json/${article}.json`);
-      const reviewImage = await import(`../images/${article}_review.jpg`);
-
-      //React State Updates
-      //Default sets the dynamic import to the state
-      setReviewData(reviewFile.default);
-      setReviewImage(reviewImage.default);
-
-    };
-
-    getFile();
-    
-  })
-
-  // //Json -> Variables
-  const movie = reviewData.movietitle;
-  const rating = reviewData.rating;
-  const director = reviewData.director;
-
-  //Takes arrays and gives line breaks to make paragraphs
-  //Non Spoiler review
-  const nsReview = reviewData.review?.nonSpoiler.map((paragraph, i) => (
-    <p className='line-spacing-paragraph' key={'non spoiler review paragraph'+ i} >
-      {paragraph} <br />
-    </p>
-  ));
-
-  //Spoiler review 
-  const sReview = reviewData.review?.spoiler.map((paragraph, i) => (
-    <p className='line-spacing-paragraph' key={'spoiler review paragraph'+ i} >
-      {paragraph} <br />
-    </p>
-  ));
-
-  // //Image
-  const image1 = reviewImage && ({
-    backgroundImage: `url(${reviewImage})`
-  });
-
-  //Spoiler Review
-  const Results = () => (
-    <div className='mt-40 mt-lg-60'>
-      {sReview}
-    </div>
-  )
-
+// Page Function
+function Project ({ match }) {
 
   return (
     <div className="container">
 
-      {/* Header Movie Image */}
-      <div className='row mt-10 mt-lg-10 mx-10 mx-lg-10'>
+      <Header />
 
-        <div className='col-12 mb-40 mb-lg-80'>
-          <div className="review-card pt-lg-20 px-lg-5 text-left text-white overflow-hidden">
-            <div className='movie-img' style={image1}></div>
-          </div>
+      <div className='row project-page-title-description justify-content-center w-100'>
+
+        <div className='pp-ts'>
+          <h1 className='pp-title mr-md-40'>Worker Management App</h1>
+          <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
         </div>
 
-        <div className='row review-width px-20'>
-          <div className='col-12 mb-20 mb-lg-20 full-width'>
-            {/* Title & Director */}
-            <div className='d-flex flex-wrap'>
-              <h1 className='mb-40 mb-lg-40'>{movie}</h1>
-              <h1 className='ml-auto'>{rating}</h1>
-            </div>
-            <h2 className=''>{director}</h2>
-          </div>
+        <p className='project-page-p'>This project was a worker management tool created  
+          for a post covid remote work world. Analogous to  
+          And.co, the tool lets you track time, chat, create and 
+          assign tasks, invoice clients, form &#38; manage a team.
+        </p>
 
-            {/* Non-Spoiler Review */}
-          <div className=''>
-            <div className='col-12 review-width'>
-
-              {/* <p> */}
-                {nsReview}
-              {/* </p> */}
-              
-              {/* Spoiler Review */}
-              <div className='mt-40 mt-lg-60 mb-40 mb-lg-100'>
-                <button type="button" className="btn btn-outline-dark btn-custom w-100" onClick={onClick}>SPOILER REVIEW</button>
-                { showResults ? <Results /> : null }
-              </div>
-            </div>
-
-            {/* More Reviews */}
-            {/* <div className="col-12 d-flex flex-equal flex-wrap w-100">
-              <Link to='./review/br'>
-                <div className="movie-card card-group-tall bg-dark mr-md-3 pt-3 px-3 pt-md-3 px-md-5 text-left text-white overflow-hidden">
-                  <div className="my-3 py-3 d-md-flex flex-md-equal">
-                    <h5 className='line-spacing-title'>BLADE <br /> RUNNER <br /> 2049</h5>
-                    <h5 className='text-right'>+ +</h5>
-                  </div>
-                  <div className=""></div>
-                </div>
-              </Link>
-              
-              <Link to='./review/br'>
-                <div className="movie-card card-group-tall bg-dark pt-3 px-3 pt-md-3 px-md-5 text-left text-white overflow-hidden">
-                  <div className="my-3 py-3 d-md-flex flex-md-equal">
-                    <h5 className='line-spacing-title'>MOVIE <br /> NAME</h5>
-                    <h5 className='text-right'>+ -</h5>
-                  </div>
-                  <div className=""></div>
-                </div>
-              </Link>
-            </div> */}
-
-          </div>
-        </div>
       </div>
-        <Footer />
+
+      {/* ------ 1st of Mocks ------ */}
+      <div className='row image-set m-10 m-lg-10'>
+
+        <div className='row flurish-d-none m-20'>
+          <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block'>
+            <h3 className='flurish-text-vertical'>MOCKS</h3>
+            <img className='flurish-vertical' src={flurish} alt='flurish' />
+          </div>
+        </div>
+
+        <div className='flex-images'>
+            <img className='image-project-page mr-lg-40 mb-40' src={image1} alt='image1'/>
+            <img className='image-project-page mr-lg-40 mb-40' src={image2} alt='image2'/>
+            <img className='image-project-page mr-lg-40 mb-40' src={image3} alt='image3'/>
+            <img className='image-project-page mr-lg-40 mb-40' src={image4} alt='image4'/>
+        </div>
+        
+      </div>
+
+      {/* Mid Role Text */}
+      <div className='row project-page-mid-role justify-content-center w-100'>
+        <p className='project-page-p'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
+      </div>
+      
+      {/* ------ 2nd of Mocks ------ */}
+      <div className='row image-set m-10 m-lg-10'>
+
+        <div className='flex-images'>
+            <img className='image-project-page mr-lg-40 mb-40' src={image5} alt='image5'/>
+        </div>
+        
+      </div>
+
+      {/* Mid Role Text */}
+      <div className='row project-page-mid-role justify-content-center w-100'>
+        <p className='project-page-p'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
+      </div>
+
+      {/* ------ 3rd of Mocks ------ */}
+      <div className='row image-set m-10 m-lg-10'>
+
+        <div className='flex-images'>
+            <img className='image-project-page mr-lg-40 mb-40' src={image6} alt='image6'/>
+            <img className='image-project-page mr-lg-40 mb-40' src={image7} alt='image7'/>
+        </div>
+        
+      </div>
+
+
+
+
+
+
+
+
+      <Footer />
     </div>
   );
 }
 
-export default Review;
+export default Project ;

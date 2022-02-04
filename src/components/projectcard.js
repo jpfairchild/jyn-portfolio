@@ -18,7 +18,7 @@ export function ProjectCard({ projectName }) {
     async function getFile() {
       
       const reviewFile = await import(`../json/${projectName}.json`);
-      const reviewImage = await import(`../images/${projectName}_card.svg`);
+      const reviewImage = await import(`../logos/${projectName}_logo.svg`);
 
       //React State Updates
       //Default sets the dynamic import to the state

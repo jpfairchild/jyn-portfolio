@@ -23,12 +23,17 @@ function App() {
           render={({ location }) => (
             <AnimatePresence>
               <Suspense fallback={<Loader />} key='suspense'>
+                
                 <Switch key={location.pathname}>
+
+                  {/* Top level paths */}
                   <Route exact path='/' component={Home} />
                   <Route exact path='/about' component={About} />
                   <Route exact path='/resume' component={Resume} />
+
                   {/* Expose all routes underneath /review/<whatever> and load your reviewpage component for that */}
                   <Route path='/project/:article' component={Project} />
+
                 </Switch>
                 
               </Suspense>

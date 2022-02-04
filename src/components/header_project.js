@@ -1,6 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu } from './menu';
+
+// svgs
+import personalLogo from '../logos/personal_logo.svg';
 
 
 export function Header() {
@@ -11,20 +14,15 @@ export function Header() {
         <div className='row'>
           <div className='col-12'>
 
-            <nav className="navbar navbar-light">
+            <nav className="navbar project-nav navbar-light">
 
-              {/* <div className='flex-column align-items-start justify-content-start ml-10'>
-                <a className="navbar-brand" href="./">LIFE IS TOO SHORT FOR SHIT FILMS</a>
-                <h2 className='line-spacing-paragraph mr-60 pt-5 pt-lg-5'>Life is already too short, don't waste it watching garbage</h2>
-              </div> */}
+              <Link exact to='/' className=''>
+              <img className='pt-20 pl-10' src={personalLogo} alt='' />
+              </Link>
 
-              <div className='flex-column align-items-start justify-content-start ml-10'>
-                
-              </div>
-
-              <div className='hamburger-nav'>
+              {/* <div className='hamburger-nav'>
                 <Menu />
-              </div>
+              </div> */}
 
               <div className="web-nav nav-parent pt-lg-20">
                 <NavLink exact to='/rating'  className='nav-item'>

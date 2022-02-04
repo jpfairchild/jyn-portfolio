@@ -4,7 +4,7 @@ export function Loader() {
   return (
     <>
       <div>
-        <p> Loading </p>
+        <p> </p>
       </div>
     </>
   );
