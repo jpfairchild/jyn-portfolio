@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { Footer } from '../components/footer';
-import { Header } from '../components/header_project';
-import '../styles/app.scss';
+import { Footer } from '../../components/footer';
+import { Header } from '../../components/header_project';
+import '../../styles/app.scss';
 
 // Svgs
-import flurish from "../illustrations/flurish_lines.svg";
+import flurish from "../../illustrations/flurish_lines.svg";
 
 // Images
-import image1 from '../images/bld_nav_min.png';
-import image2 from '../images/bld_nav_max.png';
-import image3 from '../images/bld_time.png';
-import image4 from '../images/bld_kanban.png';
-import image5 from '../images/bld_chat.png';
-import image6 from '../images/bld_pivot.png';
-import image7 from '../images/bld_invoice.png';
-import image8 from '../images/bld_nav_both.png';
-import image9 from '../images/bld_spec.png';
+import image1 from '../../images/bld_nav_min.png';
+import image2 from '../../images/bld_nav_max.png';
+import image3 from '../../images/bld_time.png';
+import image4 from '../../images/bld_kanban.png';
+import image5 from '../../images/bld_chat.png';
+import image6 from '../../images/bld_pivot.png';
+import image7 from '../../images/bld_invoice.png';
+import image8 from '../../images/bld_nav_both.png';
+import image9 from '../../images/bld_spec.png';
 
 // Page Function
-function Project ({ match }) {
+function Bld() {
 
   return (
     <div className="container">
@@ -119,4 +119,4 @@ function Project ({ match }) {
   );
 }
 
-export default Project ;
+export default Bld;

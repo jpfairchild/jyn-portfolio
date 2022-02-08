@@ -22,9 +22,9 @@ export function Header() {
 
               <div className='flex-column align-items-start justify-content-start ml-10'></div>
 
-              <div className='hamburger-nav'>
+              {/* <div className='hamburger-nav'>
                 <Menu />
-              </div>
+              </div> */}
 
               <div className="web-nav nav-parent pt-lg-20">
                 <NavLink exact to='/rating'  className='nav-item'>

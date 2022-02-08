@@ -10,8 +10,8 @@ const Home = lazy(() => import('./home'));
 const Resume = lazy(() => import('./resume'));
 const About = lazy(() => import('./about'));
 
-//reviews
-const Project = lazy(() => import('../components/projectpage'));
+//projects
+const Bld = lazy(() => import('./project/bld'));
 
 //routes
 function App() {
@@ -23,7 +23,7 @@ function App() {
           render={({ location }) => (
             <AnimatePresence>
               <Suspense fallback={<Loader />} key='suspense'>
-                
+
                 <Switch key={location.pathname}>
 
                   {/* Top level paths */}
@@ -32,7 +32,7 @@ function App() {
                   <Route exact path='/resume' component={Resume} />
 
                   {/* Expose all routes underneath /review/<whatever> and load your reviewpage component for that */}
-                  <Route path='/project/:article' component={Project} />
+                  <Route exact path='/project/bld' component={Bld} />
 
                 </Switch>
                 

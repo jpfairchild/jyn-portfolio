@@ -7,7 +7,8 @@ import { ProjectCard } from '../components/projectcard';
 import projectOrder from "../json/_projectOrder.json";
 
 //svgs
-import herolines from "../illustrations/home_lines.svg";
+import heroLines from "../illustrations/home_lines.svg";
+import smallHeroLines from "../illustrations/home_small_lines.svg";
 import namelines from "../illustrations/name_lines.svg";
 import flurish from "../illustrations/flurish_lines.svg";
 
@@ -20,8 +21,9 @@ function Home() {
       <Header />
 
       <div className='row hero-banner'>
-        <div className='d-md-flex flex-md-equal w-100'>
-          <img className='svglines' src={herolines} alt='bglines' />
+        <div className='flex-md-equal center-bg'>
+          <img className='svglines' src={heroLines} alt='bglines' />
+          <img className='svglines_small' src={smallHeroLines} alt='bgsmalllines' />
           <h1 className='name top-absolute'>Jyn Fairchild</h1>
           <img className='namelines mid-absolute' src={namelines} alt='namelines' />
           <h3 className='role bot-absolute'>DESIGNER</h3>
@@ -33,10 +35,11 @@ function Home() {
         <img className='flurish-horizontal' src={flurish} alt='flurish' />
         <h3 className='flurish-text'>PROJECTS</h3>
       </div>
-      <div className='row'>
-        <div className="col-12 d-md-flex flex-parent">
 
-        <Link className='flex-child-66' to={'./project/' + projectOrder.mostRecent[0]}>
+      <div className='row'>
+        <div className="col-12 flex-parent">
+
+        <Link className='flex-child-33' to={'./project/' + projectOrder.mostRecent[0]}>
           <ProjectCard projectName={projectOrder.mostRecent[0]}/>
         </Link>
 
@@ -53,7 +56,7 @@ function Home() {
       {/* 2 Recent Reviews */}
 
       <div className='row'>
-        <div className="col-12 d-md-flex flex-parent">
+        <div className="col-12 flex-parent">
 
           <Link className='flex-child-33' to={'./project/google' + projectOrder.mostRecent[1]}>
             <ProjectCard projectName={projectOrder.mostRecent[1]}/>
@@ -69,7 +72,7 @@ function Home() {
       </div>
 
       <div className='row'>
-        <div className="d-md-flex flex-md-equal w-100">
+        <div className="flex-md-equal w-100">
 
           <Link to={{pathname:'./project/flow' + projectOrder.mostRecent[5]}}>
             <ProjectCard projectName={projectOrder.mostRecent[5]}/>
@@ -94,7 +97,7 @@ function Home() {
       {/* long boi + all */}
       <div className='row justify-content-center pt-50 pt-lg-50'>
         <div className='col-lg-6 pt-5 pt-md-5'>
-          <p className='line-spacing-paragraph'>
+          <p className='line-spacing-paragraph text-center'>
             Without design, the world sucks.
           </p>
         </div>
