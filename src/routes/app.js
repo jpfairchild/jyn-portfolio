@@ -12,6 +12,9 @@ const About = lazy(() => import('./about'));
 
 //projects
 const Bld = lazy(() => import('./project/bld'));
+const Bantam = lazy(() => import('./project/bantam'));
+const Google = lazy(() => import('./project/google'));
+const Illustrations = lazy(() => import('./project/illustrations'));
 
 //routes
 function App() {
@@ -33,6 +36,9 @@ function App() {
 
                   {/* Expose all routes underneath /review/<whatever> and load your reviewpage component for that */}
                   <Route exact path='/project/bld' component={Bld} />
+                  <Route exact path='/project/bantam' component={Bantam} />
+                  <Route exact path='/project/google' component={Google} />
+                  <Route exact path='/project/illustrations' component={Illustrations} />
 
                 </Switch>
                 

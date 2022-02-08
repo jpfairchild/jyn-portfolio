@@ -39,7 +39,7 @@ function Home() {
       <div className='row'>
         <div className="col-12 flex-parent">
 
-        <Link className='flex-child-33' to={'./project/' + projectOrder.mostRecent[0]}>
+        <Link className='flex-child-66' to={'./project/' + projectOrder.mostRecent[0]}>
           <ProjectCard projectName={projectOrder.mostRecent[0]}/>
         </Link>
 

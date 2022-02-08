@@ -308,7 +308,6 @@ p {
   // Padding
   max-width: rempx(380);
   min-width: rempx(370);
-  padding-left: rempx(40);
   margin-top: rempx(100);
   margin-bottom: rempx(100);
   opacity: 1;
@@ -523,12 +522,25 @@ hr {
   height: rempx(600);
 }
 
+.image-project-bantam {
+  height: rempx(800);
+}
+
+.bantam-illustrations {
+  height: rempx(1440);
+}
+
 .flex-images {
   display: flex;
   flex-flow: row nowrap;
   background-color: $sf-bg-images;
   padding-top: rempx(40);
   padding-left: rempx(40);
+
+}
+
+.flex-images-bantam {
+  background-color: $sf-bg-dark;
 
 }
 
@@ -554,10 +566,6 @@ hr {
     display: block !important;
   }
 
-  .d-lg-block {
-    display: none !important;
-  }
-
   // .web-nav {
   //   display: none !important;
   // }
@@ -578,6 +586,12 @@ hr {
     height: rempx(500);
     margin-right: rempx(40);
   }
+
+  .image-project-bantam {
+    height: rempx(580);
+  }
+
+  // Project Images
   
   .flex-images {
     display: flex;
@@ -636,6 +650,12 @@ hr {
     margin-top: rempx(15);
   }
 
+  .image15 {
+    max-height: rempx(643);
+    width: auto;
+    height: auto;
+  }
+
 }
 
 // ---------- Tablet ---------- //
@@ -649,6 +669,12 @@ hr {
 
   .nav-parent {
     margin-top: rempx(15);
+  }
+
+  .image15 {
+    max-height: rempx(440);
+    width: auto;
+    height: auto;
   }
   
 }
@@ -791,6 +817,18 @@ hr {
 
   .image7 {
     max-width: rempx(343);
+    width: auto;
+    height: auto;
+  }
+
+  .image10 {
+    max-width: rempx(843);
+    width: auto;
+    height: auto;
+  }
+
+  .image15 {
+    max-height: rempx(843);
     width: auto;
     height: auto;
   }
