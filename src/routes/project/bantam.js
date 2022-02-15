@@ -13,6 +13,10 @@ import image12 from '../../images/bantam_initial.png';
 import image13 from '../../images/bantam_probe.png';
 import image14 from '../../images/bantam_illustrations.png';
 import image15 from '../../images/bantam_overview_small.png';
+import image16 from '../../images/bantam_v1.png';
+import image17 from '../../images/bantam_v2.png';
+import image18 from '../../images/bantam_v3.png';
+
 
 // Page Function
 function Bantam() {
@@ -25,7 +29,7 @@ function Bantam() {
       <div className='row project-page-title-description justify-content-center w-100'>
 
         <div className='pp-ts'>
-          <h1 className='pp-title mr-md-40'>Bantam Tools</h1>
+          <h1 className='pp-title'>Bantam Tools</h1>
           <h2 className='pp-sub-text'>THROUGH ALUMINUM LIKE BUTTER</h2>
         </div>
 
@@ -37,80 +41,75 @@ function Bantam() {
 
       </div>
 
-      {/* ------ 1st of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
+      <div className='body-content'>
 
-        <div className='row flurish-d-none m-20'>
-          <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mt-lg-100'>
-            <h3 className='flurish-text-vertical'>MOCKS</h3>
-            <img className='flurish-vertical' src={flurish} alt='flurish' />
+        {/* ------ 1st of Mocks ------ */}
+        <div className='row'>
+
+          <div className='row flurish-d-none m-20'>
+            <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mt-lg-100'>
+              <h3 className='flurish-text-vertical'>MOCKS</h3>
+              <img className='flurish-vertical' src={flurish} alt='flurish' />
+            </div>
+          </div>
+
+          <div className='flex-bantam'>
+            <img className=' image-width-100 image10' src={image10} alt='image10'/>
+            <img className=' image-width-100 image15' src={image15} alt='image15'/>
+          </div>
+          
+        </div>
+
+        {/* Text Paragraph */}
+        <div className='row project-page-mid-role justify-content-center w-100 mb-lg-180 mb-md-80'>
+          <p className='project-page-p'>I build frameworks, not one offs. Software companies that are 
+            constantly evolving and need to adapt to new user needs every year. I only build designs to be 
+            reusable. If Bantam ever needs to add a new tool, process, set of controls, they will be able 
+            to adapt the designs for their new needs easily. </p>
+        </div>
+        
+        {/* ------ 2nd of Mocks ------ */}
+        <div className='row m-10 m-lg-10'>
+
+          <div className='flex-bantam'>
+            <img className='image-width-40' src={image11} alt='material' />
+            <img className='image-width-40' src={image12} alt='initial' />
+          </div>
+          
+        </div>
+
+        {/* ------ 3rd of Mocks ------ */}
+        <div className='row m-10 m-lg-10'>
+          <div className='flex-bantam'>
+              <img className='bantam-illustrations ' src={image14} alt='image14'/>
           </div>
         </div>
 
-        <div className='flex-images flex-images-bantam'>
-          <img className='image-project-page mr-lg-40 mb-80 image10
-            d-none d-sm-none d-md-none d-lg-block d-xl-block' src={image10} alt='image10'/>
-          <img className='image-project-page mr-lg-40 mb-80 image15 
-            d-none d-sm-block d-md-block d-lg-none d-xl-none' src={image15} alt='image15'/>
-        </div>
-        
-      </div>
+        {/* Text Paragraph */}
+        <div className='row project-double-text justify-content-center w-100'>
 
-      {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100 mb-180'>
-        <p className='project-page-p'>I build frameworks, not one offs. Software companies that are 
-          constantly evolving and need to adapt to new user needs every year. I only build designs to be 
-          reusable. If Bantam ever needs to add a new tool, process, set of controls, they will be able 
-          to adapt the designs for their new needs easily. </p>
-      </div>
-      
-      {/* ------ 2nd of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
+          <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mr-lg-40'>
+            <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
+            <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+          </div>
 
-        <div className='flex-images flex-images-bantam'>
-          <img className='image-project-page image-project-bantam mr-lg-80 mb-40' src={image11} alt='material' />
-          <img className='image-project-page image-project-bantam mr-lg-40 mb-40' src={image12} alt='initial' />
-        </div>
-        
-      </div>
+          <p className='project-page-p mb-60 mr-lg-80'>Bantam was a great partner to work with because they knew what 
+            they wanted to be done, but also where they wanted to focus in the future. In certain areas of the app I 
+            gave them minimal viable product designs, but also future versions.</p>
 
-      {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100'>
-        <p className='project-page-p'>Revenue breakdown by project, by month, by person. 
-          Blended rate next to the original estimate was a common ask from clients. Invoicing panel 
-          making invoicing simple and easy.</p>
-      </div>
-
-      {/* ------ 3rd of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images flex-images-bantam'>
-            <img className='bantam-illustrations mb-40 image7' src={image14} alt='image7'/>
-        </div>
-      </div>
-
-      {/* Text Paragraph */}
-      <div className='row project-double-text justify-content-center w-100'>
-
-        <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mr-lg-40'>
-          <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
-          <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+          <p className='project-page-p mb-60'>Additional features fully ready for implementation when engineers have 
+            time, but things that didn&#x27;t need to be part of the first iteration. </p>
         </div>
 
-        <p className='project-page-p mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
-          implimenting designs poorly. This is half true, but often I find designers aren&#x27;t 
-          communicating well, having checkins during the engineering team during the coding process 
-          and made zero specs around their designs.</p>
+        {/* ------ 2nd of Mocks ------ */}
+        <div className='row m-10 m-lg-10'>
 
-        <p className='project-page-p mb-60'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
-        blueprints and then when something is off, you can pull up the spec and it acts as almost a 
-        contract that you can hold the engineer too.</p>
-      </div>
-
-      {/* ------ 4th of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images flex-images-bantam'>
-            {/* <img className='image-project-page mr-lg-40 mb-40 image8' src={image14} alt='image8'/>
-            <img className='image-project-page mr-lg-40 mb-40 image9' src={image15} alt='image9'/> */}
+          <div className='flex-bantam'>
+            <img className='image-width-33' src={image16} alt='material' />
+            <img className='image-width-33' src={image17} alt='initial' />
+            <img className='image-width-33' src={image18} alt='initial' />
+          </div>
+          
         </div>
       </div>
 

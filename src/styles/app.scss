@@ -235,12 +235,17 @@ h1 {
   font-size: rempx(24);
 }
 
-.pp-ts {
+.pp-ts-bld {
   margin-right: rempx(80);
+}
+
+.pp-ts {
+  margin-right: rempx(0);
 }
 
 .pp-title {
   font-family: $font-family-ailerons;
+  margin-left: rempx(-3);
   font-weight: 800;
   font-size: rempx(28);
   min-width: rempx(370);
@@ -348,7 +353,7 @@ p {
   font-weight: 400;
 }
 
-// Img
+// Images
 
 .img-fluid {
   margin-left: auto;
@@ -512,36 +517,80 @@ hr {
   margin-top: rempx(0);
 }
 
+// Project Pages //
+
+.body-content {
+  width: 100%;
+  max-width: rempx(1400);
+  margin: 0 auto;
+  padding: rempx(20);
+}
+
 // ---------- Bld Project Page ---------- //
 
-.image-set {
-  justify-content: center;
-}
-
 .image-project-page {
-  height: rempx(600);
+  max-height: rempx(600);
 }
 
-.image-project-bantam {
-  height: rempx(800);
+.image-width-100 {
+  width: 100%;
+}
+
+.image-width-75 {
+  width: 75%;
+}
+
+.image-width-66 {
+  width: 66%;
+}
+
+.image-width-40 {
+  width: calc(40% - 40px);
+
+  &:first-child {
+    margin-right: rempx(20);
+  }
+  &:last-child {
+    margin-left: rempx(20);
+  }
+}
+
+.image-width-33 {
+  width: 33%;
+}
+
+.image-width-25 {
+  width: 25%;
 }
 
 .bantam-illustrations {
-  height: rempx(1440);
+  max-width: rempx(900);
 }
 
-.flex-images {
+.flex-images-bld {
   display: flex;
   flex-flow: row nowrap;
   background-color: $sf-bg-images;
-  padding-top: rempx(40);
-  padding-left: rempx(40);
+  justify-content: center;
 
 }
 
-.flex-images-bantam {
+.flex-bantam {
   background-color: $sf-bg-dark;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
+}
+
+// ---------- Bantam Project Page ---------- //
+
+.image10 {
+  display: block;
+}
+
+.image15 {
+  display: none;
 }
 
 // ---------- Hamburger ---------- //
@@ -550,12 +599,23 @@ hr {
   display: none !important;
 }
 
-// ---------- iPad ---------- //
-// ---------- Start of Pixel ----------//
+// ---------- Start of Pixels ----------//
+// ---------- ---------- ---------- ---------- //
+// ---------- ---------- ---------- ---------- //
+// ---------- ---------- ---------- ---------- //
+
 @media (max-width: 1360px) {
 
   .flurish-d-none {
     display: none !important;
+  }
+
+  // Bantam L+1
+
+  // Bantam
+
+  .image15 {
+    display: none;
   }
 
 }
@@ -583,17 +643,15 @@ hr {
   }
 
   .image-project-page {
-    height: rempx(500);
+    max-width: rempx(500);
+    height: auto;
+    width: auto;
     margin-right: rempx(40);
-  }
-
-  .image-project-bantam {
-    height: rempx(580);
   }
 
   // Project Images
   
-  .flex-images {
+  .flex-images-bld {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: rempx(40);
@@ -609,9 +667,49 @@ hr {
 
   }
 
+  // Widths
+  
+  // .image-width-75 {
+  //   width: 75%;
+  // }
+  
+  // .image-width-66 {
+  //   width: 66%;
+  // }
+
+  .image-width-40 {
+    width: 70%;
+    margin: 0;
+    margin-bottom: rempx(40);
+
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
+  
+  }
+  
+  // .image-width-33 {
+  //   width: 33%;
+  // }
+  
+  // .image-width-25 {
+  //   width: 25%;
+  // }
+
+  // end widths
+
+  .pp-ts-bld {
+    min-width: rempx(380);
+    max-width: rempx(380);
+    margin-right: rempx(0);
+    margin-bottom: rempx(20);
+  }
+
   .pp-ts {
-    justify-content: center;
-    max-width: rempx(370);
+    min-width: rempx(380);
     margin-right: rempx(0);
     margin-bottom: rempx(20);
   }
@@ -623,6 +721,18 @@ hr {
 
   .center-bg {
     margin: 0 auto;
+  }
+
+  // Bld Images
+
+  // Bantam Images
+
+  .image10 {
+    display: block;
+  }
+
+  .image15 {
+    display: none;
   }
 
 }
@@ -650,10 +760,14 @@ hr {
     margin-top: rempx(15);
   }
 
+  // Bantam Images
+
+  .image10 {
+    display: none;
+  }
+
   .image15 {
-    max-height: rempx(643);
-    width: auto;
-    height: auto;
+    display: block;
   }
 
 }
@@ -671,10 +785,26 @@ hr {
     margin-top: rempx(15);
   }
 
-  .image15 {
-    max-height: rempx(440);
-    width: auto;
-    height: auto;
+  // Width
+
+  .image-width-40 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: rempx(40);
+
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
+  
+  }
+
+  // Bantam Images
+
+  .image10 {
+    display: none;
   }
   
 }
@@ -701,6 +831,7 @@ hr {
 
   .project-nav {
     margin-left: rempx(0);
+    margin-bottom: rempx(80);
   }
 
   .nav-parent {
@@ -731,7 +862,7 @@ hr {
   .project-page-title-description {
     display: flex;
     flex-wrap: wrap;
-
+    margin-bottom: rempx(60);
   }
   
   .project-page-p {
@@ -764,73 +895,54 @@ hr {
     opacity: 1;
   }
 
+  .pp-ts-bld {
+    margin-left: rempx(-3);
+    margin-right: rempx(0);
+    min-width: rempx(280);
+    max-width: rempx(280);
+  }
+
   .pp-ts {
-    padding-left: rempx(30);
-    margin-right: rempx(30);
-    max-width: rempx(400);
-    min-width: rempx(200);
+    margin-left: rempx(-3);
+    margin-right: rempx(0);
+    min-width: rempx(280);
   }
 
   .pp-title {
-    padding-left: rempx(20);
+    padding-left: rempx(0);
     max-width: rempx(400);
     min-width: rempx(200);
     line-height: rempx(38);
   }
 
   .pp-sub-text {
-    padding-left: rempx(20);
+    padding-left: rempx(1);
   }
 
   // Image Specific
 
-  .flex-images {
+  .flex-images-bld {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: rempx(40);
     padding-left: rempx(15);
+    max-width: rempx(375);
+    min-width: rempx(375);
 
   }
 
   .image-project-page {
-    height: rempx(500);
     margin-right: rempx(15);
   }
 
-  .image4 {
-    max-width: rempx(343);
-    width: auto;
-    height: auto;
-  }
-
-  .image5 {
-    max-width: rempx(343);
-    width: auto;
-    height: auto;
-  }
-
-  .image6 {
-    max-width: rempx(343);
-    width: auto;
-    height: auto;
-  }
-
-  .image7 {
-    max-width: rempx(343);
-    width: auto;
-    height: auto;
-  }
+  // Bantam Images
 
   .image10 {
-    max-width: rempx(843);
-    width: auto;
-    height: auto;
+    display: none;
   }
 
   .image15 {
-    max-height: rempx(843);
-    width: auto;
-    height: auto;
+    display: flex;
   }
 
   .nav-item {

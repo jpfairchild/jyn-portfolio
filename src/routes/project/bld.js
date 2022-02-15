@@ -27,7 +27,7 @@ function Bld() {
 
       <div className='row project-page-title-description justify-content-center w-100'>
 
-        <div className='pp-ts'>
+        <div className='pp-ts-bld'>
           <h1 className='pp-title mr-md-40'>Worker Management App</h1>
           <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
         </div>
@@ -50,10 +50,10 @@ function Bld() {
           </div>
         </div>
 
-        <div className='flex-images'>
+        <div className='flex-images-bld'>
             <img className='image-project-page mr-lg-40 mb-40' src={image1} alt='image1'/>
             <img className='image-project-page mr-lg-40 mb-40' src={image2} alt='image2'/>
-            <img className='image-project-page mr-lg-40 mb-40' src={image3} alt='image3'/>
+            <img className='image-project-page mr-lg-40 mb-40 image3' src={image3} alt='image3'/>
             <img className='image-project-page mr-lg-40 mb-40 image4' src={image4} alt='image4'/>
         </div>
         
@@ -67,8 +67,8 @@ function Bld() {
       {/* ------ 2nd of Mocks ------ */}
       <div className='row image-set m-10 m-lg-10'>
 
-        <div className='flex-images'>
-            <img className='image-project-page mr-lg-40 mb-40 image5' src={image5} alt='image5'/>
+        <div className='flex-images-bld'>
+            <img className='mr-lg-40 mb-40 image5' src={image5} alt='image5'/>
         </div>
         
       </div>
@@ -82,7 +82,7 @@ function Bld() {
 
       {/* ------ 3rd of Mocks ------ */}
       <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images'>
+        <div className='flex-images-bld'>
             <img className='image-project-page mr-lg-40 mb-40 image6' src={image6} alt='image6'/>
             <img className='image-project-page mr-lg-40 mb-40 image7' src={image7} alt='image7'/>
         </div>
@@ -96,23 +96,25 @@ function Bld() {
           <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
         </div>
 
-        <p className='project-page-p mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
+        <p className='project-page-p mb-60 mr-lg-60'>I think engineers get a bad rep with the design community for 
           implimenting designs poorly. This is half true, but often I find designers aren&#x27;t 
           communicating well, having checkins during the engineering team during the coding process 
           and made zero specs around their designs.</p>
 
-        <p className='project-page-p mb-60'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
+        <p className='project-page-p mr-30 mb-60'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
         blueprints and then when something is off, you can pull up the spec and it acts as almost a 
         contract that you can hold the engineer too.</p>
       </div>
 
       {/* ------ 4th of Mocks ------ */}
       <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images'>
+        <div className='flex-images-bld'>
             <img className='image-project-page mr-lg-40 mb-40 image8' src={image8} alt='image8'/>
             <img className='image-project-page mr-lg-40 mb-40 image9' src={image9} alt='image9'/>
         </div>
       </div>
+
+      <div className='mb-100'></div>
 
       <Footer />
     </div>
