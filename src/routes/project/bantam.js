@@ -7,19 +7,19 @@ import '../../styles/app.scss';
 import flurish from "../../illustrations/flurish_lines.svg";
 
 // Images
-import image10 from '../../images/bantam_overview.png';
-import image11 from '../../images/bantam_material.png';
-import image12 from '../../images/bantam_initial.png';
-import image13 from '../../images/bantam_probe.png';
-import image14 from '../../images/bantam_illustrations.png';
-import image15 from '../../images/bantam_overview_small.png';
-import v1 from '../../images/bantam_v1.png';
-import v2 from '../../images/bantam_v2.png';
-import v3 from '../../images/bantam_v3.png';
-import image19 from '../../images/bantam_feed.png';
-import image20 from '../../images/bantam_feed_expanded.png';
-import image21 from '../../images/bantam_spec.png';
-import image22 from '../../images/bantam_spec2.png';
+import OverviewLarge from '../../images/bantam_overview.png';
+import OverviewSmall from '../../images/bantam_overview_small.png';
+import BantamMaterial from '../../images/bantam_material.png';
+import BantamInitial from '../../images/bantam_initial.png';
+import BantamProbe from '../../images/bantam_probe.png';
+import BantamIllustrations from '../../images/bantam_illustrations.png';
+import BantamV1 from '../../images/bantam_v1.png';
+import BantamV2 from '../../images/bantam_v2.png';
+import BantamV3 from '../../images/bantam_v3.png';
+import BantamFeed from '../../images/bantam_feed.png';
+import BantamFeedExpaneded from '../../images/bantam_feed_expanded.png';
+import BantamSpec1 from '../../images/bantam_spec.png';
+import BantamSpec2 from '../../images/bantam_spec2.png';
 
 
 // Page Function
@@ -53,8 +53,8 @@ function Bantam() {
         <div className='row mb-140'>
 
           <div className='flex-bantam'>
-            <img className=' image-width-100 image10' src={image10} alt='image10'/>
-            <img className=' image-width-100 image15' src={image15} alt='image15'/>
+            <img className=' image-width-100 image10' src={OverviewLarge} alt='image10'/>
+            <img className=' image-width-100 image15' src={OverviewSmall} alt='image15'/>
           </div>
           
         </div>
@@ -75,8 +75,8 @@ function Bantam() {
         <div className='row m-10 m-lg-10 mb-lg-160'>
 
           <div className='flex-bantam'>
-            <img className='image-width-40 mb-60' src={image11} alt='material' />
-            <img className='image-width-40 mb-60' src={image12} alt='initial' />
+            <img className='image-width-40 mb-60' src={BantamMaterial} alt='material' />
+            <img className='image-width-40 mb-60' src={BantamInitial} alt='initial' />
           </div>
           
         </div>
@@ -86,7 +86,7 @@ function Bantam() {
         {/* ------ 3rd set of Mocks ------ */}
         <div className='row m-10 m-lg-10'>
           <div className='flex-bantam'>
-              <img className='image-width-100 mb-lg-240 mb-100' src={image14} alt='image14'/>
+              <img className='image-width-100 mb-lg-240 mb-100' src={BantamIllustrations} alt='image14'/>
           </div>
         </div>
 
@@ -114,9 +114,9 @@ function Bantam() {
         <div className='row m-10 m-lg-10 mb-lg-160'>
 
           <div className='flex-bantam'>
-            <img className='image-width-25 mb-60' src={v1} alt='material' />
-            <img className='image-width-25 mb-60' src={v2} alt='initial' />
-            <img className='image-width-25 mb-60' src={v3} alt='initial' />
+            <img className='image-width-25 mb-60' src={BantamV1} alt='material' />
+            <img className='image-width-25 mb-60' src={BantamV2} alt='initial' />
+            <img className='image-width-25 mb-60' src={BantamV3} alt='initial' />
           </div>
           
         </div>
@@ -127,8 +127,8 @@ function Bantam() {
         <div className='row m-10 m-lg-10 mb-lg-160'>
 
           <div className='flex-bantam'>
-            <img className='image-width-40 mb-60' src={image19} alt='material' />
-            <img className='image-width-40 mb-80' src={image20} alt='initial' />
+            <img className='image-width-40 mb-60' src={BantamFeed} alt='material' />
+            <img className='image-width-40 mb-80' src={BantamFeedExpaneded} alt='initial' />
           </div>
 
         </div>
@@ -158,8 +158,8 @@ function Bantam() {
         <div className='row m-10 m-lg-10 mb-lg-40'>
 
           <div className='flex-bantam'>
-            <img className='image-width-40 mb-60' src={image21} alt='material' />
-            <img className='image-width-40 mb-60' src={image22} alt='initial' />
+            <img className='image-width-40 mb-60' src={BantamSpec1} alt='material' />
+            <img className='image-width-40 mb-60' src={BantamSpec2} alt='initial' />
           </div>
 
         </div>
