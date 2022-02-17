@@ -9,7 +9,7 @@ export function Footer() {
       <footer className='nav-parent'>
         <div className='arriflex'></div>
 
-        <div className='d-flex flex-column flex-lg-row pb-30 pb-lg-50 mr-lg-50 justify-content-center'>
+        <div className='d-flex flex-column flex-lg-row pb-100 pb-lg-140 mr-lg-50 justify-content-center'>
           <div className="web-nav nav-parent pt-lg-20">
             <Link exact to='/'  className='nav-item'>
               HOME

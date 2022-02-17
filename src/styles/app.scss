@@ -309,13 +309,6 @@ p {
   margin: 0 auto;
   font-size: rempx(14);
   line-height: rempx(26);
-
-  // Padding
-  max-width: rempx(380);
-  min-width: rempx(370);
-  margin-top: rempx(100);
-  margin-bottom: rempx(100);
-  opacity: 1;
 }
 
 .project-double-text {
@@ -323,14 +316,6 @@ p {
   margin: 0 auto;
   font-size: rempx(14);
   line-height: rempx(26);
-
-  // Padding
-  max-width: rempx(1080);
-  min-width: rempx(370);
-  padding-left: rempx(0);
-  margin-top: rempx(200);
-  margin-bottom: rempx(140);
-  opacity: 1;
 }
 
 .project-page-title-description {
@@ -533,7 +518,7 @@ hr {
 }
 
 .image-width-100 {
-  width: 100%;
+  width: 95%;
 }
 
 .image-width-75 {
@@ -545,22 +530,49 @@ hr {
 }
 
 .image-width-40 {
-  width: calc(40% - 40px);
+  width: calc(40% - 60px);
+  height: auto;
 
   &:first-child {
-    margin-right: rempx(20);
+    margin-right: rempx(30);
   }
   &:last-child {
-    margin-left: rempx(20);
+    margin-left: rempx(30);
   }
 }
 
 .image-width-33 {
   width: 33%;
+
+  &:first-child {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child {
+    margin-right: rempx(30);
+  }
+
+  &:last-child {
+    margin-left: rempx(30);
+  }
+
 }
 
 .image-width-25 {
   width: 25%;
+
+  &:first-child {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child {
+    margin-right: rempx(30);
+  }
+
+  &:last-child {
+    margin-left: rempx(30);
+  }
+
 }
 
 .bantam-illustrations {
@@ -576,9 +588,9 @@ hr {
 }
 
 .flex-bantam {
-  background-color: $sf-bg-dark;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
 
 }
@@ -616,6 +628,10 @@ hr {
 
   .image15 {
     display: none;
+  }
+
+  .image-width-100 {
+    width: 85%;
   }
 
 }
@@ -678,17 +694,14 @@ hr {
   // }
 
   .image-width-40 {
-    width: 70%;
-    margin: 0;
-    margin-bottom: rempx(40);
-
+    width: calc(40% - 60px);
+  
     &:first-child {
-      margin-right: 0;
+      margin-right: rempx(30);
     }
     &:last-child {
-      margin-left: 0;
+      margin-left: rempx(30);
     }
-  
   }
   
   // .image-width-33 {
@@ -739,7 +752,7 @@ hr {
 
 // ---------- End of Svgs ---------- //
 
-@media (max-width: 802px) {
+@media (max-width: 810px) {
 
   .svglines {
     display: none;
@@ -768,6 +781,35 @@ hr {
 
   .image15 {
     display: block;
+  }
+
+  // Width
+
+  .image-width-40 {
+    width: 60%;
+  
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+
+  .image-width-25 {
+    width: 40%;
+  
+    &:first-child {
+      margin-right: rempx(30);
+    }
+
+    &:nth-child {
+      margin-right: rempx(30);
+    }
+
+    &:last-child {
+      margin-left: rempx(30);
+    }
   }
 
 }
@@ -801,6 +843,23 @@ hr {
   
   }
 
+  .image-width-25 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: rempx(40);
+
+    &:first-child {
+      margin-right: 0;
+    }
+  
+    &:nth-child {
+      margin-right: 0;
+    }
+  
+    &:last-child {
+      margin-left: 0;
+    }
+  }
   // Bantam Images
 
   .image10 {
@@ -878,8 +937,8 @@ hr {
     line-height: rempx(26);
   
     // Padding
-    max-width: rempx(380);
-    min-width: rempx(370);
+    max-width: rempx(375);
+    min-width: rempx(375);
     padding-left: rempx(0);
     margin-top: rempx(100);
     margin-bottom: rempx(100);
