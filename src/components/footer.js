@@ -6,21 +6,20 @@ export function Footer() {
 
   return (
     <>
-      <footer className='nav-parent'>
-        <div className='arriflex'></div>
+      <footer>
 
-        <div className='d-flex flex-column flex-lg-row pb-100 pb-lg-140 mr-lg-50 justify-content-center'>
-          <div className="web-nav nav-parent pt-lg-20">
-            <Link exact to='/'  className='nav-item'>
+        <div className='nav-parent pt-lg-20 pb-100 pb-lg-140 mr-lg-50'>
+
+            <Link exact to='/'  className='nav-item mr-30'>
               HOME
             </Link>
-            <Link exact to='/rating'  className='nav-item'>
+            <Link exact to='/rating'  className='nav-item mr-30'>
               ABOUT
             </Link>
             <Link exact to='/about' className='nav-item'>
               RESUME
             </Link>
-          </div>
+
         </div>
 
       </footer>
