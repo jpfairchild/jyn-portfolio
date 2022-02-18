@@ -325,6 +325,7 @@ p {
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: rempx(160);
+  margin: 0 auto;
 }
 
 .ptable {
@@ -524,12 +525,20 @@ hr {
   width: 95%;
 }
 
+.image-width-90 {
+  width: 85%;
+}
+
 .image-width-75 {
   width: 75%;
 }
 
 .image-width-66 {
   width: 66%;
+}
+
+.image-width-50 {
+  width: 50%;
 }
 
 .image-width-40 {
@@ -582,8 +591,8 @@ hr {
 
 }
 
-.image-width-15 {
-  width: 15%;
+.image-width-20 {
+  width: 20%;
 
   &:first-child {
     margin-right: rempx(30);
@@ -600,13 +609,11 @@ hr {
   &:last-child {
     margin-right: rempx(30);
   }
+
 }
 
-// Bld Height
-// This is used in bld's project page for sets of images
-
-.image-height-50 {
-  height: 32%;
+.image-width-15 {
+  width: 15%;
 
   &:first-child {
     margin-right: rempx(30);
@@ -629,6 +636,10 @@ hr {
 
 .text-width-100 {
   width: 30%;
+}
+
+.text-width-40 {
+  width: 40%;
 }
 
 .text-width-33 {
@@ -654,11 +665,13 @@ hr {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  align-self: auto;
   justify-content: center;
   background-color: $sf-bg-images;
-  width: 100%;
 
+}
+
+.web-margin-r-pivot {
+  margin-right: rempx(30);
 }
 
 // ---------- Bantam Project Page ---------- //
@@ -713,6 +726,22 @@ hr {
   }
 
   // Widths
+
+  .image-width-51 {
+    width: 51%;
+  
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   .image-width-25 {
     width: 25%;
@@ -776,17 +805,6 @@ hr {
   // .image-width-66 {
   //   width: 66%;
   // }
-
-  .image-width-40 {
-    width: calc(40% - 60px);
-  
-    &:first-child {
-      margin-right: rempx(30);
-    }
-    &:last-child {
-      margin-right: rempx(30);
-    }
-  }
   
   // .image-width-33 {
   //   width: 33%;
@@ -796,13 +814,70 @@ hr {
   //   width: 25%;
   // }
 
+  .image-width-100 {
+    width: 100%;
+  
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .image-width-66 {
+    width: 80%;
+  }
+
+  .image-width-51 {
+    width: 51%;
+  
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .text-width-75 {
+    width: 75%;
+  }
+
+  //bld double line text
+  .text-width-33 {
+    width: 33%;
+
+    &:first-child {
+      margin-right: rempx(0);
+    }
+
+    &:nth-child(2) {
+      margin-right: rempx(60);
+    }
+  }
+
+  .text-width-25 {
+    width: 70%;
+  }
+  
+
   // end widths
 
   .pp-ts-bld {
-    min-width: rempx(380);
-    max-width: rempx(380);
     margin-right: rempx(0);
     margin-bottom: rempx(20);
+    margin: 0 auto;
   }
 
   .pp-ts {
@@ -869,7 +944,55 @@ hr {
     display: block;
   }
 
+  // Bld Project Page
+
+  .flex-images-bld {
+    flex-wrap: wrap;  
+  }
+
+  .pp-ts-bld {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pp-title {
+    width: 51%;
+    max-width: rempx(375);
+    min-width: rempx(375);
+  }
+
+  .pp-sub-text {
+    width: 51%;
+    max-width: rempx(375);
+    min-width: rempx(375);
+  }
+
+  .tablet-margin-pivot {
+    margin-bottom: rempx(30);
+  }
+
+  .990-r {
+    margin-right: rempx(30);
+  }
+
   // Image Width
+
+  .image-width-51 {
+    width: 51%;
+  
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   .image-width-40 {
     width: 60%;
@@ -904,6 +1027,14 @@ hr {
     width: 63%;
   }
 
+  .text-width-66 {
+    width: 70%;
+  }
+
+  .text-width-40 {
+    width: 50%;
+  }
+
   .text-width-33 {
     width: 51%;
   
@@ -915,6 +1046,12 @@ hr {
     }
   }
 
+  // bld project overview text  
+  .text-width-25 {
+    width: 46%;
+
+  }
+
 }
 
 // ---------- Tablet ---------- //
@@ -922,8 +1059,9 @@ hr {
 @media (max-width: 574px) {
 
   .project-page-title-description {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
   }
 
   .nav-parent {
@@ -932,10 +1070,13 @@ hr {
 
   // Width
 
+  .image-width-100 {
+    width: 100%;
+  }
+
   .image-width-40 {
     width: 100%;
     margin: 0;
-    margin-bottom: rempx(40);
 
     &:first-child {
       margin-right: 0;
@@ -949,7 +1090,6 @@ hr {
   .image-width-25 {
     width: 70%;
     margin: 0;
-    margin-bottom: rempx(40);
 
     &:first-child {
       margin-right: 0;
@@ -962,6 +1102,10 @@ hr {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .tablet-margin-pivot {
+    margin-bottom: rempx(30);
   }
 
   // Text Width 
@@ -1089,10 +1233,15 @@ hr {
     max-width: rempx(400);
     min-width: rempx(200);
     line-height: rempx(38);
+    width: auto;
   }
 
   .pp-sub-text {
     padding-left: rempx(1);
+  }
+
+  .pp-sub-text-bld {
+    padding-left: rempx(50);
   }
 
   // Image Specific
@@ -1101,9 +1250,25 @@ hr {
     margin-right: rempx(15);
   }
 
+  .image-width-90 {
+    width: 100%;
+  }
+
+  .image-width-75 {
+    width: 100%;
+  }
+
+  .phone-margin-b-pivot {
+    margin-bottom: rempx(20);
+  }
+
   // Text widths
 
   .text-width-100 {
+    width: 75%;
+  }
+
+  .text-width-75{
     width: 75%;
   }
 
@@ -1116,6 +1281,10 @@ hr {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .web-margin-r-pivot {
+    margin-right: 0;
   }
 
   // Bantam Images

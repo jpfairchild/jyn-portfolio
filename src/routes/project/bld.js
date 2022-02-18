@@ -6,16 +6,28 @@ import '../../styles/app.scss';
 // Svgs
 import flurish from "../../illustrations/flurish_lines.svg";
 
-// Images
-import image1 from '../../images/bld_nav_min.png';
-import image2 from '../../images/bld_nav_max.png';
-import image3 from '../../images/bld_time.png';
-import image4 from '../../images/bld_kanban.png';
-import image5 from '../../images/bld_chat.png';
-import image6 from '../../images/bld_pivot.png';
-import image7 from '../../images/bld_invoice.png';
-import image8 from '../../images/bld_nav_both.png';
-import image9 from '../../images/bld_spec.png';
+// ------ Images
+
+// -- Set 1
+// Combined
+import BldCombined from '../../images/bld_projectimage.png';
+
+// Dobule
+import BldDouble from '../../images/bld_double.png';
+
+// Triple
+import BldNavs from '../../images/bld_navs.png';
+import BldTime from '../../images/bld_time.png';
+import BldKanban from '../../images/bld_kanban.png';
+
+// Set 2, 3, 4,
+import BldChat from '../../images/bld_chat.png';
+import BldPivot from '../../images/bld_pivot.png';
+import BldInvoice from '../../images/bld_invoice.png';
+import BldSpec1 from '../../images/bld_nav_both.png';
+import BldSpec2 from '../../images/bld_spec.png';
+
+
 
 // Page Function
 function Bld() {
@@ -25,14 +37,14 @@ function Bld() {
 
       <Header />
 
-      <div className='row project-page-title-description justify-content-center w-100'>
+      <div className='row project-page-title-description image-width-75 justify-content-center mb-lg-120 mb-100'>
 
-        <div className='pp-ts-bld'>
+        <div className='pp-ts-bld text-width-75 mb-lg-20 mb-20'>
           <h1 className='pp-title'>Worker Management App</h1>
-          <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
+          <h2 className='pp-sub-text pp-sub-text-bld'>ORGANIZE YOUR WORK</h2>
         </div>
 
-        <p className='project-page-p text-width-100'>This project was a worker management tool created  
+        <p className='project-page-p text-width-75'>This project was a worker management tool created  
           for a post covid remote work world. Analogous to  
           And.co, the tool lets you track time, chat, create and 
           assign tasks, invoice clients, form &#38; manage a team.
@@ -41,7 +53,7 @@ function Bld() {
       </div>
 
       {/* ------ 1st of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
+      <div className='row justify-content-center mb-lg-140 mb-80'>
 
         <div className='row flurish-d-none m-20'>
           <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block'>
@@ -50,67 +62,75 @@ function Bld() {
           </div>
         </div>
 
-        <div className='flex-images-bld pt-30'>
-            <img className='image-height-50' src={image1} alt='image1'/>
-            <img className='image-height-50' src={image2} alt='image2'/>
-            <img className='image-height-50' src={image3} alt='image3'/>
-            <img className='image-height-50' src={image4} alt='image4'/>
+        <div className='flex-images-bld image-width-90 d-none d-sm-none d-md-none d-lg-block d-xl-block p-30'>
+          <img className='w-100' src={BldCombined} alt='image1'/>
+        </div>
+
+        <div className='flex-images-bld text-center image-width-100 d-none d-sm-none d-md-block d-lg-none d-xl-none p-30'>
+          <img className='image-width-33 pb-30' src={BldNavs} alt='image1'/>
+          <img className='image-width-100' src={BldDouble} alt='image1'/>
+        </div>
+
+        <div className='flex-images-bld text-center image-width-100 d-block d-sm-block d-md-none d-lg-none d-xl-none p-20'>
+          <img className='image-width-100 pb-20' src={BldNavs} alt='image1'/>
+          <img className='image-width-100 pb-20' src={BldTime} alt='image1'/>
+          <img className='image-width-100' src={BldKanban} alt='image1'/>
         </div>
         
       </div>
 
       {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100'>
-        <p className='project-page-p'>Time Tracking, Kanban, Chat, Mentions, oh my. This is some more text</p>
+      <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-80'>
+        <p className='project-page-p'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
       </div>
       
       {/* ------ 2nd of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
+      <div className='row image-set justify-content-center mb-lg-140 mb-100'>
 
-        <div className='flex-images-bld'>
-            <img className='mr-lg-40 mb-40 image5' src={image5} alt='image5'/>
+        <div className='flex-images-bld image-width-75 p-20'>
+            <img className='w-100' src={BldChat} alt='bldchatimage'/>
         </div>
         
       </div>
 
       {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100'>
-        <p className='project-page-p'>Revenue breakdown by project, by month, by person. 
+      <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-100'>
+        <p className='project-page-p text-width-100'>Revenue breakdown by project, by month, by person. 
           Blended rate next to the original estimate was a common ask from clients. Invoicing panel 
           making invoicing simple and easy.</p>
       </div>
 
       {/* ------ 3rd of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images-bld'>
-            <img className='image-project-page mr-lg-40 mb-40 image6' src={image6} alt='image6'/>
-            <img className='image-project-page mr-lg-40 mb-40 image7' src={image7} alt='image7'/>
+      <div className='row image-set justify-content-center mb-lg-240 mb-200'>
+        <div className='flex-images-bld image-width-90 p-20 p-lg-30'>
+            <img className='image-width-100 tablet-margin-b-pivot phone-margin-b-pivot web-margin-r-pivot' src={BldPivot} alt='pivot'/>
+            <img className='image-width-50' src={BldInvoice} alt='invoice'/>
         </div>
       </div>
 
       {/* Text Paragraph */}
-      <div className='row project-double-text justify-content-center w-100'>
+      <div className='row project-double-text justify-content-center w-100 mb-lg-200 mb-120'>
 
         <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mr-lg-40'>
           <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
           <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
         </div>
 
-        <p className='project-page-p mb-60 mr-lg-60'>I think engineers get a bad rep with the design community for 
-          implimenting designs poorly. This is half true, but often I find designers aren&#x27;t 
-          communicating well, having checkins during the engineering team during the coding process 
-          and made zero specs around their designs.</p>
+        <p className='project-page-p text-width-33 mb-60 mr-lg-80'>I think engineers get a bad rep 
+          with the design community for implimenting designs poorly. This is half true, but often I 
+          find designers aren&#x27;t communicating well, having checkins during the engineering team 
+          during the coding process and made zero specs around their designs.</p>
 
-        <p className='project-page-p mr-30 mb-60'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
-        blueprints and then when something is off, you can pull up the spec and it acts as almost a 
-        contract that you can hold the engineer too.</p>
+        <p className='project-page-p text-width-33 mb-60 mr-lg-80'>I&#x27;m a huge fan on making specs 
+          for engineers. Often specs act as blueprints and then when something is off, you can pull 
+          up the spec and it acts as almost a contract that you can hold the engineer too.</p>
       </div>
 
       {/* ------ 4th of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images-bld'>
-            <img className='image-project-page mr-lg-40 mb-40 image8' src={image8} alt='image8'/>
-            <img className='image-project-page mr-lg-40 mb-40 image9' src={image9} alt='image9'/>
+      <div className='row image-set justify-content-center'>
+        <div className='flex-images-bld image-width-50 p-lg-30 p-20'>
+            <img className='image-width-50 pr-40 pb-40 pb-lg-none' src={BldSpec1} alt='image8'/>
+            <img className='image-width-50 pb-20 pb-lg-none' src={BldSpec2} alt='image9'/>
         </div>
       </div>
 
