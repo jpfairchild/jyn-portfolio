@@ -30,9 +30,9 @@ function Bantam() {
 
       <Header />
 
-      <div className='row project-page-title-description justify-content-center'>
+      <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 
-        <div className='pp-ts'>
+        <div className='pp-ts text-width-100'>
           <h1 className='pp-title'>Bantam Tools</h1>
           <h2 className='pp-sub-text'>THROUGH ALUMINUM LIKE BUTTER</h2>
         </div>
@@ -100,11 +100,11 @@ function Bantam() {
             <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
           </div>
 
-          <p className='project-page-p text-width-33 mb-60 mr-lg-80'>Bantam was a great partner to work with because they knew what 
+          <p className='project-page-p text-width-51 mb-60 mr-lg-80'>Bantam was a great partner to work with because they knew what 
             they wanted to be done, but also where they wanted to focus in the future. In certain areas of the app I 
             gave them minimal viable product designs, but also future versions.</p>
 
-          <p className='project-page-p text-width-33 mb-120 mb-lg-240'>Additional features fully ready for implementation when engineers have 
+          <p className='project-page-p text-width-51 mb-120 mb-lg-240'>Additional features fully ready for implementation when engineers have 
             time, but things that didn&#x27;t need to be part of the first iteration. </p>
         </div>
 
@@ -143,11 +143,11 @@ function Bantam() {
             <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
           </div>
 
-          <p className='project-page-p text-width-33 mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
+          <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
             implimenting designs poorly. This is only half true... often I find designers aren&#x27;t communicating with the 
           engineering team during the coding process and/or  making zero specs around their designs.</p>
 
-          <p className='project-page-p text-width-33 mb-60 mb-lg-160 mb-100'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
+          <p className='project-page-p text-width-51 mb-60 mb-lg-160 mb-100'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
             blueprints and then when something is off, you can pull up the spec and it acts as almost a contract that you 
             can hold the engineer too.</p>
         </div>

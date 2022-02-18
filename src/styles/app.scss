@@ -57,7 +57,7 @@ a {
 .navbar {
   font-family: $font-family-opensans;
   flex-wrap: inherit;
-  margin-right: rempx(30);
+  margin-right: rempx(10);
 }
 
 .navbar-brand {
@@ -76,6 +76,7 @@ a {
   font-size: rempx(11);
   letter-spacing: rempx(2);
   opacity: 1;
+  margin-right: rempx(40);
 
   &.active {
     font-weight: 400;
@@ -238,10 +239,6 @@ h1 {
   font-family: $font-family-opensans;
   font-weight: 800;
   font-size: rempx(24);
-}
-
-.pp-ts-bld {
-  margin-right: rempx(80);
 }
 
 .pp-ts {
@@ -638,6 +635,14 @@ hr {
   width: 30%;
 }
 
+.text-width-51 {
+  width: 30%;
+}
+
+.text-width-50 {
+  width: 30%;
+}
+
 .text-width-40 {
   width: 40%;
 }
@@ -818,7 +823,7 @@ hr {
     width: 100%;
   
     &:first-child {
-      margin-right: 0;
+      margin-right: rempx(30);
     }
 
     &:nth-child(2) {
@@ -851,7 +856,20 @@ hr {
   }
 
   .text-width-75 {
-    width: 75%;
+    width: 51%;
+  }
+
+  .text-width-51 {
+    width: 30%;
+
+    &:nth-child(2) {
+      margin-right: rempx(60);
+    }
+
+  }
+
+  .text-width-50 {
+    width: 50%;
   }
 
   //bld double line text
@@ -874,12 +892,6 @@ hr {
 
   // end widths
 
-  .pp-ts-bld {
-    margin-right: rempx(0);
-    margin-bottom: rempx(20);
-    margin: 0 auto;
-  }
-
   .pp-ts {
     min-width: rempx(380);
     margin-right: rempx(0);
@@ -893,6 +905,10 @@ hr {
 
   .center-bg {
     margin: 0 auto;
+  }
+
+  .web-margin-r-pivot {
+    margin-right: rempx(30);
   }
 
   // Bld Images
@@ -950,12 +966,6 @@ hr {
     flex-wrap: wrap;  
   }
 
-  .pp-ts-bld {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .pp-title {
     width: 51%;
     max-width: rempx(375);
@@ -965,7 +975,7 @@ hr {
   .pp-sub-text {
     width: 51%;
     max-width: rempx(375);
-    min-width: rempx(375);
+    min-width: rempx(320);
   }
 
   .tablet-margin-pivot {
@@ -977,6 +987,14 @@ hr {
   }
 
   // Image Width
+
+  .image-width-100 {
+    width: 100%;
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: rempx(30);
+    }
+  }
 
   .image-width-51 {
     width: 51%;
@@ -1164,6 +1182,20 @@ hr {
     margin-top: rempx(20);
   }
 
+  .navbar {
+    margin-right: rempx(25);
+  }
+
+  .nav-item {
+    margin-bottom: rempx(20);
+    margin-right: rempx(30);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
   // Hero
 
   .svglines_small {
@@ -1215,13 +1247,6 @@ hr {
     opacity: 1;
   }
 
-  .pp-ts-bld {
-    margin-left: rempx(-3);
-    margin-right: rempx(0);
-    min-width: rempx(280);
-    max-width: rempx(280);
-  }
-
   .pp-ts {
     margin-left: rempx(-3);
     margin-right: rempx(0);
@@ -1258,6 +1283,10 @@ hr {
     width: 100%;
   }
 
+  .image-width-50 {
+    width: 100%;
+  }
+
   .phone-margin-b-pivot {
     margin-bottom: rempx(20);
   }
@@ -1270,6 +1299,15 @@ hr {
 
   .text-width-75{
     width: 75%;
+  }
+
+  .text-width-51 {
+    width: 80%;
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  
   }
 
   .text-width-33 {
@@ -1295,15 +1333,6 @@ hr {
 
   .image15 {
     display: flex;
-  }
-
-  .nav-item {
-    margin-bottom: rempx(20);
-    opacity: .5;
-  
-    &.active {
-      opacity: 1;
-    }
   }
 
   .movie-card {

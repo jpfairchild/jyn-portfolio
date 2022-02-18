@@ -37,14 +37,14 @@ function Bld() {
 
       <Header />
 
-      <div className='row project-page-title-description image-width-75 justify-content-center mb-lg-120 mb-100'>
+      <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 
-        <div className='pp-ts-bld text-width-75 mb-lg-20 mb-20'>
-          <h1 className='pp-title'>Worker Management App</h1>
-          <h2 className='pp-sub-text pp-sub-text-bld'>ORGANIZE YOUR WORK</h2>
+        <div className='pp-ts text-width-100'>
+          <h1 className='pp-title mr-20'>Freelance Management</h1>
+          <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
         </div>
 
-        <p className='project-page-p text-width-75'>This project was a worker management tool created  
+        <p className='project-page-p text-width-100'>This project was a worker management tool created  
           for a post covid remote work world. Analogous to  
           And.co, the tool lets you track time, chat, create and 
           assign tasks, invoice clients, form &#38; manage a team.
@@ -81,7 +81,7 @@ function Bld() {
 
       {/* Text Paragraph */}
       <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-80'>
-        <p className='project-page-p'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
+        <p className='project-page-p text-width-100'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
       </div>
       
       {/* ------ 2nd of Mocks ------ */}
@@ -111,17 +111,17 @@ function Bld() {
       {/* Text Paragraph */}
       <div className='row project-double-text justify-content-center w-100 mb-lg-200 mb-120'>
 
-        <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mr-lg-40'>
+        <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
           <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
           <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
         </div>
 
-        <p className='project-page-p text-width-33 mb-60 mr-lg-80'>I think engineers get a bad rep 
+        <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep 
           with the design community for implimenting designs poorly. This is half true, but often I 
           find designers aren&#x27;t communicating well, having checkins during the engineering team 
           during the coding process and made zero specs around their designs.</p>
 
-        <p className='project-page-p text-width-33 mb-60 mr-lg-80'>I&#x27;m a huge fan on making specs 
+        <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I&#x27;m a huge fan on making specs 
           for engineers. Often specs act as blueprints and then when something is off, you can pull 
           up the spec and it acts as almost a contract that you can hold the engineer too.</p>
       </div>
