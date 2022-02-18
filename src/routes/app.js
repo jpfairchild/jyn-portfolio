@@ -34,7 +34,7 @@ function App() {
                   <Route exact path='/about' component={About} />
                   <Route exact path='/resume' component={Resume} />
 
-                  {/* Expose all routes underneath /review/<whatever> and load your reviewpage component for that */}
+                  {/* Expose all routes underneath /project/<whatever> and load your project page */}
                   <Route exact path='/project/bld' component={Bld} />
                   <Route exact path='/project/bantam' component={Bantam} />
                   <Route exact path='/project/google' component={Google} />

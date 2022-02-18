@@ -28,11 +28,11 @@ function Bld() {
       <div className='row project-page-title-description justify-content-center w-100'>
 
         <div className='pp-ts-bld'>
-          <h1 className='pp-title mr-md-40'>Worker Management App</h1>
+          <h1 className='pp-title'>Worker Management App</h1>
           <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
         </div>
 
-        <p className='project-page-p'>This project was a worker management tool created  
+        <p className='project-page-p text-width-100'>This project was a worker management tool created  
           for a post covid remote work world. Analogous to  
           And.co, the tool lets you track time, chat, create and 
           assign tasks, invoice clients, form &#38; manage a team.
@@ -50,11 +50,11 @@ function Bld() {
           </div>
         </div>
 
-        <div className='flex-images-bld'>
-            <img className='image-project-page mr-lg-40 mb-40' src={image1} alt='image1'/>
-            <img className='image-project-page mr-lg-40 mb-40' src={image2} alt='image2'/>
-            <img className='image-project-page mr-lg-40 mb-40 image3' src={image3} alt='image3'/>
-            <img className='image-project-page mr-lg-40 mb-40 image4' src={image4} alt='image4'/>
+        <div className='flex-images-bld pt-30'>
+            <img className='image-height-50' src={image1} alt='image1'/>
+            <img className='image-height-50' src={image2} alt='image2'/>
+            <img className='image-height-50' src={image3} alt='image3'/>
+            <img className='image-height-50' src={image4} alt='image4'/>
         </div>
         
       </div>

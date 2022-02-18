@@ -514,9 +514,6 @@ hr {
   padding: rempx(20);
 }
 
-// ---------- Bld Project Page ---------- //
-
-
 // Image widths
 
 .image-project-page {
@@ -575,10 +572,57 @@ hr {
     margin-right: rempx(30);
   }
 
+  &:nth-child(3) {
+    margin-right: rempx(30);
+  }
+
   &:last-child {
     margin-right: rempx(30);
   }
 
+}
+
+.image-width-15 {
+  width: 15%;
+
+  &:first-child {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child(2) {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child(3) {
+    margin-right: rempx(30);
+  }
+
+  &:last-child {
+    margin-right: rempx(30);
+  }
+}
+
+// Bld Height
+// This is used in bld's project page for sets of images
+
+.image-height-50 {
+  height: 32%;
+
+  &:first-child {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child(2) {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child(3) {
+    margin-right: rempx(30);
+  }
+
+  &:last-child {
+    margin-right: rempx(30);
+  }
 }
 
 // Text Widths
@@ -604,16 +648,23 @@ hr {
 
 }
 
-.bantam-illustrations {
-  max-width: rempx(900);
-}
+// ---------- Bld Project Page ---------- //
 
 .flex-images-bld {
   display: flex;
   flex-flow: row nowrap;
-  background-color: $sf-bg-images;
+  align-items: flex-start;
+  align-self: auto;
   justify-content: center;
+  background-color: $sf-bg-images;
+  width: 100%;
 
+}
+
+// ---------- Bantam Project Page ---------- //
+
+.bantam-illustrations {
+  max-width: rempx(900);
 }
 
 .flex-bantam {
@@ -623,8 +674,6 @@ hr {
   justify-content: center;
 
 }
-
-// ---------- Bantam Project Page ---------- //
 
 .image10 {
   display: block;
@@ -710,20 +759,11 @@ hr {
   }
 
   // Project Images
-  
-  .flex-images-bld {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: rempx(40);
-
-  }
 
   .project-page-title-description {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: rempx(600);
-    margin-bottom: rempx(100);
 
   }
 
@@ -1056,16 +1096,6 @@ hr {
   }
 
   // Image Specific
-
-  .flex-images-bld {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: rempx(40);
-    padding-left: rempx(15);
-    max-width: rempx(375);
-    min-width: rempx(375);
-
-  }
 
   .image-project-page {
     margin-right: rempx(15);

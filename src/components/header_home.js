@@ -27,10 +27,10 @@ export function Header() {
               </div> */}
 
               <div className="web-nav nav-parent pt-lg-20">
-                <NavLink exact to='/rating'  className='nav-item'>
+                <NavLink exact to='/rating'  className='nav-item mr-40'>
                   ABOUT
                 </NavLink>
-                <NavLink exact to='/about' className='nav-item'>
+                <NavLink exact to='/about' className='nav-item mr-40'>
                   RESUME
                 </NavLink>
               </div>
