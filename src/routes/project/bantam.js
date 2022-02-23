@@ -4,7 +4,7 @@ import { Header } from '../../components/header_project';
 import '../../styles/app.scss';
 
 // Svgs
-import flurish from "../../illustrations/flurish_lines.svg";
+import flurish from "../../svgs/flurish_lines.svg";
 
 // Images
 import OverviewLarge from '../../images/bantam_overview.png';

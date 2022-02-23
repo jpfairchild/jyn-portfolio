@@ -7,10 +7,10 @@ import { ProjectCard } from '../components/projectcard';
 import projectOrder from "../json/_projectOrder.json";
 
 //svgs
-import heroLines from "../illustrations/home_lines.svg";
-import smallHeroLines from "../illustrations/home_small_lines.svg";
-import namelines from "../illustrations/name_lines.svg";
-import flurish from "../illustrations/flurish_lines.svg";
+import heroLines from "../svgs/home_lines.svg";
+import smallHeroLines from "../svgs/home_small_lines.svg";
+import namelines from "../svgs/name_lines.svg";
+import flurish from "../svgs/flurish_lines.svg";
 
 function Home() {
 
@@ -64,7 +64,7 @@ function Home() {
 
           <div className='d-lg-none phone-between-padding'></div>
           
-          <Link className='flex-child-66' to={'./project/bantam' + projectOrder.mostRecent[3]}>
+          <Link className='flex-child-66' to={'./project/' + projectOrder.mostRecent[3]}>
             <ProjectCard projectName={projectOrder.mostRecent[3]}/>
           </Link>
 
