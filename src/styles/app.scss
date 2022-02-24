@@ -2,7 +2,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'normalize.css';
-@import '~bootstrap/scss/bootstrap.scss'; 
+@import '~bootstrap/scss/bootstrap.scss';
 
 
 //Essentials
@@ -182,6 +182,90 @@ a {
   margin-left: rempx(45);
   margin-top: rempx(110);
 }
+
+.rounded-corner {
+  border-radius: rempx(6);
+}
+
+// Zoom
+// -------
+:root {
+  --arrow-font-size: 30px;
+  --arrow-color: #000000;
+  --arrow-color-lightbox: #ffffff;
+}
+
+.XXXXX__slide img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.slick-slider:not(.hero__slider) .slick-prev + .slick-list .slick-slide {
+  padding: 0 35px;
+}
+
+.slick-slider:not(.hero__slider) .slick-prev:before,
+.slick-slider:not(.hero__slider) .slick-next:before {
+  font-size: var(--arrow-font-size);
+  color: var(--arrow-color);
+}
+
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-prev:before,
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-next:before {
+  color: var(--arrow-color-lightbox);
+}
+
+.slick-slider:not(.hero__slider) .slick-prev,
+.slick-slider:not(.hero__slider) .slick-next {
+  height: initial;
+  width: initial;
+  z-index: 4;
+}
+
+.slick-slider:not(.hero__slider) .slick-prev {
+  left: 0;
+}
+
+.slick-slider:not(.hero__slider) .slick-next {
+  right: 0;
+}
+
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-prev {
+  left: 15px;
+}
+
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-next {
+  right: 15px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .slick-slider:not(.hero__slider) .slick-prev + .slick-list .slick-slide {
+      padding: 0;
+  }
+
+  .slick-slider:not(.hero__slider) .slick-prev {
+      left: unset;
+      right: calc(100% + 30px);
+  }
+
+  .slick-slider:not(.hero__slider) .slick-next {
+      left: calc(100% + 30px);
+      right: unset;
+  }
+
+  .slick-lightbox .slick-slider:not(.hero__slider) .slick-prev {
+      left: 30px;
+      right: unset;
+  }
+
+  .slick-lightbox .slick-slider:not(.hero__slider) .slick-next {
+      right: 30px;
+      left: unset;
+  }
+}
+
+// End
+
 
 // Hero on Home Text
 
@@ -673,6 +757,14 @@ hr {
   justify-content: center;
   background-color: $sf-bg-images;
 
+}
+
+.flex-images-illustrations {
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  
 }
 
 .web-margin-r-pivot {

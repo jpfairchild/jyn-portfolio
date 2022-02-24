@@ -13,7 +13,8 @@ function importAll(r) {
   let images = {};
   console.log('r', r);
   r.keys().map((item) => { 
-    images[item.replace('./', '')] = r(item); 
+    images[item.replace('./', '')] = r(item);
+    return false;
   });
   return images;
 }
@@ -24,9 +25,10 @@ images = importAll(require.context('../../illustrations', false, /\.(png|jpe?g|s
 
 
 // Page Function
-function illustrations() {
+function Illustrations() {
+  
 
-  console.log("object", images)
+  // console.log("object", images)
 
   return (
     <div className="container">
@@ -48,16 +50,14 @@ function illustrations() {
       </div>
 
       {/* ------ 1st of Mocks ------ */}
-      <div className='row justify-content-center mb-lg-140 mb-80'>
+      <div className='row XXXXX justify-content-center mb-lg-140 mb-80'>
+        <div className='XXXXX__slider flex-images-illustrations w-100 rounded-corner'>
 
-        <div className='flex-images image-width-90 p-30'>
-        
-        {Object.keys(images).map((fileName) => {
-          return <img key={fileName} className='image-width-100' src={images[fileName]} alt={fileName}/>;
-        })}
+            {Object.keys(images).map((fileName) => {
+              return <img key={fileName} className='image-width-50 XXXXX__slide' src={images[fileName]} alt={fileName}/>;
+            })}
 
         </div>
-        
       </div>
 
       <div className='mb-100'></div>
@@ -67,4 +67,4 @@ function illustrations() {
   );
 }
 
-export default illustrations;
+export default Illustrations;
