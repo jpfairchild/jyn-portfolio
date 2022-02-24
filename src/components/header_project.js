@@ -16,7 +16,7 @@ export function Header() {
 
             <nav className="navbar project-nav navbar-light">
 
-              <Link exact to='/' className=''>
+              <Link to='/'>
               <img className='pt-20 pl-10' src={personalLogo} alt='' />
               </Link>
 
@@ -25,10 +25,10 @@ export function Header() {
               </div> */}
 
               <div className="web-nav nav-parent pt-lg-20">
-                <NavLink exact to='/rating'  className='nav-item'>
+                <NavLink to='/rating'  className='nav-item'>
                   ABOUT
                 </NavLink>
-                <NavLink exact to='/about' className='nav-item'>
+                <NavLink to='/about' className='nav-item'>
                   RESUME
                 </NavLink>
               </div>
