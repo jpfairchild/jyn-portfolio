@@ -25,10 +25,10 @@ export function Header() {
               </div> */}
 
               <div className="web-nav nav-parent pt-lg-20">
-                <NavLink to='/rating'  className='nav-item'>
+                <NavLink to='/about'  className='nav-item'>
                   ABOUT
                 </NavLink>
-                <NavLink to='/about' className='nav-item'>
+                <NavLink to='/resume' className='nav-item'>
                   RESUME
                 </NavLink>
               </div>
