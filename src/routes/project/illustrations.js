@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
-import { Header } from '../../components/header_project';
+import { Header, HeaderProject } from '../../components/header';
 import '../../styles/app.scss';
 
 // Svgs
@@ -33,7 +33,7 @@ function Illustrations() {
   return (
     <div className="container">
 
-      <Header />
+      <HeaderProject />
 
       <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 

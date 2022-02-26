@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Footer } from '../components/footer';
-import { Header } from '../components/header_project';
+import { Footer, FooterResume } from '../components/footer';
+import { HeaderResume } from '../components/header';
 import '../styles/app.scss';
+
+// PDF
+import ResumePDF from "../resume/resume.pdf";
 
 // Svgs
 import flurish from "../svgs/flurish_lines.svg";
@@ -20,7 +23,7 @@ function Resume() {
   return (
     <div className="container">
 
-      <Header />
+      <HeaderResume />
 
       {/* Title & Description */}
 
@@ -29,6 +32,7 @@ function Resume() {
         <div className='pp-ts-resume'>
           <h1 className='resume-title mr-20'>Resume</h1>
           <h2 className='resume-sub-text'>MAKE GOOD SHIT</h2>
+          <a className='btn my-20' href={ResumePDF} download>Download PDF</a>
         </div>
 
         <p className='project-page-p text-width-100'>I love to be challenged; to think outside the box. 
@@ -41,10 +45,27 @@ function Resume() {
       {/* Skills */}
       <div className='skills mb-lg-140 mb-100'>
         <div className='flex-resume-skill'>
-          <img className='resume-skill' src={ui} alt='ui' />
-          <img className='resume-skill' src={code} alt='code' />
-          <img className='resume-skill' src={illustration} alt='illustration' />
-          <img className='resume-skill' src={animation} alt='animation' />
+
+          <div className='skill-group'>
+            <img className='resume-skill' src={ui} alt='ui' />
+            <h3 className='resume-skill-title'>UX / UI</h3>
+          </div>
+
+          <div className='skill-group'>
+            <img className='resume-skill' src={code} alt='code' />
+            <h3 className='resume-skill-title'>CODE</h3>
+          </div>
+
+          <div className='skill-group'>
+            <img className='resume-skill' src={illustration} alt='illustration' />
+            <h3 className='resume-skill-title'>ILLUSTRATION</h3>
+          </div>
+
+          <div className='skill-group'>
+            <img className='resume-skill' src={animation} alt='animation' />
+            <h3 className='resume-skill-title'>ANIMATION</h3>
+          </div>
+
         </div>
       </div>
 
@@ -118,7 +139,7 @@ function Resume() {
 
       <div className='mb-100'></div>
 
-      <Footer />
+      <FooterResume />
     </div>
   );
 }

@@ -8,15 +8,12 @@ export function Footer() {
     <>
       <footer>
 
-        <div className='nav-parent pt-lg-20 pb-100 pb-lg-140 mr-lg-50'>
+        <div className='nav-parent pt-lg-20 pb-100 pb-lg-140'>
 
-            <Link to='/'  className='nav-item mr-30'>
+            <Link to='/'  className='nav-item'>
               HOME
             </Link>
-            <Link to='/rating'  className='nav-item mr-30'>
-              ABOUT
-            </Link>
-            <Link to='/about' className='nav-item'>
+            <Link to='/resume' className='nav-item'>
               RESUME
             </Link>
 
@@ -26,3 +23,23 @@ export function Footer() {
     </>
   );
 }
+
+export function FooterResume() {
+
+  return (
+    <>
+      <footer>
+
+        <div className='nav-parent pt-lg-20 pb-100 pb-lg-140'>
+
+            <Link to='/'  className='nav-item'>
+              HOME
+            </Link>
+
+        </div>
+
+      </footer>
+    </>
+  );
+}
+

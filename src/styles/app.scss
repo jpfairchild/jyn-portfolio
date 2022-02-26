@@ -52,6 +52,35 @@ a {
   margin-bottom: rempx(30);
 }
 
+// Button
+
+.btn {
+
+  // type
+  font-family: $font-family-opensans;
+  font-size: rempx(12);
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+
+  // btn
+  background: transparent;
+  padding: 8px 15px 8px 15px;
+
+  border-color: $white-300;
+  border-width: 1px;
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+
+  &:hover {
+    background: $white-900;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+}
+
 // Nav
 
 .navbar {
@@ -62,6 +91,10 @@ a {
 
 .navbar-brand {
   padding-bottom: 0;
+}
+
+.opactiy-0 {
+  opacity: 0;
 }
 
 .nav-parent {
@@ -183,6 +216,16 @@ a {
   margin-top: rempx(110);
 }
 
+.flurish-quality-google {
+  margin-left: rempx(52);
+  margin-top: rempx(110);
+}
+
+.flurish-quality-google-2 {
+  margin-left: rempx(72);
+  margin-top: rempx(140);
+}
+
 .rounded-corner {
   border-radius: rempx(6);
 }
@@ -249,8 +292,34 @@ h1 {
   font-size: rempx(24);
 }
 
+h2 {
+  font-family: $font-family-opensans;
+  font-weight: 400;
+  font-size: rempx(16);
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
+
+h3 {
+  font-family: $font-family-opensans;
+  font-weight: 700;
+  font-size: rempx(11);
+  letter-spacing: rempx(2);
+  color: $white;
+}
+
+h5 {
+  font-family: $font-family-opensans;
+  font-weight: 300;
+  font-size: rempx(40);
+}
+
 .pp-ts {
   margin-right: rempx(0);
+}
+
+.resume-skill-title {
+  color: $white;
 }
 
 .resume-title {
@@ -290,20 +359,6 @@ h1 {
   width: 20%;
 }
 
-h2 {
-  font-family: $font-family-opensans;
-  font-weight: 400;
-  font-size: rempx(16);
-  margin-top: inherit;
-  margin-bottom: inherit;
-}
-
-h5 {
-  font-family: $font-family-opensans;
-  font-weight: 300;
-  font-size: rempx(40);
-}
-
 .resume-company {
   font-family: $font-family-opensans;
   color: $white;
@@ -339,8 +394,12 @@ h5 {
 }
 
 .resume-skill {
-  width: 20%;
+  width: 70%;
+  margin-bottom: rempx(20);
+}
 
+.skill-group {
+  text-align: center;
 }
 
 .resume-arrow {
@@ -400,6 +459,23 @@ p {
 
 }
 
+.flex-bantam {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.flex-google {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
 .flex-images-illustrations {
   display: flex;
   flex-flow: wrap;
@@ -423,14 +499,18 @@ p {
 .skills {
   margin: 0 auto;
   width: 100%;
-  max-width: rempx(360);
+  max-width: rempx(540);
 }
 
 @media (max-width: 428px) {
   .skills {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     max-width: rempx(350);
+  }
+
+  .skill-group {
+    margin-bottom: rempx(20);
   }
 }
 
@@ -460,6 +540,10 @@ p {
 .img-fluid {
   margin-left: auto;
   margin-right: auto;
+}
+
+.m0auto {
+  margin: 0 auto;
 }
 
 // line
@@ -788,14 +872,6 @@ hr {
 
 .bantam-illustrations {
   max-width: rempx(900);
-}
-
-.flex-bantam {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-
 }
 
 .image10 {
@@ -1491,6 +1567,12 @@ hr {
   .row {
     margin-left: rempx(0);
     margin-right: rempx(0);
+  }
+
+  // Google
+
+  .mb-mobile-google {
+    margin-bottom: rempx(50);
   }
 
 }

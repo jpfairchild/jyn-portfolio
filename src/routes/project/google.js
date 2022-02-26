@@ -1,117 +1,168 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
-import { Header } from '../../components/header_project';
+import { Header, HeaderProject } from '../../components/header';
 import '../../styles/app.scss';
 
 // Svgs
 import flurish from "../../svgs/flurish_lines.svg";
 
 // Images
-import image1 from '../../images/bld_nav_min.png';
-import image2 from '../../images/bld_nav_max.png';
-import image3 from '../../images/bld_time.png';
-import image4 from '../../images/bld_kanban.png';
-import image5 from '../../images/bld_chat.png';
-import image6 from '../../images/bld_pivot.png';
-import image7 from '../../images/bld_invoice.png';
-import image8 from '../../images/bld_nav_both.png';
-import image9 from '../../images/bld_spec.png';
+import OverviewLarge from '../../images/bantam_overview.png';
+import OverviewSmall from '../../images/bantam_overview_small.png';
+import BantamMaterial from '../../images/bantam_material.png';
+import BantamInitial from '../../images/bantam_initial.png';
+import BantamProbe from '../../images/bantam_probe.png';
+import BantamIllustrations from '../../images/bantam_illustrations.png';
+import BantamV1 from '../../images/bantam_v1.png';
+import BantamV2 from '../../images/bantam_v2.png';
+import BantamV3 from '../../images/bantam_v3.png';
+import BantamFeed from '../../images/bantam_feed.png';
+import BantamFeedExpaneded from '../../images/bantam_feed_expanded.png';
+import BantamSpec1 from '../../images/bantam_spec.png';
+import BantamSpec2 from '../../images/bantam_spec2.png';
+
+// Images Google
+import LibraryLight from '../../images/google_youtube-case-study-light.png';
+import LibraryDark from '../../images/google_youtube-case-study-dark.png';
+import EnableAnimation from '../../animations/google_youtube_dark-mode-settings.mp4';
+import LibrarySpec from '../../images/google_youtube-spec.png';
+import FloatyAnimation from '../../animations/google_floaty.mp4';
 
 // Page Function
-function Bld() {
+function Google() {
 
   return (
     <div className="container">
 
-      <Header />
+    <HeaderProject />
 
-      <div className='row project-page-title-description justify-content-center w-100'>
 
-        <div className='pp-ts'>
-          <h1 className='pp-title mr-md-40'>Worker Management App</h1>
-          <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
+      <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
+
+      <div className='pp-ts-resume'>
+          <h1 className='pp-title'>Google</h1>
+          <h2 className='pp-sub-text'>DO NO EVIL</h2>
         </div>
 
-        <p className='project-page-p'>This project was a worker management tool created  
-          for a post covid remote work world. Analogous to  
-          And.co, the tool lets you track time, chat, create and 
-          assign tasks, invoice clients, form &#38; manage a team.
+        <p className='project-page-p text-width-100'>I loved my time at google. I learned how data can drive 
+          useful decisions (and poor decisions). Design exists in this weird state where people admit its 
+          integral yet refrain from pushing to far too fast. I hope we push into a new era of design where 
+          we force UX to evolve past the easy patterns of convenience over function.
         </p>
 
       </div>
 
-      {/* ------ 1st of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
 
-        <div className='row flurish-d-none m-20'>
-          <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block'>
-            <h3 className='flurish-text-vertical'>MOCKS</h3>
-            <img className='flurish-vertical' src={flurish} alt='flurish' />
+
+      <div className='body-content'>
+
+        {/* Flurish */}
+        <div className='row'>
+          <img className='flurish-horizontal' src={flurish} alt='flurish' />
+          <h3 className='flurish-text'>MOCKS</h3>
+        </div>
+
+        {/* ------ Dark and Light Library ------ */}
+        <div className='row mb-lg-160'>
+
+          <div className='flex-bantam mb-mobile-google'>
+            <img className='image-width-40' src={LibraryLight} alt='material' />
+            <img className='image-width-40' src={LibraryDark} alt='initial' />
           </div>
+          
         </div>
 
-        <div className='flex-images'>
-            <img className='image-project-page mr-lg-40 mb-40' src={image1} alt='image1'/>
-            <img className='image-project-page mr-lg-40 mb-40' src={image2} alt='image2'/>
-            <img className='image-project-page mr-lg-40 mb-40' src={image3} alt='image3'/>
-            <img className='image-project-page mr-lg-40 mb-40 image4' src={image4} alt='image4'/>
+
+
+        {/* Text Paragraph */}
+        <div className='row justify-content-center mt-lg-160 mb-lg-160 mb-100'>
+          <p className='project-page-p text-width-100'>YouTube's Dark mode was one of my favorite projects I did 
+            during my time @ Google. It touched every screen, every part of the app. Death by a million cuts, it taught me 
+            that even seeminly small changes, at scale, change a lot. What seems like a simple color change meant hundreds of 
+            screen designs, and actual style guide for the first time in YouTube's history, different tooltips, 
+            different illustrations, &#x26; updated navigation transitions.</p>
         </div>
+
+
         
-      </div>
+        {/* ------ Settings Animation ------ */}
+        <div className='row mb-lg-160 mb-mobile-google'>
 
-      {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100'>
-        <p className='project-page-p'>Time Tracking, Kanban, Chat, Mentions, oh my. This is some more text</p>
-      </div>
-      
-      {/* ------ 2nd of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-
-        <div className='flex-images'>
-            <img className='image-project-page mr-lg-40 mb-40 image5' src={image5} alt='image5'/>
-        </div>
-        
-      </div>
-
-      {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100'>
-        <p className='project-page-p'>Revenue breakdown by project, by month, by person. 
-          Blended rate next to the original estimate was a common ask from clients. Invoicing panel 
-          making invoicing simple and easy.</p>
-      </div>
-
-      {/* ------ 3rd of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images'>
-            <img className='image-project-page mr-lg-40 mb-40 image6' src={image6} alt='image6'/>
-            <img className='image-project-page mr-lg-40 mb-40 image7' src={image7} alt='image7'/>
-        </div>
-      </div>
-
-      {/* Text Paragraph */}
-      <div className='row project-double-text justify-content-center w-100'>
-
-        <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block mr-lg-40'>
-          <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
-          <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+          <div className='flex-google'>
+            <video 
+              className='image-width-40 mb-60' 
+              src={EnableAnimation} 
+              autoPlay
+              loop
+              muted
+              playsInline 
+              alt='material' />
+          </div>
+          
         </div>
 
-        <p className='project-page-p mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
-          implimenting designs poorly. This is half true, but often I find designers aren&#x27;t 
-          communicating well, having checkins during the engineering team during the coding process 
-          and made zero specs around their designs.</p>
 
-        <p className='project-page-p mb-60'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
-        blueprints and then when something is off, you can pull up the spec and it acts as almost a 
-        contract that you can hold the engineer too.</p>
-      </div>
 
-      {/* ------ 4th of Mocks ------ */}
-      <div className='row image-set m-10 m-lg-10'>
-        <div className='flex-images'>
-            <img className='image-project-page mr-lg-40 mb-40 image8' src={image8} alt='image8'/>
-            <img className='image-project-page mr-lg-40 mb-40 image9' src={image9} alt='image9'/>
+        {/* Text - Power User */}
+        <div className='row justify-content-center mr-lg-40 mb-mobile-google'>
+
+          <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
+            <h3 className='flurish-text-vertical'>POWER USER QUEEN</h3>
+            <img className='flurish-vertical flurish-quality-google' src={flurish} alt='flurish' />
+          </div>
+
+          <p className='project-page-p text-width-51 mb-60'>The Library was under utilized when I 
+            arrived at YouTube. I identified it as a large user pain point that had a ton of utility. 
+            Over the next 2 years I recruited like minded engineers and a team of 12 formed around 
+            us dedicated to improving the user experience of core users.</p>
+
         </div>
+
+
+
+        {/* ------ Library Spec ------ */}
+        <div className='row m-10 m-lg-10 mb-lg-160'>
+
+          <div className='flex-bantam'>
+            <img className='image-width-50 mb-60' src={LibrarySpec} alt='material' />
+          </div>
+          
+        </div>
+
+        <div className='row'>
+          <img className='flurish-horizontal' src={flurish} alt='flurish' />
+          <h3 className='flurish-text'>TOOLTIPS = 15%+ USAGE</h3>
+        </div>
+
+        {/* ------ Floaty Animation ------ */}
+        <div className='row m-10 m-lg-10 mb-lg-160 mb-mobile-google'>
+
+          <div className='flex-google'>
+            <video 
+              className='image-width-40 mb-60' 
+              src={FloatyAnimation} 
+              autoPlay
+              loop
+              muted
+              playsInline 
+              alt='floaty animation' />
+          </div>
+
+        </div>
+
+
+        {/* Text Paragraph */}
+        <div className='row justify-content-center mb-lg-120'>
+
+          <p className='project-page-p text-width-51 mb-60'>While working at Google, I spent years 
+            improving products through creative design solutions, making substancial metrics improvements along 
+            the way. I worked on a multitude of projects, but most of my impact was increasing user adoption and
+            usage.</p>
+
+        </div>
+
+
+
       </div>
 
       <Footer />
@@ -119,4 +170,4 @@ function Bld() {
   );
 }
 
-export default Bld;
+export default Google;

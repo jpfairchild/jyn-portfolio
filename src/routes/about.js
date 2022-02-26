@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../components/footer';
-import { Header } from '../components/header_project';
+import { HeaderResume } from '../components/header';
 import '../styles/app.scss';
 
 // Svgs
@@ -21,7 +21,7 @@ function About() {
   return (
     <div className="container">
 
-      <Header />
+      <HeaderResume />
 
       {/* Title & Description */}
 
