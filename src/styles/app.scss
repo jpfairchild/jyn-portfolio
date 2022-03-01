@@ -151,6 +151,7 @@ a {
 
 .flex-md-equal > * {
   flex: 1;
+  justify-content: center;
 }
 
 // Hero
@@ -261,23 +262,33 @@ a {
 
 .top-absolute {
   position: absolute;
-  top: 34%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  margin: 0 auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  width: 100%;
+
 }
 
 .mid-absolute {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .bot-absolute {
   position: absolute;
-  top: 64%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 61%;
+  margin: 0 auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 // Text
