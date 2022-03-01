@@ -28,11 +28,11 @@ export function ProjectGrid() {
     for (let property in projectorder.order) {
 
       // print all values of projectorder
-      console.log(`${property}: ${projectorder.order[property]}`);
+      // console.log(`${property}: ${projectorder.order[property]}`);
 
       // current URL
       let currentpage = window.location.href;
-      console.log(currentpage);
+      // console.log(currentpage);
 
       // if the project is in the Str(URL) then don't add it to the new array
       if (currentpage.includes(projectorder.order[property])) {
@@ -68,7 +68,7 @@ export function ProjectGrid() {
   let groups = pairs();
 
   
-  // First Return
+  // Primary Return
   return (
 
     <div className="container">
@@ -80,51 +80,66 @@ export function ProjectGrid() {
         <h3 className='flurish-text'>PROJECTS</h3>
       </div>
 
+      {// Start of Dynamic Loading of Grid
+        groups.map((project, index) => {
+                  
+          console.log('group map', project.length)
+          console.log('project', project);
 
-      {/* Start of Dynamic Loading of Grid */}
-      {groups.map((project) => {
-              
-        console.log(project.length)
-        
-        // Second return
-        return (
-        
-          <div key={project} className='row'>
+          if (project.length === 2 && index % 2 === 0) {
+            console.log('am I true');
 
-              {/* If 2 or 1 return this */}
-              {project.length === 2
-                ?
-                  // third return if
-                  (
-                    <div className="col-12 flex-parent">
-                      <Link className='flex-child-66' to={'./' + project[0]}>
-                        <ProjectCard projectName={project[0]}/>
-                      </Link>
-                      
-                      <div className='d-lg-none phone-between-padding'></div>
+            // return
+            return (
+              <div key={`project-card-${project}-${index}`} className='row'>
+                <div className="col-12 flex-parent">
+                  <Link className='flex-child-66' to={'/project/' + project[0]}>
+                    <ProjectCard projectName={project[0]}/>
+                  </Link>
+                  
+                  <div className='d-lg-none phone-between-padding'></div>
 
-                      <Link className='flex-child-33' to={'./' + project[1]}>
-                        <ProjectCard projectName={project[1]}/>
-                      </Link>
-                    </div>
-                  )
-                : 
-                  // third return else
-                  ( 
-                    <div className="col-12 flex-parent">
-                      <Link className='w-100 flex-child-100' to={'./' + project[0]}>
-                        <ProjectCard projectName={project[0]}/>
-                      </Link>
-                    </div>
-                  )
-              }
+                  <Link className='flex-child-33' to={'/project/' + project[1]}>
+                    <ProjectCard projectName={project[1]}/>
+                  </Link>
+                </div>
+              </div>
+            )
 
-          </div>
-          
-        ) 
-      })}
+          } else if (project.length === 2 && index % 1 === 0) {
 
-      {/* End of Dynamic Grid based on # of projects */}
+            // return
+            return (
+              <div key={`project-card-${project}-${index}`} className='row'>
+                <div className="col-12 flex-parent">
+                  <Link className='flex-child-33' to={'/project/' + project[0]}>
+                    <ProjectCard projectName={project[0]}/>
+                  </Link>
+                  
+                  <div className='d-lg-none phone-between-padding'></div>
+
+                  <Link className='flex-child-66' to={'/project/' + project[1]}>
+                    <ProjectCard projectName={project[1]}/>
+                  </Link>
+                </div>
+              </div>
+            )
+
+          } else {
+
+            return (
+              <div key={`project-card-${project}-${index}`} className='row'>
+                <div className="col-12 flex-parent">
+                  <Link className='w-100 flex-child-100' to={'/project/' + project[0]}>
+                    <ProjectCard projectName={project[0]}/>
+                  </Link>
+                </div>
+              </div>
+            )
+          }
+        }
+      )}
+
 
     </div>
   );
