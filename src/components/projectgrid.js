@@ -48,7 +48,7 @@ export function ProjectGrid() {
 
 
   let pageSet = projectListFiltered();
-  console.log(pageSet);
+  // console.log(pageSet);
 
 
   const pairs = () => {
@@ -60,7 +60,7 @@ export function ProjectGrid() {
     for (var i = 0; i < pageSet.length; i += 2) {
       groups.push(pageSet.slice(i, i + 2));
     }
-    console.log(groups);
+    // console.log(groups);
     return groups;
   }
 
@@ -83,11 +83,11 @@ export function ProjectGrid() {
       {// Start of Dynamic Loading of Grid
         groups.map((project, index) => {
                   
-          console.log('group map', project.length)
-          console.log('project', project);
+          // console.log('group map', project.length)
+          // console.log('project', project);
 
+          // If array has 2 items, & is even index
           if (project.length === 2 && index % 2 === 0) {
-            console.log('am I true');
 
             // return
             return (
@@ -105,7 +105,8 @@ export function ProjectGrid() {
                 </div>
               </div>
             )
-
+          
+            // If array has 2 items, & is odd index
           } else if (project.length === 2 && index % 1 === 0) {
 
             // return
@@ -125,6 +126,7 @@ export function ProjectGrid() {
               </div>
             )
 
+            // If array has 1 item
           } else {
 
             return (
