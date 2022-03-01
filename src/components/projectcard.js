@@ -1,6 +1,10 @@
 import '../styles/app.scss';
 import React, { useEffect, useState } from 'react';
 
+
+
+
+
 export function ProjectCard({ projectName }) {
 
   //Set States for Data to be imported

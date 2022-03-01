@@ -1,25 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
 import { Header, HeaderProject } from '../../components/header';
+import ProjectGrid from '../../components/projectgrid';
 import '../../styles/app.scss';
 
 // Svgs
 import flurish from "../../svgs/flurish_lines.svg";
-
-// Images
-import OverviewLarge from '../../images/bantam_overview.png';
-import OverviewSmall from '../../images/bantam_overview_small.png';
-import BantamMaterial from '../../images/bantam_material.png';
-import BantamInitial from '../../images/bantam_initial.png';
-import BantamProbe from '../../images/bantam_probe.png';
-import BantamIllustrations from '../../images/bantam_illustrations.png';
-import BantamV1 from '../../images/bantam_v1.png';
-import BantamV2 from '../../images/bantam_v2.png';
-import BantamV3 from '../../images/bantam_v3.png';
-import BantamFeed from '../../images/bantam_feed.png';
-import BantamFeedExpaneded from '../../images/bantam_feed_expanded.png';
-import BantamSpec1 from '../../images/bantam_spec.png';
-import BantamSpec2 from '../../images/bantam_spec2.png';
 
 // Images Google
 import LibraryLight from '../../images/google_youtube-case-study-light.png';
@@ -78,7 +64,7 @@ function Google() {
         <div className='row justify-content-center mt-lg-160 mb-lg-160 mb-100'>
           <p className='project-page-p text-width-100'>YouTube's Dark mode was one of my favorite projects I did 
             during my time @ Google. It touched every screen, every part of the app. Death by a million cuts, it taught me 
-            that even seeminly small changes, at scale, change a lot. What seems like a simple color change meant hundreds of 
+            that even seemingly small changes, at scale, change a lot. What seems like a simple color change meant hundreds of 
             screen designs, and actual style guide for the first time in YouTube's history, different tooltips, 
             different illustrations, &#x26; updated navigation transitions.</p>
         </div>
@@ -155,7 +141,7 @@ function Google() {
         <div className='row justify-content-center mb-lg-120'>
 
           <p className='project-page-p text-width-51 mb-60'>While working at Google, I spent years 
-            improving products through creative design solutions, making substancial metrics improvements along 
+            improving products through creative design solutions, making substantial metrics improvements along 
             the way. I worked on a multitude of projects, but most of my impact was increasing user adoption and
             usage.</p>
 
@@ -164,6 +150,8 @@ function Google() {
 
 
       </div>
+
+      <ProjectGrid />
 
       <Footer />
     </div>

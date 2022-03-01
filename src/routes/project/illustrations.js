@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
 import { Header, HeaderProject } from '../../components/header';
+import ProjectGrid from '../../components/projectgrid';
+
+// scss
 import '../../styles/app.scss';
 
 // Svgs
@@ -56,7 +59,7 @@ function Illustrations() {
             {Object.keys(images).map((fileName) => {
               return <img key={fileName} className='image-width-50 XXXXX__slide' src={images[fileName]} alt={fileName}/>;
             })}
-
+  
         </div>
       </div>
 

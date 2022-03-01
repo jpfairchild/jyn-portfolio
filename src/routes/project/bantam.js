@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
 import { Header, HeaderProject } from '../../components/header';
+import ProjectGrid from '../../components/projectgrid';
+
+// scss
 import '../../styles/app.scss';
 
 // Svgs
@@ -38,7 +41,7 @@ function Bantam() {
         </div>
 
         <p className='project-page-p text-width-100'>Bantam is on the cutting edge of computer controlled milling 
-          (pun intended). They have made an incredibly precise and small milling machine that is '
+          (pun intended). They have made an incredibly precise and small milling machine that is
           magnitudes cheaper than the status quo. I helped them redesign their desktop software used 
           to make designs and control the machine.
         </p>
@@ -144,8 +147,8 @@ function Bantam() {
           </div>
 
           <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
-            implimenting designs poorly. This is only half true... often I find designers aren&#x27;t communicating with the 
-          engineering team during the coding process and/or  making zero specs around their designs.</p>
+            implementing designs poorly. This is only half true... often I find designers aren&#x27;t communicating with the 
+            engineering team during the coding process and/or  making zero specs around their designs.</p>
 
           <p className='project-page-p text-width-51 mb-60 mb-lg-160 mb-100'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
             blueprints and then when something is off, you can pull up the spec and it acts as almost a contract that you 
@@ -167,6 +170,8 @@ function Bantam() {
 
 
       </div>
+
+      <ProjectGrid />
 
       <Footer />
     </div>

@@ -100,7 +100,7 @@ function Resume() {
 
         <p className='project-page-p text-width-50'>I co-founded an agency called cat &#x26; husky in 
           2019 with a long time trusted engineering partner. As cat &#x26; husky, we become well known in 
-          the maching industry after several successful projects. We were convinced to join bld.ai 
+          the machining industry after several successful projects. We were convinced to join bld.ai 
           after hearing their vision on the future of agencies. </p>
 
       </div>

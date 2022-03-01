@@ -26,6 +26,7 @@ import BldPivot from '../../images/bld_pivot.png';
 import BldInvoice from '../../images/bld_invoice.png';
 import BldSpec1 from '../../images/bld_nav_both.png';
 import BldSpec2 from '../../images/bld_spec.png';
+import ProjectGrid from '../../components/projectgrid';
 
 
 
@@ -117,8 +118,8 @@ function Bld() {
         </div>
 
         <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep 
-          with the design community for implimenting designs poorly. This is half true, but often I 
-          find designers aren&#x27;t communicating well, having checkins during the engineering team 
+          with the design community for implementing designs poorly. This is half true, but often I 
+          find designers aren&#x27;t communicating well, having check ins during the engineering team 
           during the coding process and made zero specs around their designs.</p>
 
         <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I&#x27;m a huge fan on making specs 
@@ -135,6 +136,8 @@ function Bld() {
       </div>
 
       <div className='mb-100'></div>
+
+      <ProjectGrid />
 
       <Footer />
     </div>

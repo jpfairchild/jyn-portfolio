@@ -58,7 +58,7 @@ export function HeaderNoLogo() {
             <nav className="navbar navbar-light">
 
               <Link to='/'>
-              <img className='opactiy-0 pt-20 pl-10' src={personalLogo} alt='' />
+              <img className='opactiy-0 personalLogo pt-20 pl-10' src={personalLogo} alt='' />
               </Link>
 
               {/* <div className='hamburger-nav'>
@@ -94,7 +94,7 @@ export function HeaderResume() {
             <nav className="navbar project-nav navbar-light">
 
               <Link to='/'>
-              <img className='pt-20 pl-10' src={personalLogo} alt='' />
+              <img className='personalLogo pt-20 pl-10' src={personalLogo} alt='personalLogo' />
               </Link>
 
               {/* <div className='hamburger-nav'>
@@ -131,7 +131,7 @@ export function HeaderProject() {
             <nav className="navbar project-nav navbar-light">
 
               <Link to='/'>
-              <img className='pt-20 pl-10' src={personalLogo} alt='' />
+              <img className='personalLogo pt-20 pl-10' src={personalLogo} alt='personalLogo' />
               </Link>
 
               {/* <div className='hamburger-nav'>
