@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ProjectCard } from '../components/projectcard';
 import projectorder from "../json/_projectorder.json";
+import { motion } from "framer-motion";
 
 // scss
 import '../styles/app.scss';
@@ -18,6 +19,23 @@ import flurish from "../svgs/flurish_lines.svg";
 
 
 export function ProjectGrid() {
+
+  const container = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: .5,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const xRight = {
+    hidden: { x: -15, y: 0, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
 
 
   const projectListFiltered = () => {
@@ -75,10 +93,15 @@ export function ProjectGrid() {
 
 
       {/* Project Links */}
-      <div className='row'>
+      <motion.div 
+        className='row'
+        initial="hidden"
+        animate="visible"
+        variants={xRight}
+      >
         <img className='flurish-horizontal' src={flurish} alt='flurish' />
         <h3 className='flurish-text'>PROJECTS</h3>
-      </div>
+      </motion.div>
 
       {// Start of Dynamic Loading of Grid
         groups.map((project, index) => {

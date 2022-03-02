@@ -10,7 +10,7 @@ import '../../styles/app.scss';
 import flurish from "../../svgs/flurish_lines.svg";
 
 // ------ Images
-// Lets make a array that cycles through a folder
+// Array that cycles through a folder
 
 function importAll(r) {
   let images = {};
@@ -64,6 +64,8 @@ function Illustrations() {
       </div>
 
       <div className='mb-100'></div>
+
+      <ProjectGrid />
 
       <Footer />
     </div>

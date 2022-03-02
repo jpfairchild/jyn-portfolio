@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu } from './menu';
+import { motion } from "framer-motion";
 
 // svgs
 import personalLogo from '../logos/personal_logo.svg';
 
 
 export function Header() {
+  
 
   return (
     <>
@@ -49,6 +51,23 @@ export function Header() {
 
 export function HeaderNoLogo() {
 
+  const container = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: .5,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const wait = {
+    hidden: { x: 0, y: 0, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.5, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
+
   return (
     <>
       <div className='container'>
@@ -65,14 +84,19 @@ export function HeaderNoLogo() {
                 <Menu />
               </div> */}
 
-              <div className="web-nav nav-parent pt-lg-20">
+              <motion.div 
+                className="web-nav nav-parent pt-lg-20"
+                initial="hidden"
+                animate="visible"
+                variants={wait}
+              >
                 {/* <NavLink to='/about'  className='nav-item'>
                   ABOUT
                 </NavLink> */}
                 <NavLink to='/resume' className='nav-item'>
                   RESUME
                 </NavLink>
-              </div>
+              </motion.div>
 
             </nav>
             
