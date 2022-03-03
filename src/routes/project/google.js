@@ -13,28 +13,76 @@ import LibraryDark from '../../images/google_youtube-case-study-dark.png';
 import EnableAnimation from '../../animations/google_youtube_dark-mode-settings.mp4';
 import LibrarySpec from '../../images/google_youtube-spec.png';
 import FloatyAnimation from '../../animations/google_floaty.mp4';
+import { motion } from 'framer-motion';
 
 // Page Function
 function Google() {
 
+  // Animation
+  const container = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 1,
+        staggerChildren: 1
+      }
+    }
+  };
+
+  // These animation objects define how the animations display. 
+  // n versions is currently only staggering animation timings using (delay: 1)
+
+  const yUp = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+  
+  const yUp2 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp3 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
   return (
-    <div className="container">
+    <motion.div 
+      className="container"
+      initial="hidden"
+      animate="visible"
+      variants={container}
+    >
 
     <HeaderProject />
 
 
       <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 
-      <div className='pp-ts-resume'>
-          <h1 className='pp-title'>Google</h1>
-          <h2 className='pp-sub-text'>DO NO EVIL</h2>
-        </div>
+      <motion.div 
+        className='pp-ts-resume'
+        initial="hidden"
+        animate="visible"
+        variants={yUp}
+      >
+        <h1 className='pp-title'>Google</h1>
+        <h2 className='pp-sub-text'>DO NO EVIL</h2>
+      </motion.div>
 
-        <p className='project-page-p text-width-100'>I loved my time at google. I learned how data can drive 
+        <motion.p 
+          className='project-page-p text-width-100'
+          initial="hidden"
+          animate="visible"
+          variants={yUp2}
+        >
+          I loved my time at google. I learned how data can drive 
           useful decisions (and poor decisions). Design exists in this weird state where people admit its 
           integral yet refrain from pushing to far too fast. I hope we push into a new era of design where 
           we force UX to evolve past the easy patterns of convenience over function.
-        </p>
+        </motion.p>
 
       </div>
 
@@ -42,21 +90,29 @@ function Google() {
 
       <div className='body-content'>
 
-        {/* Flurish */}
-        <div className='row'>
-          <img className='flurish-horizontal' src={flurish} alt='flurish' />
-          <h3 className='flurish-text'>MOCKS</h3>
-        </div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={yUp3}
+        >
 
-        {/* ------ Dark and Light Library ------ */}
-        <div className='row mb-lg-160'>
-
-          <div className='flex-bantam mb-mobile-google'>
-            <img className='image-width-40' src={LibraryLight} alt='material' />
-            <img className='image-width-40' src={LibraryDark} alt='initial' />
+          {/* Flurish */}
+          <div className='row'>
+            <img className='flurish-horizontal' src={flurish} alt='flurish' />
+            <h3 className='flurish-text'>MOCKS</h3>
           </div>
-          
-        </div>
+
+          {/* ------ Dark and Light Library ------ */}
+          <div className='row mb-lg-160'>
+
+            <div className='flex-bantam mb-mobile-google'>
+              <img className='image-width-40' src={LibraryLight} alt='material' />
+              <img className='image-width-40' src={LibraryDark} alt='initial' />
+            </div>
+            
+          </div>
+
+        </motion.div>
 
 
 
@@ -154,7 +210,7 @@ function Google() {
       <ProjectGrid />
 
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
 import { Header, HeaderProject } from '../../components/header';
 import ProjectGrid from '../../components/projectgrid';
+import { motion } from 'framer-motion';
 
 // scss
 import '../../styles/app.scss';
@@ -28,23 +29,72 @@ import BantamSpec2 from '../../images/bantam_spec2.png';
 // Page Function
 function Bantam() {
 
+  // Animation
+  const container = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 1,
+        staggerChildren: 1
+      }
+    }
+  };
+
+  // These animation objects define how the animations display. 
+  // n versions is currently only staggering animation timings using (delay: 1)
+
+  const yUp = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+  
+  const yUp2 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp3 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+
+
   return (
-    <div className="container">
+    <motion.div 
+      className="container"
+      initial="hidden"
+      animate="visible"
+      variants={container}
+    >
 
     <HeaderProject />
 
       <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 
-        <div className='pp-ts text-width-100'>
+        <motion.div 
+          className='pp-ts text-width-100'
+          initial="hidden"
+          animate="visible"
+          variants={yUp}
+        >
           <h1 className='pp-title'>Bantam Tools</h1>
           <h2 className='pp-sub-text'>THROUGH ALUMINUM LIKE BUTTER</h2>
-        </div>
+        </motion.div>
 
-        <p className='project-page-p text-width-100'>Bantam is on the cutting edge of computer controlled milling 
+        <motion.p 
+          className='project-page-p text-width-100'
+          initial="hidden"
+          animate="visible"
+          variants={yUp2}
+        >
+          Bantam is on the cutting edge of computer controlled milling 
           (pun intended). They have made an incredibly precise and small milling machine that is
           magnitudes cheaper than the status quo. I helped them redesign their desktop software used 
           to make designs and control the machine.
-        </p>
+        </motion.p>
 
       </div>
 
@@ -53,14 +103,18 @@ function Bantam() {
       <div className='body-content'>
 
         {/* ------ 1st set of Mocks ------ */}
-        <div className='row mb-140'>
-
+        <motion.div 
+          className='row mb-140'
+          initial="hidden"
+          animate="visible"
+          variants={yUp3}
+        >
           <div className='flex-bantam'>
             <img className=' image-width-100 image10' src={OverviewLarge} alt='image10'/>
             <img className=' image-width-100 image15' src={OverviewSmall} alt='image15'/>
           </div>
           
-        </div>
+        </motion.div>
 
 
 
@@ -174,7 +228,7 @@ function Bantam() {
       <ProjectGrid />
 
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

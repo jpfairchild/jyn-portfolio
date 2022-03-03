@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 
-export function Loader() {
+export const DelayedFallback = () => {
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    let timeout = setTimeout(() => setShow(true), 300)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
+
   return (
     <>
-      <div>
-        <p> </p>
-      </div>
+      {show && <h3> </h3>}
     </>
-  );
+  )
 }
+export default DelayedFallback

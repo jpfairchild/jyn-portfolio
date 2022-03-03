@@ -1,60 +1,114 @@
 import React, { useEffect, useState } from 'react';
 import { Footer } from '../../components/footer';
 import { Header, HeaderProject } from '../../components/header';
+import ProjectGrid from '../../components/projectgrid';
+import { motion } from 'framer-motion';
+
+// Scss
 import '../../styles/app.scss';
 
 // Svgs
 import flurish from "../../svgs/flurish_lines.svg";
 
-// ------ Images
+// ------ Images ------ //
 
 // -- Set 1
 // Combined
 import BldCombined from '../../images/bld_projectimage.png';
-
 // Dobule
 import BldDouble from '../../images/bld_double.png';
-
 // Triple
 import BldNavs from '../../images/bld_navs.png';
 import BldTime from '../../images/bld_time.png';
 import BldKanban from '../../images/bld_kanban.png';
 
-// Set 2, 3, 4,
+// Rest of images
 import BldChat from '../../images/bld_chat.png';
 import BldPivot from '../../images/bld_pivot.png';
 import BldInvoice from '../../images/bld_invoice.png';
 import BldSpec1 from '../../images/bld_nav_both.png';
 import BldSpec2 from '../../images/bld_spec.png';
-import ProjectGrid from '../../components/projectgrid';
 
 
 
-// Page Function
 function Bld() {
 
+
+  // Animation
+  const container = {
+    hidden: { opacity: 0, scale: 1 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: .3
+      }
+    }
+  };
+
+  // These animation objects define how the animations display. 
+  // n versions is currently only staggering animation timings using (delay: 1)
+
+  const yUp = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+  
+  const yUp2 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp3 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+
+
   return (
-    <div className="container">
+    <motion.div 
+      className="container"
+      initial="hidden"
+      animate="visible"
+      variants={container}
+    >
 
       <HeaderProject />
 
       <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 
-        <div className='pp-ts text-width-100'>
-          <h1 className='pp-title mr-20'>Freelance Management</h1>
+        <motion.div 
+          className='pp-ts text-width-100'
+          initial="hidden"
+          animate="visible"
+          variants={yUp}
+        >
+          <h1 className='pp-title mr-20'>Freelance App</h1>
           <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
-        </div>
+        </motion.div>
 
-        <p className='project-page-p text-width-100'>This project was a worker management tool created  
+        <motion.p 
+          className='project-page-p text-width-100'
+          initial="hidden"
+          animate="visible"
+          variants={yUp2}
+        >
+          This project was a worker management tool created  
           for a post covid remote work world. Analogous to  
           And.co, the tool lets you track time, chat, create and 
           assign tasks, invoice clients, form &#38; manage a team.
-        </p>
+        </motion.p>
 
       </div>
 
       {/* ------ 1st of Mocks ------ */}
-      <div className='row justify-content-center mb-lg-140 mb-80'>
+      <motion.div 
+        className='row justify-content-center mb-lg-140 mb-80'
+        initial="hidden"
+        animate="visible"
+        variants={yUp3}
+      >
 
         <div className='row flurish-d-none m-20'>
           <div className='flurish-parent d-none d-sm-block d-md-block d-lg-block d-xl-block'>
@@ -78,7 +132,7 @@ function Bld() {
           <img className='image-width-100' src={BldKanban} alt='image1'/>
         </div>
         
-      </div>
+      </motion.div>
 
       {/* Text Paragraph */}
       <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-80'>
@@ -88,7 +142,7 @@ function Bld() {
       {/* ------ 2nd of Mocks ------ */}
       <div className='row image-set justify-content-center mb-lg-140 mb-100'>
 
-        <div className='flex-images-bld image-width-75 p-20'>
+        <div className='flex-images-bld image-width-50 p-20'>
             <img className='w-100' src={BldChat} alt='bldchatimage'/>
         </div>
         
@@ -140,7 +194,7 @@ function Bld() {
       <ProjectGrid />
 
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

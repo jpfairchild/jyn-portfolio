@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Loader } from '../components/loader';
+import { DelayedFallback } from '../components/loader';
 import '../styles/app.scss';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTop from "../components/scrollintoview";
@@ -25,7 +25,7 @@ function App() {
         <Route
           render={({ location }) => (
             <AnimatePresence>
-              <Suspense fallback={<Loader />} key='suspense'>
+              <Suspense fallback={<DelayedFallback />} key='suspense'>
 
                 <Switch key={location.pathname}>
 

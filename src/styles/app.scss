@@ -86,7 +86,7 @@ a {
 .navbar {
   font-family: $font-family-opensans;
   flex-wrap: inherit;
-  margin-right: rempx(10);
+  max-width: rempx(1200);
 }
 
 .navbar-brand {
@@ -97,10 +97,12 @@ a {
   opacity: 0;
 }
 
-.nav-parent {
-  margin-top: rempx(15);
+.right-side-nav {
   display: flex;
-  justify-content: center;
+}
+
+.right-side-nav-home {
+  display: flex;
 }
 
 .nav-item {
@@ -123,7 +125,25 @@ a {
 }
 
 .project-nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: rempx(1000);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rempx(40);
   margin-bottom: rempx(150); 
+}
+
+.project-nav-home {
+  display: flex;
+  float: right;
+
+  max-width: rempx(1440);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rempx(40);
 }
 
 // Flex
@@ -239,6 +259,14 @@ a {
   font-size: rempx(22);
   color: $white;
   text-align: center;
+}
+
+.name-header {
+  font-family: $font-family-ailerons;
+  font-weight: 800;
+  font-size: rempx(16);
+  color: $white;
+  text-align: left;
 }
 
 .role {
@@ -1146,8 +1174,12 @@ hr {
     margin: 0 auto;
   }
 
-  .nav-parent {
-    margin-top: rempx(15);
+  .right-side-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-side-nav-home {
     display: flex;
     justify-content: center;
   }
@@ -1290,8 +1322,10 @@ hr {
     margin: 0 auto;
   }
 
-  .nav-parent {
-    margin-top: rempx(15);
+  .project-nav {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // Width
@@ -1382,12 +1416,11 @@ hr {
   // Nav
 
   .project-nav {
-    margin-left: rempx(0);
     margin-bottom: rempx(80);
   }
 
-  .nav-parent {
-    margin-top: rempx(20);
+  .right-side-nav-home {
+    margin-right: rempx(30);
   }
 
   .navbar {
@@ -1395,7 +1428,6 @@ hr {
   }
 
   .nav-item {
-    margin-bottom: rempx(20);
     margin-right: rempx(30);
 
     &:last-child {
@@ -1416,6 +1448,11 @@ hr {
     height: rempx(6);
     margin: 0 auto;
     width: 100%;
+  }
+
+  .hero-banner {
+    margin: rempx(40) 0 rempx(40) 0;
+    position: relative;
   }
 
   // Projects
