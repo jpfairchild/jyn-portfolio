@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { DelayedFallback } from '../components/loader';
+import { Loader } from '../components/loader';
 import '../styles/app.scss';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTop from "../components/scrollintoview";
@@ -11,10 +11,10 @@ const Resume = lazy(() => import('./resume'));
 const About = lazy(() => import('./about'));
 
 //projects
-const Bld = lazy(() => import('./project/bld'));
-const Bantam = lazy(() => import('./project/bantam'));
-const Google = lazy(() => import('./project/google'));
-const Illustrations = lazy(() => import('./project/illustrations'));
+const Bld = lazy(() => import('./bld'));
+const Bantam = lazy(() => import('./bantam'));
+const Google = lazy(() => import('./google'));
+const Illustrations = lazy(() => import('./illustrations'));
 
 //routes
 function App() {
@@ -25,7 +25,7 @@ function App() {
         <Route
           render={({ location }) => (
             <AnimatePresence>
-              <Suspense fallback={<DelayedFallback />} key='suspense'>
+              <Suspense fallback={<Loader />} key='suspense'>
 
                 <Switch key={location.pathname}>
 
@@ -34,11 +34,11 @@ function App() {
                   <Route exact path='/about' component={About} />
                   <Route exact path='/resume' component={Resume} />
 
-                  {/* Expose all routes underneath /project/<whatever> and load your project page */}
-                  <Route exact path='/project/bld' component={Bld} />
-                  <Route exact path='/project/bantam' component={Bantam} />
-                  <Route exact path='/project/google' component={Google} />
-                  <Route exact path='/project/illustrations' component={Illustrations} />
+                  {/* Expose all routes underneath /<whatever> and load your page */}
+                  <Route exact path='/bld' component={Bld} />
+                  <Route exact path='/bantam' component={Bantam} />
+                  <Route exact path='/google' component={Google} />
+                  <Route exact path='/illustrations' component={Illustrations} />
 
                 </Switch>
                 

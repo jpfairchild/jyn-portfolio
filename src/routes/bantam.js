@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { Footer } from '../../components/footer';
-import { Header, HeaderProject } from '../../components/header';
-import ProjectGrid from '../../components/projectgrid';
+import { Footer } from '../components/footer';
+import { Header, HeaderProject } from '../components/header';
+import ProjectGrid from '../components/projectgrid';
 import { motion } from 'framer-motion';
 
 // scss
-import '../../styles/app.scss';
+import '../styles/app.scss';
 
 // Svgs
-import flurish from "../../svgs/flurish_lines.svg";
+import flurish from "../svgs/flurish_lines.svg";
 
 // Images
-import OverviewLarge from '../../images/bantam_overview.png';
-import OverviewSmall from '../../images/bantam_overview_small.png';
-import BantamMaterial from '../../images/bantam_material.png';
-import BantamInitial from '../../images/bantam_initial.png';
-import BantamProbe from '../../images/bantam_probe.png';
-import BantamIllustrations from '../../images/bantam_illustrations.png';
-import BantamV1 from '../../images/bantam_v1.png';
-import BantamV2 from '../../images/bantam_v2.png';
-import BantamV3 from '../../images/bantam_v3.png';
-import BantamFeed from '../../images/bantam_feed.png';
-import BantamFeedExpaneded from '../../images/bantam_feed_expanded.png';
-import BantamSpec1 from '../../images/bantam_spec.png';
-import BantamSpec2 from '../../images/bantam_spec2.png';
+import OverviewLarge from '../images/bantam_overview.png';
+import OverviewSmall from '../images/bantam_overview_small.png';
+import BantamMaterial from '../images/bantam_material.png';
+import BantamInitial from '../images/bantam_initial.png';
+import BantamIllustrations from '../images/bantam_illustrations.png';
+import BantamV1 from '../images/bantam_v1.png';
+import BantamV2 from '../images/bantam_v2.png';
+import BantamV3 from '../images/bantam_v3.png';
+import BantamFeed from '../images/bantam_feed.png';
+import BantamFeedExpaneded from '../images/bantam_feed_expanded.png';
+import BantamSpec1 from '../images/bantam_spec.png';
+import BantamSpec2 from '../images/bantam_spec2.png';
 
 
 // Page Function

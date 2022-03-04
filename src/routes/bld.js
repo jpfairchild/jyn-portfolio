@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { Footer } from '../../components/footer';
-import { Header, HeaderProject } from '../../components/header';
-import ProjectGrid from '../../components/projectgrid';
+import { Footer } from '../components/footer';
+import { Header, HeaderProject } from '../components/header';
+import ProjectGrid from '../components/projectgrid';
 import { motion } from 'framer-motion';
 
 // Scss
-import '../../styles/app.scss';
+import '../styles/app.scss';
 
 // Svgs
-import flurish from "../../svgs/flurish_lines.svg";
+import flurish from "../svgs/flurish_lines.svg";
 
 // ------ Images ------ //
 
 // -- Set 1
 // Combined
-import BldCombined from '../../images/bld_projectimage.png';
+import BldCombined from '../images/bld_projectimage.png';
 // Dobule
-import BldDouble from '../../images/bld_double.png';
+import BldDouble from '../images/bld_double.png';
 // Triple
-import BldNavs from '../../images/bld_navs.png';
-import BldTime from '../../images/bld_time.png';
-import BldKanban from '../../images/bld_kanban.png';
+import BldNavs from '../images/bld_navs.png';
+import BldTime from '../images/bld_time.png';
+import BldKanban from '../images/bld_kanban.png';
 
 // Rest of images
-import BldChat from '../../images/bld_chat.png';
-import BldPivot from '../../images/bld_pivot.png';
-import BldInvoice from '../../images/bld_invoice.png';
-import BldSpec1 from '../../images/bld_nav_both.png';
-import BldSpec2 from '../../images/bld_spec.png';
+import BldChat from '../images/bld_chat.png';
+import BldPivot from '../images/bld_pivot.png';
+import BldInvoice from '../images/bld_invoice.png';
+import BldSpec1 from '../images/bld_nav_both.png';
+import BldSpec2 from '../images/bld_spec.png';
 
 
 

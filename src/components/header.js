@@ -3,10 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { Menu } from './menu';
 import { motion } from "framer-motion";
 
-// svgs
-import personalLogo from '../logos/personal_logo.svg';
-
-
 export function Header() {
   
 

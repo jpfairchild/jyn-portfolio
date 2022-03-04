@@ -4,7 +4,6 @@ import { HeaderResume } from '../components/header';
 import '../styles/app.scss';
 
 // Svgs
-import flurish from "../svgs/flurish_lines.svg";
 import arrow from "../svgs/arrow.svg";
 import ui from "../svgs/ui.svg";
 import code from "../svgs/code.svg";

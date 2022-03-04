@@ -11,7 +11,6 @@ import '../styles/app.scss';
 import ResumePDF from "../resume/resume.pdf";
 
 // Svgs
-import flurish from "../svgs/flurish_lines.svg";
 import arrow from "../svgs/arrow.svg";
 import ui from "../svgs/ui.svg";
 import code from "../svgs/code.svg";

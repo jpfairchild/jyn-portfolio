@@ -116,13 +116,13 @@ export function ProjectGrid() {
             return (
               <div key={`project-card-${project}-${index}`} className='row'>
                 <div className="col-12 flex-parent">
-                  <Link className='flex-child-66' to={'/project/' + project[0]}>
+                  <Link className='flex-child-66' to={'/' + project[0]}>
                     <ProjectCard projectName={project[0]}/>
                   </Link>
                   
                   <div className='d-lg-none phone-between-padding'></div>
 
-                  <Link className='flex-child-33' to={'/project/' + project[1]}>
+                  <Link className='flex-child-33' to={'/' + project[1]}>
                     <ProjectCard projectName={project[1]}/>
                   </Link>
                 </div>
@@ -136,13 +136,13 @@ export function ProjectGrid() {
             return (
               <div key={`project-card-${project}-${index}`} className='row'>
                 <div className="col-12 flex-parent">
-                  <Link className='flex-child-33' to={'/project/' + project[0]}>
+                  <Link className='flex-child-33' to={'/' + project[0]}>
                     <ProjectCard projectName={project[0]}/>
                   </Link>
                   
                   <div className='d-lg-none phone-between-padding'></div>
 
-                  <Link className='flex-child-66' to={'/project/' + project[1]}>
+                  <Link className='flex-child-66' to={'/' + project[1]}>
                     <ProjectCard projectName={project[1]}/>
                   </Link>
                 </div>
@@ -155,7 +155,7 @@ export function ProjectGrid() {
             return (
               <div key={`project-card-${project}-${index}`} className='row'>
                 <div className="col-12 flex-parent">
-                  <Link className='w-100 flex-child-100' to={'/project/' + project[0]}>
+                  <Link className='w-100 flex-child-100' to={'/' + project[0]}>
                     <ProjectCard projectName={project[0]}/>
                   </Link>
                 </div>

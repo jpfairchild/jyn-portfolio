@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Footer } from '../../components/footer';
-import { Header, HeaderProject } from '../../components/header';
-import ProjectGrid from '../../components/projectgrid';
-import '../../styles/app.scss';
+import { Footer } from '../components/footer';
+import { Header, HeaderProject } from '../components/header';
+import ProjectGrid from '../components/projectgrid';
+import '../styles/app.scss';
 
 // Svgs
-import flurish from "../../svgs/flurish_lines.svg";
+import flurish from "../svgs/flurish_lines.svg";
 
 // Images Google
-import LibraryLight from '../../images/google_youtube-case-study-light.png';
-import LibraryDark from '../../images/google_youtube-case-study-dark.png';
-import EnableAnimation from '../../animations/google_youtube_dark-mode-settings.mp4';
-import LibrarySpec from '../../images/google_youtube-spec.png';
-import FloatyAnimation from '../../animations/google_floaty.mp4';
+import LibraryLight from '../images/google_youtube-case-study-light.png';
+import LibraryDark from '../images/google_youtube-case-study-dark.png';
+import EnableAnimation from '../animations/google_youtube_dark-mode-settings.mp4';
+import LibrarySpec from '../images/google_youtube-spec.png';
+import FloatyAnimation from '../animations/google_floaty.mp4';
 import { motion } from 'framer-motion';
 
 // Page Function

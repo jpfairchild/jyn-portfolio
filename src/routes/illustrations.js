@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Footer } from '../../components/footer';
-import { Header, HeaderProject } from '../../components/header';
-import ProjectGrid from '../../components/projectgrid';
+import { Footer } from '../components/footer';
+import { Header, HeaderProject } from '../components/header';
+import ProjectGrid from '../components/projectgrid';
 import { motion } from 'framer-motion';
 
 // scss
-import '../../styles/app.scss';
-
-// Svgs
-import flurish from "../../svgs/flurish_lines.svg";
+import '../styles/app.scss';
 
 // ------ Images
 // Array that cycles through a folder
@@ -25,7 +22,7 @@ function importAll(r) {
 
 let images = {}
 
-images = importAll(require.context('../../illustrations', false, /\.(png|jpe?g|svg)$/));
+images = importAll(require.context('../illustrations', false, /\.(png|jpe?g|svg)$/));
 
 
 // Page Function
