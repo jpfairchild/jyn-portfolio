@@ -146,7 +146,7 @@ function Google() {
 
 
         {/* Text - Power User */}
-        <div className='row justify-content-center mr-lg-40 mb-mobile-google'>
+        <div className='row justify-content-center mr-lg-40 mb-lg-120 mb-mobile-google'>
 
           <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
             <h3 className='flurish-text-vertical'>POWER USER QUEEN</h3>

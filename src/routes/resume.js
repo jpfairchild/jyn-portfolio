@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Footer, FooterResume } from '../components/footer';
 import { HeaderResume } from '../components/header';
 import { motion } from 'framer-motion';
+import ProjectGrid from '../components/projectgrid';
+
+// Scss
 import '../styles/app.scss';
 
 // PDF
@@ -67,6 +70,36 @@ function Resume() {
   const yUp7 = {
     hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
     visible: { x : 0, y: 0, opacity: 1, transition: {delay: 2.2, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp8 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 2.4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp9 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 2.6, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp10 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 2.8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp11 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 3, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp12 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 3.2, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp13 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 3.4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
   };
 
 
@@ -186,11 +219,16 @@ function Resume() {
         alt='arrow'
         initial="hidden"
         animate="visible"
-        variants={yUp7}
+        variants={yUp8}
       />
 
       {/* Experience Item */}
-      <div className='row flex-resume justify-content-center'>
+      <motion.div 
+        className='row flex-resume justify-content-center'
+        initial="hidden"
+        animate="visible"
+        variants={yUp9}
+      >
 
         <div className='resume-company'>
           <h1 className='resume-company-title text-width-70'>cat &#x26; husky</h1>
@@ -202,12 +240,23 @@ function Resume() {
           the machining industry after several successful projects. We were convinced to join bld.ai 
           after hearing their vision on the future of agencies. </p>
 
-      </div>
+      </motion.div>
 
-      <img className='resume-arrow w-100 mt-100 mb-100' src={arrow} alt='arrow' />
+      <motion.img 
+        className='resume-arrow w-100 mt-100 mb-100' 
+        src={arrow} 
+        alt='arrow'
+        initial="hidden"
+        animate="visible"
+        variants={yUp10}
+      />
 
       {/* Experience Item */}
-      <div className='row flex-resume justify-content-center'>
+      <motion.div className='row flex-resume justify-content-center'
+        initial="hidden"
+        animate="visible"
+        variants={yUp11}
+      >
 
         <div className='resume-company'>
           <h1 className='resume-company-title text-width-70'>art platform</h1>
@@ -218,12 +267,24 @@ function Resume() {
         While not financially anything to write home about, it has a small but dedicated community drawing 
         and painting some of the finest art on the internet.</p>
 
-      </div>
+      </motion.div>
 
-      <img className='resume-arrow w-100 mt-100 mb-100' src={arrow} alt='arrow' />
+      <motion.img 
+        className='resume-arrow w-100 mt-100 mb-100' 
+        src={arrow} 
+        alt='arrow'
+        initial="hidden"
+        animate="visible"
+        variants={yUp12}
+      />
 
       {/* Experience Item */}
-      <div className='row flex-resume justify-content-center'>
+      <motion.div 
+        className='row flex-resume justify-content-center'
+        initial="hidden"
+        animate="visible"
+        variants={yUp13}
+      >
 
         <div className='resume-company'>
           <h1 className='resume-company-title text-width-70'>google</h1>
@@ -234,11 +295,14 @@ function Resume() {
           Google Search, Google Maps, with most of my time spent @ Youtube. I learned how to push good design inside a large rigid organization. 
           But most of my real innovations came in new ways to work with engineering partners.</p>
 
-      </div>
+      </motion.div>
 
       <div className='mb-100'></div>
 
-      <FooterResume />
+      <ProjectGrid />
+
+      <Footer />
+
     </motion.div>
   );
 }
