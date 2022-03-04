@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Footer, FooterResume } from '../components/footer';
+import React from 'react';
+import { Footer } from '../components/footer';
 import { HeaderResume } from '../components/header';
 import { motion } from 'framer-motion';
 import ProjectGrid from '../components/projectgrid';

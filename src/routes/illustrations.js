@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Footer } from '../components/footer';
-import { Header, HeaderProject } from '../components/header';
+import { HeaderProject } from '../components/header';
 import ProjectGrid from '../components/projectgrid';
 import { motion } from 'framer-motion';
 

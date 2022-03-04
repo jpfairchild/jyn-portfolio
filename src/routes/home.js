@@ -1,15 +1,10 @@
 import React from 'react';
 import { HeaderNoLogo } from '../components/header';
 import ProjectGrid from '../components/projectgrid';
-import { motion, scrollYProgress } from "framer-motion";
+import { motion } from "framer-motion";
 
 // scss
 import '../styles/app.scss';
-
-// svgs
-import heroLines from "../svgs/home_lines.svg";
-import smallHeroLines from "../svgs/home_small_lines.svg";
-import namelines from "../svgs/name_lines.svg";
 
 
 
@@ -41,11 +36,6 @@ function Home() {
   const yDown = {
     hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
     visible: { x :0, y: -5, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
-  };
-  
-  const wait = {
-    hidden: { x: 0, y: 0, opacity: 0, transition: {delay: 0} },
-    visible: { x :0, y: 0, opacity: 1, transition: {delay: .75, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
 
 

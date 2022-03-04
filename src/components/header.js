@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu } from './menu';
 import { motion } from "framer-motion";
 
 export function Header() {
@@ -46,18 +45,6 @@ export function Header() {
 }
 
 export function HeaderNoLogo() {
-
-  const container = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: .5,
-        staggerChildren: 0.2
-      }
-    }
-  };
 
   const wait = {
     hidden: { x: 0, y: 0, opacity: 0, transition: {delay: 0} },
@@ -107,18 +94,6 @@ export function HeaderNoLogo() {
 }
 
 export function HeaderResume() {
-
-  const container = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: .5,
-        staggerChildren: 0.2
-      }
-    }
-  };
 
   const wait = {
     hidden: { x: 0, y: 0, opacity: 0, transition: {delay: 0} },
@@ -170,18 +145,6 @@ export function HeaderResume() {
 
 
 export function HeaderProject() {
-
-  const container = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: .5,
-        staggerChildren: 0.2
-      }
-    }
-  };
 
   const wait = {
     hidden: { x: 0, y: 0, opacity: 0, transition: {delay: 0} },
