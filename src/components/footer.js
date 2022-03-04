@@ -8,7 +8,7 @@ export function Footer() {
     <>
       <footer>
 
-        <div className='nav-parent pt-lg-20 pb-100 pb-lg-140'>
+        <div className='nav-parent text-center pt-lg-20 pb-100 pb-lg-140'>
 
             <Link to='/'  className='nav-item'>
               HOME
@@ -30,7 +30,7 @@ export function FooterResume() {
     <>
       <footer>
 
-        <div className='nav-parent pt-lg-20 pb-100 pb-lg-140'>
+        <div className='nav-parent text-center pt-lg-20 pb-100 pb-lg-140'>
 
             <Link to='/'  className='nav-item'>
               HOME
