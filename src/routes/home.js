@@ -1,7 +1,7 @@
 import React from 'react';
 import { HeaderNoLogo } from '../components/header';
 import ProjectGrid from '../components/projectgrid';
-import { motion } from "framer-motion";
+import { motion, scrollYProgress } from "framer-motion";
 
 // scss
 import '../styles/app.scss';
@@ -43,6 +43,10 @@ function Home() {
     visible: { x :0, y: -5, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
   
+  const wait = {
+    hidden: { x: 0, y: 0, opacity: 0, transition: {delay: 0} },
+    visible: { x :0, y: 0, opacity: 1, transition: {delay: .75, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
 
 
   return (
