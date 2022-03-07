@@ -16,6 +16,7 @@ import ui from "../svgs/ui.svg";
 import code from "../svgs/code.svg";
 import illustration from "../svgs/illustration.svg";
 import animation from "../svgs/animation.svg";
+import linklogo from "../logos/logo_linkedin.svg";
 
 
 
@@ -125,6 +126,9 @@ function Resume() {
         >
           <h1 className='resume-title mr-20'>Resume</h1>
           <h2 className='resume-sub-text'>MAKE GOOD SHIT</h2>
+          <a className='btn my-20 mr-10' href='https://www.linkedin.com/in/jpfairchild/'>
+            <img className='' src={linklogo} alt='linkedin' />
+          </a>
           <a className='btn my-20' href={ResumePDF} download>Download PDF</a>
         </motion.div>
 

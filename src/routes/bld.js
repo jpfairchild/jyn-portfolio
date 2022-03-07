@@ -41,7 +41,7 @@ function Bld() {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: .3
+        delay: 2.2
       }
     }
   };
@@ -67,12 +67,7 @@ function Bld() {
 
 
   return (
-    <motion.div 
-      className="container"
-      initial="hidden"
-      animate="visible"
-      variants={container}
-    >
+    <div className="container">
 
       <HeaderProject />
 
@@ -134,67 +129,75 @@ function Bld() {
         
       </motion.div>
 
-      {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-80'>
-        <p className='project-page-p text-width-100'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
-      </div>
-      
-      {/* ------ 2nd of Mocks ------ */}
-      <div className='row image-set justify-content-center mb-lg-140 mb-100'>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={container}
+      >
 
-        <div className='flex-images-bld image-width-50 p-20'>
-            <img className='w-100' src={BldChat} alt='bldchatimage'/>
+        {/* Text Paragraph */}
+        <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-80'>
+          <p className='project-page-p text-width-100'>Time Tracking, Kanban, Chat, Mentions, oh my.</p>
         </div>
         
-      </div>
+        {/* ------ 2nd of Mocks ------ */}
+        <div className='row image-set justify-content-center mb-lg-140 mb-100'>
 
-      {/* Text Paragraph */}
-      <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-100'>
-        <p className='project-page-p text-width-100'>Revenue breakdown by project, by month, by person. 
-          Blended rate next to the original estimate was a common ask from clients. Invoicing panel 
-          making invoicing simple and easy.</p>
-      </div>
-
-      {/* ------ 3rd of Mocks ------ */}
-      <div className='row image-set justify-content-center mb-lg-240 mb-200'>
-        <div className='flex-images-bld image-width-90 p-20 p-lg-30'>
-            <img className='image-width-100 tablet-margin-b-pivot phone-margin-b-pivot web-margin-r-pivot' src={BldPivot} alt='pivot'/>
-            <img className='image-width-50' src={BldInvoice} alt='invoice'/>
-        </div>
-      </div>
-
-      {/* Text Paragraph */}
-      <div className='row project-double-text justify-content-center w-100 mb-lg-200 mb-120'>
-
-        <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
-          <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
-          <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+          <div className='flex-images-bld image-width-50 p-20'>
+              <img className='w-100' src={BldChat} alt='bldchatimage'/>
+          </div>
+          
         </div>
 
-        <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep 
-          with the design community for implementing designs poorly. This is half true, but often I 
-          find designers aren&#x27;t communicating well, having check ins during the engineering team 
-          during the coding process and made zero specs around their designs.</p>
-
-        <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I&#x27;m a huge fan on making specs 
-          for engineers. Often specs act as blueprints and then when something is off, you can pull 
-          up the spec and it acts as almost a contract that you can hold the engineer too.</p>
-      </div>
-
-      {/* ------ 4th of Mocks ------ */}
-      <div className='row image-set justify-content-center'>
-        <div className='flex-images-bld image-width-50 p-lg-30 p-20'>
-            <img className='image-width-50 pr-40 pb-40 pb-lg-none' src={BldSpec1} alt='image8'/>
-            <img className='image-width-50 pb-20 pb-lg-none' src={BldSpec2} alt='image9'/>
+        {/* Text Paragraph */}
+        <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-100'>
+          <p className='project-page-p text-width-100'>Revenue breakdown by project, by month, by person. 
+            Blended rate next to the original estimate was a common ask from clients. Invoicing panel 
+            making invoicing simple and easy.</p>
         </div>
-      </div>
+
+        {/* ------ 3rd of Mocks ------ */}
+        <div className='row image-set justify-content-center mb-lg-240 mb-200'>
+          <div className='flex-images-bld image-width-90 p-20 p-lg-30'>
+              <img className='image-width-100 tablet-margin-b-pivot phone-margin-b-pivot web-margin-r-pivot' src={BldPivot} alt='pivot'/>
+              <img className='image-width-50' src={BldInvoice} alt='invoice'/>
+          </div>
+        </div>
+
+        {/* Text Paragraph */}
+        <div className='row project-double-text justify-content-center w-100 mb-lg-200 mb-120'>
+
+          <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
+            <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
+            <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+          </div>
+
+          <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep 
+            with the design community for implementing designs poorly. This is half true, but often I 
+            find designers aren&#x27;t communicating well, having check ins during the engineering team 
+            during the coding process and made zero specs around their designs.</p>
+
+          <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I&#x27;m a huge fan on making specs 
+            for engineers. Often specs act as blueprints and then when something is off, you can pull 
+            up the spec and it acts as almost a contract that you can hold the engineer too.</p>
+        </div>
+
+        {/* ------ 4th of Mocks ------ */}
+        <div className='row image-set justify-content-center'>
+          <div className='flex-images-bld image-width-50 p-lg-30 p-20'>
+              <img className='image-width-50 pr-40 pb-40 pb-lg-none' src={BldSpec1} alt='image8'/>
+              <img className='image-width-50 pb-20 pb-lg-none' src={BldSpec2} alt='image9'/>
+          </div>
+        </div>
+
+      </motion.div>  
 
       <div className='mb-100'></div>
 
       <ProjectGrid />
 
       <Footer />
-    </motion.div>
+    </div>
   );
 }
 

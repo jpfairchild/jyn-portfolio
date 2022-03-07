@@ -30,14 +30,11 @@ function Bantam() {
 
   // Animation
   const container = {
-    hidden: { opacity: 0, scale: 0 },
+    hidden: { opacity: 0, scale: 1 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        delayChildren: 1,
-        staggerChildren: 1
-      }
+      transition: {delay: 2.2, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]}
     }
   };
 
@@ -62,14 +59,9 @@ function Bantam() {
 
 
   return (
-    <motion.div 
-      className="container"
-      initial="hidden"
-      animate="visible"
-      variants={container}
-    >
+    <div className="container">
 
-    <HeaderProject />
+      <HeaderProject />
 
       <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
 
@@ -115,111 +107,112 @@ function Bantam() {
           
         </motion.div>
 
+        <motion.div className='motiondiv' initial='hidden' animate='visible' variants={container}>
 
-
-        {/* Text Paragraph */}
-        <div className='row justify-content-center mt-lg-160 mb-lg-160 mb-100'>
-          <p className='project-page-p text-width-100'>I build frameworks, not one offs. Software companies that are 
-            constantly evolving and need to adapt to new user needs every year. I only build designs to be 
-            reusable. If Bantam ever needs to add a new tool, process, set of controls, they will be able 
-            to adapt the designs for their new needs easily. </p>
-        </div>
-
-
-        
-        {/* ------ 2nd set of Mocks ------ */}
-        <div className='row m-10 m-lg-10 mb-lg-160'>
-
-          <div className='flex-bantam'>
-            <img className='image-width-40 mb-60' src={BantamMaterial} alt='material' />
-            <img className='image-width-40 mb-60' src={BantamInitial} alt='initial' />
+          {/* Text Paragraph */}
+          <div className='row justify-content-center mt-lg-160 mb-lg-160 mb-100'>
+            <p className='project-page-p text-width-100'>I build frameworks, not one offs. Software companies that are 
+              constantly evolving and need to adapt to new user needs every year. I only build designs to be 
+              reusable. If Bantam ever needs to add a new tool, process, set of controls, they will be able 
+              to adapt the designs for their new needs easily. </p>
           </div>
+
+
           
-        </div>
+          {/* ------ 2nd set of Mocks ------ */}
+          <div className='row m-10 m-lg-10 mb-lg-160'>
 
-
-
-        {/* ------ 3rd set of Mocks ------ */}
-        <div className='row m-10 m-lg-10'>
-          <div className='flex-bantam'>
-              <img className='image-width-100 mb-lg-240 mb-100' src={BantamIllustrations} alt='image14'/>
-          </div>
-        </div>
-
-
-
-        {/* Text Paragraph */}
-        <div className='row justify-content-center'>
-
-          <div className='flurish-parent d-none d-sm-none d-md-none d-lg-none d-xl-block mr-lg-40'>
-            <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
-            <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+            <div className='flex-bantam'>
+              <img className='image-width-40 mb-60' src={BantamMaterial} alt='material' />
+              <img className='image-width-40 mb-60' src={BantamInitial} alt='initial' />
+            </div>
+            
           </div>
 
-          <p className='project-page-p text-width-51 mb-60 mr-lg-80'>Bantam was a great partner to work with because they knew what 
-            they wanted to be done, but also where they wanted to focus in the future. In certain areas of the app I 
-            gave them minimal viable product designs, but also future versions.</p>
-
-          <p className='project-page-p text-width-51 mb-120 mb-lg-240'>Additional features fully ready for implementation when engineers have 
-            time, but things that didn&#x27;t need to be part of the first iteration. </p>
-        </div>
 
 
-
-        {/* ------ 4th set of Mocks ------ */}
-        <div className='row m-10 m-lg-10 mb-lg-160'>
-
-          <div className='flex-bantam'>
-            <img className='image-width-25 mb-60' src={BantamV1} alt='material' />
-            <img className='image-width-25 mb-60' src={BantamV2} alt='initial' />
-            <img className='image-width-25 mb-60' src={BantamV3} alt='initial' />
-          </div>
-          
-        </div>
-
-
-
-        {/* ------ 5th set of Mocks ------ */}
-        <div className='row m-10 m-lg-10 mb-lg-160'>
-
-          <div className='flex-bantam'>
-            <img className='image-width-40 mb-60' src={BantamFeed} alt='material' />
-            <img className='image-width-40 mb-80' src={BantamFeedExpaneded} alt='initial' />
+          {/* ------ 3rd set of Mocks ------ */}
+          <div className='row m-10 m-lg-10'>
+            <div className='flex-bantam'>
+                <img className='image-width-100 mb-lg-240 mb-100' src={BantamIllustrations} alt='image14'/>
+            </div>
           </div>
 
-        </div>
 
 
+          {/* Text Paragraph */}
+          <div className='row justify-content-center'>
 
-        {/* Text Paragraph */}
-        <div className='row justify-content-center mb-lg-120'>
+            <div className='flurish-parent d-none d-sm-none d-md-none d-lg-none d-xl-block mr-lg-40'>
+              <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
+              <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+            </div>
 
-          <div className='flurish-parent d-none d-sm-none d-md-none d-lg-none d-xl-block mr-lg-40'>
-            <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
-            <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+            <p className='project-page-p text-width-51 mb-60 mr-lg-80'>Bantam was a great partner to work with because they knew what 
+              they wanted to be done, but also where they wanted to focus in the future. In certain areas of the app I 
+              gave them minimal viable product designs, but also future versions.</p>
+
+            <p className='project-page-p text-width-51 mb-120 mb-lg-240'>Additional features fully ready for implementation when engineers have 
+              time, but things that didn&#x27;t need to be part of the first iteration. </p>
           </div>
 
-          <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
-            implementing designs poorly. This is only half true... often I find designers aren&#x27;t communicating with the 
-            engineering team during the coding process and/or  making zero specs around their designs.</p>
-
-          <p className='project-page-p text-width-51 mb-60 mb-lg-160 mb-100'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
-            blueprints and then when something is off, you can pull up the spec and it acts as almost a contract that you 
-            can hold the engineer too.</p>
-        </div>
 
 
+          {/* ------ 4th set of Mocks ------ */}
+          <div className='row m-10 m-lg-10 mb-lg-160'>
 
-        {/* ------ 6th set of Mocks ------ */}
-        <div className='row m-10 m-lg-10 mb-lg-40'>
-
-          <div className='flex-bantam'>
-            <img className='image-width-40 mb-60' src={BantamSpec1} alt='material' />
-            <img className='image-width-40 mb-60' src={BantamSpec2} alt='initial' />
+            <div className='flex-bantam'>
+              <img className='image-width-25 mb-60' src={BantamV1} alt='material' />
+              <img className='image-width-25 mb-60' src={BantamV2} alt='initial' />
+              <img className='image-width-25 mb-60' src={BantamV3} alt='initial' />
+            </div>
+            
           </div>
 
-        </div>
 
+
+          {/* ------ 5th set of Mocks ------ */}
+          <div className='row m-10 m-lg-10 mb-lg-160'>
+
+            <div className='flex-bantam'>
+              <img className='image-width-40 mb-60' src={BantamFeed} alt='material' />
+              <img className='image-width-40 mb-80' src={BantamFeedExpaneded} alt='initial' />
+            </div>
+
+          </div>
+
+
+
+          {/* Text Paragraph */}
+          <div className='row justify-content-center mb-lg-120'>
+
+            <div className='flurish-parent d-none d-sm-none d-md-none d-lg-none d-xl-block mr-lg-40'>
+              <h3 className='flurish-text-vertical'>QUALITY MATTERS</h3>
+              <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
+            </div>
+
+            <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
+              implementing designs poorly. This is only half true... often I find designers aren&#x27;t communicating with the 
+              engineering team during the coding process and/or  making zero specs around their designs.</p>
+
+            <p className='project-page-p text-width-51 mb-60 mb-lg-160 mb-100'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
+              blueprints and then when something is off, you can pull up the spec and it acts as almost a contract that you 
+              can hold the engineer too.</p>
+          </div>
+
+
+
+          {/* ------ 6th set of Mocks ------ */}
+          <div className='row m-10 m-lg-10 mb-lg-40'>
+
+            <div className='flex-bantam'>
+              <img className='image-width-40 mb-60' src={BantamSpec1} alt='material' />
+              <img className='image-width-40 mb-60' src={BantamSpec2} alt='initial' />
+            </div>
+
+          </div>
+
+        </motion.div>
 
 
       </div>
@@ -227,7 +220,7 @@ function Bantam() {
       <ProjectGrid />
 
       <Footer />
-    </motion.div>
+    </div>
   );
 }
 

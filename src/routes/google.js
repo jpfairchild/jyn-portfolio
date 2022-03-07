@@ -15,19 +15,19 @@ import LibrarySpec from '../images/google_youtube-spec.png';
 import FloatyAnimation from '../animations/google_floaty.mp4';
 import { motion } from 'framer-motion';
 
+
+
 // Page Function
 function Google() {
 
+
   // Animation
   const container = {
-    hidden: { opacity: 0, scale: 0 },
+    hidden: { opacity: 0, scale: 1 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        delayChildren: 1,
-        staggerChildren: 1
-      }
+      transition: {delay: 2.2, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]}
     }
   };
 
@@ -50,14 +50,9 @@ function Google() {
   };
 
   return (
-    <motion.div 
-      className="container"
-      initial="hidden"
-      animate="visible"
-      variants={container}
-    >
+    <div className="container">
 
-    <HeaderProject />
+      <HeaderProject />
 
 
       <div className='row project-page-title-description justify-content-center mb-lg-140 mb-100'>
@@ -115,94 +110,100 @@ function Google() {
         </motion.div>
 
 
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={container}
+        >
 
-        {/* Text Paragraph */}
-        <div className='row justify-content-center mt-lg-160 mb-lg-160 mb-100'>
-          <p className='project-page-p text-width-100'>YouTube's Dark mode was one of my favorite projects I did 
-            during my time @ Google. It touched every screen, every part of the app. Death by a million cuts, it taught me 
-            that even seemingly small changes, at scale, change a lot. What seems like a simple color change meant hundreds of 
-            screen designs, and actual style guide for the first time in YouTube's history, different tooltips, 
-            different illustrations, &#x26; updated navigation transitions.</p>
-        </div>
-
-
-        
-        {/* ------ Settings Animation ------ */}
-        <div className='row mb-lg-160 mb-mobile-google'>
-
-          <div className='flex-google'>
-            <video 
-              className='image-width-40 mb-60' 
-              src={EnableAnimation} 
-              autoPlay
-              loop
-              muted
-              playsInline 
-              alt='material' />
+          {/* Text Paragraph */}
+          <div className='row justify-content-center mt-lg-160 mb-lg-160 mb-100'>
+            <p className='project-page-p text-width-100'>YouTube's Dark mode was one of my favorite projects I did 
+              during my time @ Google. It touched every screen, every part of the app. Death by a million cuts, it taught me 
+              that even seemingly small changes, at scale, change a lot. What seems like a simple color change meant hundreds of 
+              screen designs, and actual style guide for the first time in YouTube's history, different tooltips, 
+              different illustrations, &#x26; updated navigation transitions.</p>
           </div>
+
+
           
-        </div>
+          {/* ------ Settings Animation ------ */}
+          <div className='row mb-lg-160 mb-mobile-google'>
 
-
-
-        {/* Text - Power User */}
-        <div className='row justify-content-center mr-lg-40 mb-lg-120 mb-mobile-google'>
-
-          <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
-            <h3 className='flurish-text-vertical'>POWER USER QUEEN</h3>
-            <img className='flurish-vertical flurish-quality-google' src={flurish} alt='flurish' />
+            <div className='flex-google'>
+              <video 
+                className='image-width-40 mb-60' 
+                src={EnableAnimation} 
+                autoPlay
+                loop
+                muted
+                playsInline 
+                alt='material' />
+            </div>
+            
           </div>
 
-          <p className='project-page-p text-width-51 mb-60'>The Library was under utilized when I 
-            arrived at YouTube. I identified it as a large user pain point that had a ton of utility. 
-            Over the next 2 years I recruited like minded engineers and a team of 12 formed around 
-            us dedicated to improving the user experience of core users.</p>
-
-        </div>
 
 
+          {/* Text - Power User */}
+          <div className='row justify-content-center mr-lg-40 mb-lg-120 mb-mobile-google'>
 
-        {/* ------ Library Spec ------ */}
-        <div className='row m-10 m-lg-10 mb-lg-160'>
+            <div className='flurish-parent d-none d-sm-none d-md-none d-lg-block d-xl-block mr-lg-40'>
+              <h3 className='flurish-text-vertical'>POWER USER QUEEN</h3>
+              <img className='flurish-vertical flurish-quality-google' src={flurish} alt='flurish' />
+            </div>
 
-          <div className='flex-bantam'>
-            <img className='image-width-50 mb-60' src={LibrarySpec} alt='material' />
-          </div>
-          
-        </div>
+            <p className='project-page-p text-width-51 mb-60'>The Library was under utilized when I 
+              arrived at YouTube. I identified it as a large user pain point that had a ton of utility. 
+              Over the next 2 years I recruited like minded engineers and a team of 12 formed around 
+              us dedicated to improving the user experience of core users.</p>
 
-        <div className='row'>
-          <img className='flurish-horizontal' src={flurish} alt='flurish' />
-          <h3 className='flurish-text'>TOOLTIPS = 15%+ USAGE</h3>
-        </div>
-
-        {/* ------ Floaty Animation ------ */}
-        <div className='row m-10 m-lg-10 mb-lg-160 mb-mobile-google'>
-
-          <div className='flex-google'>
-            <video 
-              className='image-width-40 mb-60' 
-              src={FloatyAnimation} 
-              autoPlay
-              loop
-              muted
-              playsInline 
-              alt='floaty animation' />
           </div>
 
-        </div>
 
 
-        {/* Text Paragraph */}
-        <div className='row justify-content-center mb-lg-120'>
+          {/* ------ Library Spec ------ */}
+          <div className='row m-10 m-lg-10 mb-lg-160'>
 
-          <p className='project-page-p text-width-51 mb-60'>While working at Google, I spent years 
-            improving products through creative design solutions, making substantial metrics improvements along 
-            the way. I worked on a multitude of projects, but most of my impact was increasing user adoption and
-            usage.</p>
+            <div className='flex-bantam'>
+              <img className='image-width-50 mb-60' src={LibrarySpec} alt='material' />
+            </div>
+            
+          </div>
 
-        </div>
+          <div className='row'>
+            <img className='flurish-horizontal' src={flurish} alt='flurish' />
+            <h3 className='flurish-text'>TOOLTIPS = 15%+ USAGE</h3>
+          </div>
 
+          {/* ------ Floaty Animation ------ */}
+          <div className='row m-10 m-lg-10 mb-lg-160 mb-mobile-google'>
+
+            <div className='flex-google'>
+              <video 
+                className='image-width-40 mb-60' 
+                src={FloatyAnimation} 
+                autoPlay
+                loop
+                muted
+                playsInline 
+                alt='floaty animation' />
+            </div>
+
+          </div>
+
+
+          {/* Text Paragraph */}
+          <div className='row justify-content-center mb-lg-120'>
+
+            <p className='project-page-p text-width-51 mb-60'>While working at Google, I spent years 
+              improving products through creative design solutions, making substantial metrics improvements along 
+              the way. I worked on a multitude of projects, but most of my impact was increasing user adoption and
+              usage.</p>
+
+          </div>
+
+        </motion.div>
 
 
       </div>
@@ -210,7 +211,7 @@ function Google() {
       <ProjectGrid />
 
       <Footer />
-    </motion.div>
+    </div>
   );
 }
 
