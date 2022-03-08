@@ -146,6 +146,21 @@ a {
   margin-top: rempx(40);
 }
 
+// Code Snippet
+
+.linenumber {
+  color: #fff;
+}
+
+.react-syntax-highlighter-line-number {
+  margin-right: rempx(0);
+  color: #fff;
+}
+
+.react-syntax-highlighter-codeblock {
+  margin-right: rempx(30);
+}
+
 // Flex
 
 .flex-parent {
@@ -870,6 +885,12 @@ hr {
   &:last-child {
     margin-right: rempx(30);
   }
+}
+
+// Code Widths
+
+.code-width-40 {
+  width: 40%;
 }
 
 // Text Widths

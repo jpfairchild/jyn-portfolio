@@ -25,6 +25,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.0",
     "react-svg-loader": "^3.0.0",
+    "react-syntax-highlighter": "^15.4.5",
     "readdir": "^1.0.2",
     "sass-loader": "^12.4.0",
     "style-loader": "^1.2.1"
