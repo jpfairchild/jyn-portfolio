@@ -1,0 +1,20 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="124.987" y="124.987" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="124.987" y="174.96" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="174.96" y="124.987" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="174.96" y="174.96" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="100" y="100" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="100" y="149.973" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="149.973" y="100" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="149.973" y="149.973" width="25.0402" height="25.0402" fill="#1663BE" stroke="black" stroke-width="0.7"/>
+<rect x="100" y="124.987" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="100" y="174.96" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="149.973" y="124.987" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="149.973" y="174.96" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="124.987" y="100" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="124.987" y="149.973" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="174.96" y="100" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<rect x="174.96" y="149.973" width="25.0402" height="25.0402" fill="#313B47" stroke="black" stroke-width="0.7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M94 100V200V206H100H200H206V200V100V94H200H100H94V100ZM200 200V100H100V200H200Z" fill="#262626"/>
+<path d="M94 206H93.65V206.35H94V206ZM206 206V206.35H206.35V206H206ZM206 94H206.35V93.65H206V94ZM94 94V93.65H93.65V94H94ZM200 200V200.35H200.35V200H200ZM200 100H200.35V99.65H200V100ZM100 100V99.65H99.65V100H100ZM100 200H99.65V200.35H100V200ZM94.35 200V100H93.65V200H94.35ZM94.35 206V200H93.65V206H94.35ZM100 205.65H94V206.35H100V205.65ZM200 205.65H100V206.35H200V205.65ZM206 205.65H200V206.35H206V205.65ZM205.65 200V206H206.35V200H205.65ZM205.65 100V200H206.35V100H205.65ZM205.65 94V100H206.35V94H205.65ZM200 94.35H206V93.65H200V94.35ZM100 94.35H200V93.65H100V94.35ZM94 94.35H100V93.65H94V94.35ZM94.35 100V94H93.65V100H94.35ZM200.35 200V100H199.65V200H200.35ZM200 99.65H100V100.35H200V99.65ZM99.65 100V200H100.35V100H99.65ZM100 200.35H200V199.65H100V200.35Z" fill="black"/>
+</svg>

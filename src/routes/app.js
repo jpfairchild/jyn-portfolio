@@ -8,16 +8,17 @@ import ScrollToTop from "../components/scrollintoview";
 //top level pages
 const Home = lazy(() => import('./home'));
 const Resume = lazy(() => import('./resume'));
-const About = lazy(() => import('./about'));
 
 //projects
 const Bld = lazy(() => import('./bld'));
 const Bantam = lazy(() => import('./bantam'));
 const Google = lazy(() => import('./google'));
+const Chess = lazy(() => import('./chesspgn'));
 const Illustrations = lazy(() => import('./illustrations'));
 
 //routes
 function App() {
+
   return (
     <div>
       <Router>
@@ -31,13 +32,13 @@ function App() {
 
                   {/* Top level paths */}
                   <Route exact path='/' component={Home} />
-                  <Route exact path='/about' component={About} />
                   <Route exact path='/resume' component={Resume} />
 
                   {/* Expose all routes underneath /<whatever> and load your page */}
                   <Route exact path='/bld' component={Bld} />
                   <Route exact path='/bantam' component={Bantam} />
                   <Route exact path='/google' component={Google} />
+                  <Route exact path='/chess' component={Chess} />
                   <Route exact path='/illustrations' component={Illustrations} />
 
                 </Switch>

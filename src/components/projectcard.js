@@ -11,7 +11,7 @@ export function ProjectCard({ projectName }) {
   // Animation
   const yUp = {
     hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
-    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1, duration: 1 } }
   };
 
   //Set States for Data to be imported
