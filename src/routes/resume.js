@@ -105,12 +105,7 @@ function Resume() {
 
 
   return (
-    <motion.div 
-      className="container"
-      initial="hidden"
-      animate="visible"
-      variants={container}
-    >
+    <div className="container">
 
       <HeaderResume />
 
@@ -306,7 +301,7 @@ function Resume() {
 
       <Footer />
 
-    </motion.div>
+    </div>
   );
 }
 

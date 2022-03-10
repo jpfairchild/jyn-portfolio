@@ -153,8 +153,13 @@ a {
 }
 
 .react-syntax-highlighter-line-number {
-  margin-right: rempx(0);
-  color: #fff;
+  margin-right: rempx(10);
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.linenumber {
+  color: rgb(255, 255, 255);
 }
 
 .react-syntax-highlighter-codeblock {
@@ -825,6 +830,10 @@ hr {
 
 }
 
+.image-width-33-chess {
+  width: 33%;
+}
+
 .image-width-25 {
   width: 25%;
 
@@ -891,6 +900,14 @@ hr {
 
 .code-width-40 {
   width: 40%;
+}
+
+@media (max-width: 375px) {
+  
+  .code-width-40 {
+    width: 95%;
+  }
+  
 }
 
 // Text Widths
@@ -1282,6 +1299,10 @@ hr {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .image-width-33-chess {
+    width: 80%;
   }
 
   .image-width-25 {
