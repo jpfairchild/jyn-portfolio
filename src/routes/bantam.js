@@ -71,7 +71,7 @@ function Bantam() {
           animate="visible"
           variants={yUp}
         >
-          <h1 className='pp-title'>Bantam Tools</h1>
+          <h1 className='pp-title'>BANTAM TOOLS</h1>
           <h2 className='pp-sub-text'>THROUGH ALUMINUM LIKE BUTTER</h2>
         </motion.div>
 

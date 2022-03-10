@@ -78,7 +78,7 @@ function Illustrations() {
           animate="visible"
           variants={yUp}
         >
-          <h1 className='pp-title mr-20'>Illustrations</h1>
+          <h1 className='pp-title mr-20'>ILLUSTRATIONS</h1>
           <h2 className='pp-sub-text'>IN PURSUIT OF THE VECTOR</h2>
         </motion.div>
 
@@ -96,17 +96,17 @@ function Illustrations() {
       </div>
 
       {/* ------ 1st of Mocks ------ */}
-      <div className='row XXXXX justify-content-center mb-lg-140 mb-80'>
+      <div className='row justify-content-center'>
 
         <motion.div 
-          className='XXXXX__slider flex-images-illustrations w-100 rounded-corner'
+          className='flex-images-illustrations w-100 rounded-corner'
           initial="hidden"
           animate="visible"
           variants={yUp3}
         >
 
           {Object.keys(images).map((fileName) => {
-            return <img key={fileName} className='image-width-100 XXXXX__slide' src={images[fileName]} alt={fileName}/>;
+            return <img key={fileName} className='image-width-100' src={images[fileName]} alt={fileName}/>;
           })}
   
         </motion.div>

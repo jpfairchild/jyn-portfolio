@@ -231,6 +231,10 @@ a {
   margin-right: rempx(12);
 }
 
+.flurish-horizontal-centered {
+  margin-right: rempx(12);
+}
+
 .flurish-vertical {
   rotate: 270deg;
   margin-right: rempx(0);
@@ -390,12 +394,12 @@ h5 {
 }
 
 .pp-title {
-  font-family: $font-family-ailerons;
-  margin-left: rempx(-3);
-  font-weight: 800;
-  font-size: rempx(28);
+  font-family: $font-family-unica;
+  font-weight: 300;
+  font-size: rempx(38);
   min-width: rempx(370);
-  color: $white-800;
+  letter-spacing: rempx(2);
+  color: $white-900;
 }
 
 .pp-sub-text {
@@ -855,6 +859,15 @@ hr {
 
 }
 
+.image-width-25-singleton {
+  width: 25%;
+
+  &:first-child {
+    margin-right: rempx(50);
+  }
+
+}
+
 .image-width-20 {
   width: 20%;
 
@@ -900,6 +913,14 @@ hr {
 
 .code-width-40 {
   width: 40%;
+}
+
+@media (max-width: 810px) {
+  
+  .code-width-40 {
+    width: 90%;
+  }
+  
 }
 
 @media (max-width: 375px) {
@@ -1082,6 +1103,10 @@ hr {
   // }
 
   .image-width-100 {
+    width: 100%;
+  }
+
+  .image-width-100-project {
     width: 100%;
   
     &:first-child {
@@ -1268,6 +1293,10 @@ hr {
 
   .image-width-100 {
     width: 100%;
+  }
+
+  .image-width-100-project {
+    width: 100%;
     &:first-child {
       margin-right: 0;
       margin-bottom: rempx(30);
@@ -1404,6 +1433,17 @@ hr {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .image-width-25-singleton {
+    width: 95%;
+    margin: 0;
+  
+    &:first-child {
+      margin-right: rempx(0);
+      margin-bottom: rempx(30);
+    }
+  
   }
 
   .tablet-margin-pivot {
@@ -1666,7 +1706,7 @@ hr {
   // Google
 
   .mb-mobile-google {
-    margin-bottom: rempx(50);
+    margin-bottom: rempx(100);
   }
 
 }

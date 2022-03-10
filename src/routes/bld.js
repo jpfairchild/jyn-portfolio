@@ -79,7 +79,7 @@ function Bld() {
           animate="visible"
           variants={yUp}
         >
-          <h1 className='pp-title mr-20'>Freelance App</h1>
+          <h1 className='pp-title mr-20'>FREELANCE APP</h1>
           <h2 className='pp-sub-text'>ORGANIZE YOUR WORK</h2>
         </motion.div>
 
@@ -159,7 +159,7 @@ function Bld() {
         {/* ------ 3rd of Mocks ------ */}
         <div className='row image-set justify-content-center mb-lg-240 mb-200'>
           <div className='flex-images-bld image-width-90 p-20 p-lg-30'>
-              <img className='image-width-100 tablet-margin-b-pivot phone-margin-b-pivot web-margin-r-pivot' src={BldPivot} alt='pivot'/>
+              <img className='image-width-100-project tablet-margin-b-pivot phone-margin-b-pivot web-margin-r-pivot' src={BldPivot} alt='pivot'/>
               <img className='image-width-50' src={BldInvoice} alt='invoice'/>
           </div>
         </div>

@@ -11,7 +11,6 @@ import flurish from "../svgs/flurish_lines.svg";
 import LibraryLight from '../images/google_youtube-case-study-light.png';
 import LibraryDark from '../images/google_youtube-case-study-dark.png';
 import EnableAnimation from '../animations/google_youtube_dark-mode-settings.mp4';
-import LibrarySpec from '../images/google_youtube-spec.png';
 import FloatyAnimation from '../animations/google_floaty.mp4';
 import { motion } from 'framer-motion';
 
@@ -63,7 +62,7 @@ function Google() {
         animate="visible"
         variants={yUp}
       >
-        <h1 className='pp-title'>Google</h1>
+        <h1 className='pp-title'>GOOGLE</h1>
         <h2 className='pp-sub-text'>DO NO EVIL</h2>
       </motion.div>
 
@@ -92,7 +91,7 @@ function Google() {
         >
 
           {/* Flurish */}
-          <div className='row'>
+          <div className='row mb-20'>
             <img className='flurish-horizontal' src={flurish} alt='flurish' />
             <h3 className='flurish-text'>MOCKS</h3>
           </div>
@@ -101,8 +100,8 @@ function Google() {
           <div className='row mb-lg-160'>
 
             <div className='flex-bantam mb-mobile-google'>
-              <img className='image-width-40' src={LibraryLight} alt='material' />
-              <img className='image-width-40' src={LibraryDark} alt='initial' />
+              <img className='image-width-25-singleton' src={LibraryLight} alt='material' />
+              <img className='image-width-25-singleton' src={LibraryDark} alt='initial' />
             </div>
             
           </div>
@@ -132,7 +131,7 @@ function Google() {
 
             <div className='flex-google'>
               <video 
-                className='image-width-40 mb-60' 
+                className='image-width-25-singleton mr-0 mb-60' 
                 src={EnableAnimation} 
                 autoPlay
                 loop
@@ -161,27 +160,17 @@ function Google() {
           </div>
 
 
-
-          {/* ------ Library Spec ------ */}
-          <div className='row m-10 m-lg-10 mb-lg-160'>
-
-            <div className='flex-bantam'>
-              <img className='image-width-50 mb-60' src={LibrarySpec} alt='material' />
-            </div>
-            
-          </div>
-
-          <div className='row'>
-            <img className='flurish-horizontal' src={flurish} alt='flurish' />
+          <div className='row justify-content-center mb-20'>
+            <img className='flurish-horizontal-centered' src={flurish} alt='flurish' />
             <h3 className='flurish-text'>TOOLTIPS = 15%+ USAGE</h3>
           </div>
 
           {/* ------ Floaty Animation ------ */}
-          <div className='row m-10 m-lg-10 mb-lg-160 mb-mobile-google'>
+          <div className='row m-10 m-lg-10 mb-mobile-google'>
 
             <div className='flex-google'>
               <video 
-                className='image-width-40 mb-60' 
+                className='image-width-25-singleton mr-0 mb-120' 
                 src={FloatyAnimation} 
                 autoPlay
                 loop
@@ -196,7 +185,7 @@ function Google() {
           {/* Text Paragraph */}
           <div className='row justify-content-center mb-lg-120'>
 
-            <p className='project-page-p text-width-51 mb-60'>While working at Google, I spent years 
+            <p className='project-page-p ml-lg-40 text-width-51 mb-60'>While working at Google, I spent years 
               improving products through creative design solutions, making substantial metrics improvements along 
               the way. I worked on a multitude of projects, but most of my impact was increasing user adoption and
               usage.</p>

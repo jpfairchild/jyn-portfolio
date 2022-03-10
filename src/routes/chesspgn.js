@@ -52,7 +52,12 @@ function Chesspgn() {
 
   const yUp4 = {
     hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
-    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 2, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.5, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
+  };
+
+  const yUp5 = {
+    hidden: { x: 0, y: 20, opacity: 0, transition: {delay: 0} },
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99]} }
   };
 
   const codesnippet = `  directory = "mi_pgns/"
@@ -144,7 +149,7 @@ print("")`
           animate="visible"
           variants={yUp}
         >
-          <h1 className='pp-title mr-20'>Chess.PGN App</h1>
+          <h1 className='pp-title mr-20'>CHESS PGN APP</h1>
           <h2 className='pp-sub-text'>STUDY YOUR OPPONENTS</h2>
         </motion.div>
 
@@ -156,8 +161,8 @@ print("")`
         >
           A personal coding project that I'm super proud of, this python app lets you study 
           opponents by finding and consolidating all of their OTB games. In the land of competitive 
-          chess, understanding what openings your opponent plays, what tatics they've fallen for in 
-          the past, is a strong advantage over the board.
+          chess, understanding your opponents openings, what tatics they've fallen for, often gives 
+          a winning advantage.
         </motion.p>
 
       </div>
@@ -182,10 +187,15 @@ print("")`
 
       {/* Flurish */}
 
-      <div className='row justify-content-center m-20'>
+      <motion.div 
+        className='row justify-content-center m-20'
+        initial='hidden'
+        animate='visible'
+        variants={yUp5}
+      >
         <img className='flurish-horizontal' src={flurish} alt='flurish' />
         <h3 className='flurish-text'>DATA SET</h3>
-      </div>
+      </motion.div>
 
 
 
@@ -234,9 +244,9 @@ print("")`
         {/* Text Paragraph */}
         <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-80'>
           <p className='project-page-p text-width-100'>
-            This program, first consolodates all PGNs files from my local chessclub (The Mechanics Institue 
-            in San Francisco). There are a couple hundred files scrapped from their website. Some of the larger files contain
-            thousands of games. They have no standard naming convention, so all the games are unsorted.
+            This program, first consolodates all PGN files from my local chessclub (The Mechanics Institue 
+            in San Francisco). They upload all PGN files to their website, for anyone to download. Some of the 
+            larger files contain thousands of games. They have no standard naming convention, so all the games are unsorted.
             </p>
         </div>
 
@@ -358,9 +368,9 @@ print("")`
         {/* Text Paragraph */}
         <div className='row project-page-mid-role justify-content-center w-100 mb-lg-140 mb-100'>
           <p className='project-page-p text-width-100'>
-            Does a search for their name, finds their games, makes a new PGN file, shows how many games 
-            they have in the database. Their PGN file is exported into a local folder for upload to a 
-            lichess study or openingtree breakdown of their openings.
+            Then we do a search for their name, find their games, makes a new PGN file, check how many games 
+            they have in the database if any at all. The games are put into a new PGN file that is exported into a 
+            local folder for upload to lichess or openingtree for study.
           </p>
         </div>
 
