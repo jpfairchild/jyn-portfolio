@@ -22,6 +22,21 @@ function Home() {
       }
     }
   };
+
+  const containerAnimation = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { delay: 1, when: 'beforeChildren', staggerChildren: 0.2 } }
+  };
+
+  const containerAnimationMobile = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { delay: 2.0, when: 'beforeChildren', staggerChildren: 0.3 } }
+  };
+
+  const childrenAnimation = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
   
   const item = {
     hidden: { y: 0, opacity: .6, rotate: 0, pathLength: 0, pathSpacing: .2, transition: {delay: 0} },
@@ -36,6 +51,21 @@ function Home() {
   const yDown = {
     hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
     visible: { x :0, y: -5, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
+
+  const yUp2 = {
+    hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
+    visible: { x: 0, y: -30, opacity: 1, transition: {delay: 1.2, duration: .8, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
+
+  const yUp3 = {
+    hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
+    visible: { x: 0, y: -30, opacity: 1, transition: {delay: 1.4, duration: .8, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
+
+  const yUp4 = {
+    hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
+    visible: { x: 0, y: -30, opacity: 1, transition: {delay: 1.6, duration: .8, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
 
 
@@ -118,21 +148,6 @@ function Home() {
             Jyn Fairchild
           </motion.h1>
 
-          {/* <motion.svg
-            className='namelines mid-absolute'
-            width="378" 
-            height="9" 
-            viewBox="0 0 378 9" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <motion.path initial="hidden" animate="visible" variants={sepLine} d="M377 1H370V8H377V1Z" stroke="white"/>
-            <motion.path initial="hidden" animate="visible" variants={sepLine} d="M1 1H8V8H1V1Z" stroke="white"/>
-            <motion.path initial="hidden" animate="visible" variants={sepLine} d="M219 4.5H365" stroke="#6B6B6B"/>
-            <motion.path initial="hidden" animate="visible" variants={sepLine} d="M159 4.5H13" stroke="#6B6B6B"/>
-            <motion.path initial="hidden" animate="visible" variants={sepLine} d="M210 5V4H169V5H210Z" fill="white" stroke="white"/>
-          </motion.svg> */}
-
           <motion.h3 
             className='role bot-absolute'
             initial="hidden"
@@ -145,6 +160,130 @@ function Home() {
 
       </motion.div>
 
+
+      {/* ---- TagLine + About ----*/}
+
+      <div className='mt-lg-200 mb-lg-140'>
+
+        {/* Tagline */}
+        <div className="row">
+          <div className="mb-lg-40 mb-60">
+            <motion.div className='headline ml-lg-30 mb-lg-30'>
+
+              <motion.h4 initial='hidden' animate='show' variants={containerAnimation} className='home-animation-text'>
+                <motion.span variants={childrenAnimation}>Creating</motion.span>&nbsp;
+                <motion.span variants={childrenAnimation}>dynamite</motion.span>&nbsp;
+                <motion.span variants={childrenAnimation}>products</motion.span>&nbsp;
+
+                <motion.div className='mt-10 d-none d-sm-none d-md-none d-lg-block d-xl-block'>
+                  <motion.span variants={childrenAnimation}>Design</motion.span>&nbsp;
+                  <motion.span variants={childrenAnimation}>&#x26;</motion.span>&nbsp;
+                  <motion.span variants={childrenAnimation}>Engineering</motion.span>&nbsp;
+                  <motion.span variants={childrenAnimation}>Crafted</motion.span>&nbsp;
+                  <motion.span variants={childrenAnimation}>Together</motion.span>
+                </motion.div>
+
+
+                <motion.div 
+                  className='d-block d-sm-block d-md-block d-lg-none d-xl-none'
+                  initial='hidden' 
+                  animate='show'
+                  variants={containerAnimationMobile}
+                >
+                  <motion.div className='mt-10'>
+                    <motion.span variants={childrenAnimation}>Design</motion.span>&nbsp;
+                    <motion.span variants={childrenAnimation}>&#x26;</motion.span>&nbsp;
+                    <motion.span variants={childrenAnimation}>Engineering</motion.span>
+                  </motion.div>
+                  <motion.div className='mt-10'>
+                    <motion.span variants={childrenAnimation}>Crafted</motion.span>&nbsp;
+                    <motion.span variants={childrenAnimation}>Together</motion.span>
+                  </motion.div>
+
+                </motion.div>
+
+
+
+              </motion.h4>
+
+            </motion.div>
+          </div>
+        </div>
+
+
+        {/* ------- About Section -------*/}
+
+        <motion.div
+          className='mt-lg-30 mt-30'
+          initial="hidden"
+          animate="visible"
+          variants={yUp}
+        >
+          <div className='home-flex col-12'>
+            {/* flex */}
+
+            <motion.div 
+              className='home-flex-item'
+              initial="hidden"
+              animate="visible"
+              variants={yUp2}
+            
+            >
+              {/* 1st seciton */}
+              <h6>01 - DESIGN</h6>
+              <hr className='hr-sm'/>
+              <p className='project-page-p'>
+                Having designed for multiple billion user products, 
+                I deliver a data backed understanding of how people use technology. From that,
+                creative problem solving flows, and any product can be thoughtfully designed.
+              </p>
+
+            </motion.div>
+
+            <motion.div 
+              className='home-flex-item'
+              initial="hidden"
+              animate="visible"
+              variants={yUp3}
+            >
+
+              {/* 2nd seciton */}
+              <h6>02 - ENGINEERING</h6>
+              <hr className='hr-sm'/>
+              <p className='project-page-p'>
+                With a soild understanding of software engineering, I become one of the most 
+                useful tools for L5+ engineers. I implement most of the things I design for web, 
+                but having that knowledge of what engineering truly needs lets me design efficiently 
+                for larger projects.
+              </p>
+
+
+            </motion.div>
+
+            <motion.div 
+              className='home-flex-item'
+              initial="hidden"
+              animate="visible"
+              variants={yUp4}
+            >
+
+              {/* 3rd seciton */}
+              <h6>03 - LEADERSHIP</h6>
+              <hr className='hr-sm'/>
+              <p className='project-page-p'>
+                Beyond co-founding a small design agency, I lead an 8 person design team at a mid sized agency, 
+                growing the team from just me, while also nailing new clients becoming the liaison betweem design 
+                and engineering.
+              </p>
+
+
+            </motion.div>
+
+          </div>
+        </motion.div>
+
+      </div>
+
       {/* I SAID BITCHHHHHHHH */}
       <ProjectGrid />
 
@@ -152,7 +291,7 @@ function Home() {
       <div className='row justify-content-center pt-50 pt-lg-50 mb-100'>
         <div className='col-lg-6 pt-5 pt-md-5'>
           <p className='line-spacing-paragraph text-center'>
-            Without design, the world sucks.
+            Design is Queen.
           </p>
         </div>
       </div>

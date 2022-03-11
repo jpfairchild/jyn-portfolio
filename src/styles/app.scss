@@ -280,7 +280,7 @@ a {
 .name {
   font-family: $font-family-ailerons;
   font-weight: 300;
-  font-size: rempx(22);
+  font-size: rempx(30);
   color: $white;
   text-align: center;
 }
@@ -296,7 +296,7 @@ a {
 .role {
   font-family: $font-family-opensans;
   font-weight: 700;
-  font-size: rempx(11);
+  font-size: rempx(12);
   color: $white;
   text-align: center;
   letter-spacing: rempx(2);
@@ -314,7 +314,7 @@ a {
 
 .top-absolute {
   position: absolute;
-  top: 50%;
+  top: 46%;
   margin: 0 auto;
   text-align: center;
   left: 0;
@@ -371,11 +371,76 @@ h3 {
   color: $white;
 }
 
+h4 {
+  font-family: $font-family-unica;
+  font-size: rempx(16);
+  font-weight: 300;
+  color: $white-900;
+}
+
 h5 {
   font-family: $font-family-opensans;
   font-weight: 300;
   font-size: rempx(40);
 }
+
+h6 {
+  font-family: $font-family-opensans;
+  font-weight: 500;
+  font-size: rempx(13);
+  letter-spacing: rempx(2);
+  color: $white-500;
+}
+
+
+// Home Tagline
+
+.home-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+.home-flex-item {
+  margin: 0 35px;
+}
+
+@media (max-width: 428px) {
+
+  .home-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .home-flex-item {
+    margin: 0 15px 60px;
+  }
+}
+
+.home-animation-text {
+  font-size: rempx(46);
+  letter-spacing: rempx(3);
+  text-transform: uppercase
+}
+
+@media (max-width: 428px) {
+  
+  .home-animation-text {
+    font-size: rempx(22);
+    margin-left: rempx(16);
+  }
+}
+
+.headline {
+  display: inline-block;
+}
+
+.hr-sm {
+  border: 1px solid $white-100;
+}
+
+// Title 
 
 .pp-ts {
   margin-right: rempx(0);
@@ -727,10 +792,14 @@ hr {
 .project-card {
   position: relative;
   height: rempx(220);
-  margin: rempx(5);
   min-width: rempx(100);
   background-color: #131313;
   border-radius: rempx(0);
+
+  margin-left: rempx(5);
+  margin-right: rempx(5);
+  margin-bottom: rempx(5);
+  margin-top: rempx(5);
 
   &:hover {
     .project-img {
@@ -1533,8 +1602,18 @@ hr {
   }
 
   .hero-banner {
-    margin: rempx(40) 0 rempx(40) 0;
+    margin: rempx(60) 0 rempx(100) 0;
     position: relative;
+  }
+
+  // Grid
+
+  .project-card {  
+    margin-left: rempx(10);
+    margin-right: rempx(10);
+    margin-bottom: rempx(5);
+    margin-top: rempx(5);
+  
   }
 
   // Projects
