@@ -22,7 +22,7 @@ export function ProjectGrid() {
 
   const xRight = {
     hidden: { x: -15, y: 0, opacity: 0, transition: {delay: 0} },
-    visible: { x : 0, y: 0, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+    visible: { x : 0, y: 0, opacity: 1, transition: {delay: 1.4, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
 
 

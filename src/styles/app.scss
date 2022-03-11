@@ -275,6 +275,20 @@ a {
   border-radius: rempx(6);
 }
 
+// svgs on home
+
+.lines-box {
+  height: rempx(0);
+}
+
+.bg-lines {
+  position: absolute;
+  margin-top: rempx(60);
+  margin-left: rempx(-100);
+  height: 1920px;
+  opacity: 30%;
+}
+
 // Hero on Home Text
 
 .name {
@@ -283,6 +297,14 @@ a {
   font-size: rempx(30);
   color: $white;
   text-align: center;
+}
+
+@media (max-width: 428px) {
+
+  .name {
+    font-size: rempx(26);
+  }
+
 }
 
 .name-header {
@@ -405,6 +427,19 @@ h6 {
   margin: 0 35px;
 }
 
+@media (max-width: 810px) {
+
+  .home-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .home-flex-item {
+    margin: 0 15px 60px;
+  }
+}
+
 @media (max-width: 428px) {
 
   .home-flex {
@@ -419,7 +454,7 @@ h6 {
 }
 
 .home-animation-text {
-  font-size: rempx(46);
+  font-size: rempx(38);
   letter-spacing: rempx(3);
   text-transform: uppercase
 }
@@ -428,12 +463,21 @@ h6 {
   
   .home-animation-text {
     font-size: rempx(22);
-    margin-left: rempx(16);
   }
 }
 
 .headline {
   display: inline-block;
+  margin-left: rempx(30);
+}
+
+@media (max-width: 810px) {
+  
+  .headline {
+    display: inline-block;
+    margin-left: rempx(16);
+  }
+
 }
 
 .hr-sm {
@@ -1301,8 +1345,8 @@ hr {
   
   .svglines_small {
     display: block;
-    width: rempx(375);
-    height: rempx(263);
+    width: rempx(428);
+    height: rempx(300);
     margin: 0 auto;
   }
 
@@ -1591,8 +1635,7 @@ hr {
 
   .svglines_small {
     display: block;
-    width: rempx(365);
-    height: rempx(263);
+    max-width: rempx(375);
   }
 
   .namelines {
@@ -1604,6 +1647,10 @@ hr {
   .hero-banner {
     margin: rempx(60) 0 rempx(100) 0;
     position: relative;
+  }
+
+  .top-absolute {
+    top: 50%;
   }
 
   // Grid
