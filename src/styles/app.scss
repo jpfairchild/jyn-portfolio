@@ -194,10 +194,16 @@ a {
   justify-content: center;
 }
 
+.arrow-flex {
+  display: flex;
+
+  justify-content: center;
+}
+
 // Hero
 
 .hero-banner {
-  margin: rempx(100) 0 rempx(140) 0;
+  margin: 0;
   position: relative;
 }
 
@@ -209,15 +215,12 @@ a {
 
 .svglines {
   width: rempx(761);
-  height: rempx(263);
+  height: 82vh;
   margin: 0 auto;
 }
 
 .svglines_small {
   display: none;
-  opacity: 1;
-  height: rempx(263);
-  margin: 0 auto;
 }
 
 .namelines {
@@ -283,13 +286,23 @@ a {
 
 .bg-lines {
   position: absolute;
-  margin-top: rempx(60);
+  margin-top: rempx(460);
   margin-left: rempx(-100);
   height: 1920px;
   opacity: 30%;
 }
 
-// Hero on Home Text
+.arrow-style {
+  margin: 0 auto;
+  align-self: flex-start;
+  opacity: 20%;
+}
+
+// Hero on Home
+
+.vh {
+  height: 100vh;
+}
 
 .name {
   font-family: $font-family-ailerons;
@@ -336,18 +349,7 @@ a {
 
 .top-absolute {
   position: absolute;
-  top: 46%;
-  margin: 0 auto;
-  text-align: center;
-  left: 0;
-  right: 0;
-  width: 100%;
-
-}
-
-.mid-absolute {
-  position: absolute;
-  top: 50%;
+  top: 40%;
   margin: 0 auto;
   text-align: center;
   left: 0;
@@ -357,7 +359,7 @@ a {
 
 .bot-absolute {
   position: absolute;
-  top: 61%;
+  top: 44%;
   margin: 0 auto;
   text-align: center;
   left: 0;
@@ -414,8 +416,12 @@ h6 {
   color: $white-500;
 }
 
-
 // Home Tagline
+
+.home-about {
+  max-width: 95%;
+  margin: 0 auto;
+}
 
 .home-flex {
   display: flex;
@@ -1346,7 +1352,7 @@ hr {
   .svglines_small {
     display: block;
     width: rempx(428);
-    height: rempx(300);
+    height: 82vh;
     margin: 0 auto;
   }
 
@@ -1645,12 +1651,21 @@ hr {
   }
 
   .hero-banner {
-    margin: rempx(60) 0 rempx(100) 0;
+    margin: 0;
     position: relative;
   }
 
   .top-absolute {
-    top: 50%;
+    top: 42%;
+  }
+  .bot-absolute {
+    position: absolute;
+    top: 45%;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   // Grid

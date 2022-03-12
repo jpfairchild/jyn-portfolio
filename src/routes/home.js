@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import '../styles/app.scss';
 
 // svg
-// import line2 from '../svgs/project_lines2.svg';
+import line2 from '../svgs/project_lines2.svg';
+import arrowStyle from '../svgs/arrow_style.svg';
 
 
 
@@ -51,11 +52,6 @@ function Home() {
     visible: { x: 0, y: -30, opacity: 1, transition: {delay: .3, duration: .8, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
 
-  const yDown = {
-    hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
-    visible: { x :0, y: -5, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
-  };
-
   const yUp2 = {
     hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
     visible: { x: 0, y: -30, opacity: 1, transition: {delay: 1.2, duration: .8, ease: [0.05, 0.15, 0.30, 0.99] } }
@@ -71,32 +67,44 @@ function Home() {
     visible: { x: 0, y: -30, opacity: 1, transition: {delay: 1.6, duration: .8, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
 
+  const yDown = {
+    hidden: { x: 0, y: -15, opacity: 0, transition: {delay: 0} },
+    visible: { x :0, y: -5, opacity: 1, transition: {delay: .8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
+
+  const yDown2 = {
+    hidden: { x: 0, y: -100, opacity: 0, transition: {delay: 0} },
+    visible: { x :0, y: -60, opacity: 1, transition: {delay: 3.8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
+  };
+
 
   return (
     
     <div>
     
-      {/* <motion.div 
+      <motion.div 
         className='w-100 lines-box d-none d-sm-none d-md-none d-lg-block d-xl-block'
         initial='hidden'
         animate='visible'
         variants={yUp4}
       >
         <img className='bg-lines w-100' src={line2} alt='line1'/>
-      </motion.div> */}
+      </motion.div>
 
       <div className="container">
+
         <HeaderNoLogo />
 
         <motion.div 
-          className='row hero-banner'
+          className='row hero-banner vh'
           initial="hidden"
           animate="visible"
           variants={container}
         >
 
           <div className='text-center flex-md-equal justify-content-center center-bg'>
-
+            
+            {/* BG Illustration */}
             <motion.svg
               className='svglines'
               width="762" 
@@ -153,6 +161,7 @@ function Home() {
               <motion.path initial="hidden" animate="visible" variants={item} d="M1.99999 262.5C1.17157 262.5 0.5 261.828 0.5 261L0.499989 2.00003C0.499989 1.17163 1.17156 0.50003 1.99999 0.50003L182.712 0.500023L454 0.500011C454.828 0.500011 455.5 1.17155 455.5 2.00001L455.5 261C455.5 261.828 454.828 262.5 454 262.5L1.99999 262.5Z" stroke="#4A4A4A"/>
             </motion.svg>
 
+            {/* Jyn Fairchild */}
             <motion.h1 
               className='name top-absolute'
               initial="hidden"
@@ -162,6 +171,7 @@ function Home() {
               Jyn Fairchild
             </motion.h1>
 
+            {/* Role */}
             <motion.h3 
               className='role bot-absolute'
               initial="hidden"
@@ -172,12 +182,24 @@ function Home() {
             </motion.h3>
           </div>
 
+
+          {/* ----- Arrow ----- */}
+
+          <motion.div 
+          className='w-100 arrow-flex'
+          initial='hidden'
+          animate='visible'
+          variants={yDown2}
+          >
+            <img className='arrow-style' src={arrowStyle} alt='arrowstyle'/>
+          </motion.div>
+
         </motion.div>
 
 
         {/* ---- TagLine + About ----*/}
 
-        <div className='mt-lg-200 mb-lg-140'>
+        <div className='home-about mb-lg-140'>
 
           {/* Tagline */}
           <div className=''>
@@ -228,12 +250,12 @@ function Home() {
           {/* ------- About Section -------*/}
 
           <motion.div
-            className='mt-lg-30 mt-30'
+            className=''
             initial="hidden"
             animate="visible"
             variants={yUp}
           >
-            <div className='home-flex col-12'>
+            <div className='home-flex'>
               {/* flex */}
 
               <motion.div 
