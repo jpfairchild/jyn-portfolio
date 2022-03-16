@@ -196,8 +196,8 @@ a {
 
 .arrow-flex {
   display: flex;
-
   justify-content: center;
+  
 }
 
 // Hero
@@ -1351,9 +1351,16 @@ hr {
   
   .svglines_small {
     display: block;
+    position: absolute;
     width: rempx(428);
-    height: 82vh;
-    margin: 0 auto;
+    top: 25%;
+    left: 50%;
+    margin-left: rempx(-214);
+  }
+
+  .arrow-flex {
+    position: absolute;
+    top: 86%;
   }
 
   .right-side-nav {
@@ -1641,7 +1648,28 @@ hr {
 
   .svglines_small {
     display: block;
-    max-width: rempx(375);
+    position: absolute;
+    width: rempx(375);
+    top: 42%;
+    left: 50%;
+    margin-left: rempx(-187);
+    margin-top: rempx(-108)
+  }
+
+  .top-absolute {
+    position: absolute;
+    top: 45%;
+    margin-top: rempx(-26);
+  }
+
+  .bot-absolute {
+    position: absolute;
+    top: 46%;
+  }
+
+  .arrow-flex {
+    position: absolute;
+    top: 86%;
   }
 
   .namelines {
@@ -1653,19 +1681,6 @@ hr {
   .hero-banner {
     margin: 0;
     position: relative;
-  }
-
-  .top-absolute {
-    top: 42%;
-  }
-  .bot-absolute {
-    position: absolute;
-    top: 45%;
-    margin: 0 auto;
-    text-align: center;
-    left: 0;
-    right: 0;
-    width: 100%;
   }
 
   // Grid

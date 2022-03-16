@@ -2,6 +2,7 @@ import React from 'react';
 import { HeaderNoLogo } from '../components/header';
 import ProjectGrid from '../components/projectgrid';
 import { motion } from "framer-motion";
+import getWindowDimensions from '../components/windowsize'
 
 // scss
 import '../styles/app.scss';
@@ -14,7 +15,7 @@ import arrowStyle from '../svgs/arrow_style.svg';
 
 function Home() {
 
-
+  // Animation
   const container = {
     hidden: { opacity: 0, scale: 0 },
     visible: {
@@ -77,6 +78,13 @@ function Home() {
     visible: { x :0, y: -60, opacity: 1, transition: {delay: 3.8, duration: 1, ease: [0.05, 0.15, 0.30, 0.99] } }
   };
 
+  // Get Window Size Function (from windowsize.js)
+  const WindowDim = () => {
+    return getWindowDimensions();
+  }
+
+  console.log(WindowDim())
+
 
   return (
     
@@ -95,8 +103,9 @@ function Home() {
 
         <HeaderNoLogo />
 
+        {/* Desktop Resizable Height */}
         <motion.div 
-          className='row hero-banner vh'
+          className='row hero-banner vh d-none d-sm-none d-md-block d-lg-block d-xl-block'
           initial="hidden"
           animate="visible"
           variants={container}
@@ -136,10 +145,56 @@ function Home() {
               <motion.path strokeLinecap="round" strokeLinejoin="round" initial="hidden" animate="visible" variants={item} d="M3.00002 263.5C2.17159 263.5 1.5 262.828 1.5 262L1.49999 3.00003C1.49999 2.17163 2.17156 1.50003 2.99999 1.50003L305.921 1.50002L760 1.5C760.828 1.5 761.5 2.17157 761.5 3L761.5 262C761.5 262.828 760.828 263.5 760 263.5L3.00002 263.5Z" stroke="#4A4A4A"/>
             </motion.svg>
 
+            {/* Jyn Fairchild */}
+            <motion.h1 
+              className='name top-absolute'
+              initial="hidden"
+              animate="visible"
+              variants={yUp}
+            >
+              Jyn Fairchild
+            </motion.h1>
+
+            {/* Role */}
+            <motion.h3 
+              className='role bot-absolute'
+              initial="hidden"
+              animate="visible"
+              variants={yDown}
+            >
+                DESIGNER &nbsp;&#x26;&nbsp; ENG
+            </motion.h3>
+          </div>
+
+
+          {/* ----- Arrow ----- */}
+
+          <motion.div 
+          className='w-100 arrow-flex'
+          initial='hidden'
+          animate='visible'
+          variants={yDown2}
+          >
+            <img className='arrow-style' src={arrowStyle} alt='arrowstyle'/>
+          </motion.div>
+
+        </motion.div>
+
+        {/* Mobile Unresizable Height */}
+        <motion.div 
+          className='row hero-banner d-block d-sm-block d-md-none d-lg-none d-xl-none'
+          initial="hidden"
+          animate="visible"
+          style={{ height: WindowDim().height }}
+          variants={container}
+        >
+
+          <div className='text-center flex-md-equal justify-content-center center-bg'>
+
             <motion.svg
               className='svglines_small' 
               width="456" 
-              height="264" 
+              height="216" 
               viewBox="0 0 456 264" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +362,7 @@ function Home() {
                 <hr className='hr-sm'/>
                 <p className='project-page-p'>
                   Beyond co-founding a small design agency, I lead an 8 person design team at a mid sized agency, 
-                  growing the team from just me, while also nailing new clients becoming the liaison betweem design 
+                  growing the team from just me, while also nailing new clients becoming the liaison between design 
                   and engineering.
                 </p>
 
