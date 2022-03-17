@@ -13,7 +13,7 @@ const Resume = lazy(() => import('./resume'));
 const Bld = lazy(() => import('./bld'));
 const Bantam = lazy(() => import('./bantam'));
 const Google = lazy(() => import('./google'));
-const Chess = lazy(() => import('./chesspgn'));
+const Chess = lazy(() => import('./chess'));
 const Illustrations = lazy(() => import('./illustrations'));
 
 //routes

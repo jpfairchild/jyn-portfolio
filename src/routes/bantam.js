@@ -148,12 +148,18 @@ function Bantam() {
               <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
             </div>
 
-            <p className='project-page-p text-width-51 mb-60 mr-lg-80'>Bantam was a great partner to work with because they knew what 
-              they wanted to be done, but also where they wanted to focus in the future. In certain areas of the app I 
-              gave them minimal viable product designs, but also future versions.</p>
+            <p className='project-page-p text-width-51 mb-60 mr-lg-80'>
+              Bantam was a great partner to work with because they knew what 
+              they needed, but also where they wanted to focus in the future. 
+              In certain areas of the app I gave them minimal viable product designs, but 
+              also future versions.
+            </p>
 
-            <p className='project-page-p text-width-51 mb-120 mb-lg-240'>Additional features fully ready for implementation when engineers have 
-              time, but things that didn&#x27;t need to be part of the first iteration. </p>
+            <p className='project-page-p text-width-51 mb-120 mb-lg-240'>
+              Additional features fully ready for implementation when engineers have 
+              time, but things that didn&#x27;t need to be part of the first iteration. 
+            </p>
+
           </div>
 
 
@@ -191,9 +197,11 @@ function Bantam() {
               <img className='flurish-vertical flurish-quality' src={flurish} alt='flurish' />
             </div>
 
-            <p className='project-page-p text-width-51 mb-60 mr-lg-80'>I think engineers get a bad rep with the design community for 
-              implementing designs poorly. This is only half true... often I find designers aren&#x27;t communicating with the 
-              engineering team during the coding process and/or  making zero specs around their designs.</p>
+            <p className='project-page-p text-width-51 mb-60 mr-lg-80'>
+              Below are 2 of the 14 Specs I made in the course of the project. Starting with the most basic items,
+              often the panel, expandable in most cases, allows for the engineer to start in the right place. This
+              particular expandable panel is displayed hundreds of times in the UI. 
+            </p>
 
             <p className='project-page-p text-width-51 mb-60 mb-lg-160 mb-100'>I&#x27;m a huge fan on making specs for engineers. Often specs act as 
               blueprints and then when something is off, you can pull up the spec and it acts as almost a contract that you 

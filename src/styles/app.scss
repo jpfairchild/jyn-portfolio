@@ -857,19 +857,43 @@ hr {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%);
     }
+
+    .project-meta {
+      display: flex;
+      justify-content: center;
+      margin-top: rempx(18)
+    }
   }
 }
 
-.project-card-text {
-  position: relative;
-  z-index: 2;
-  padding-left: rempx(40);
-  padding-right: rempx(40);
+.project-meta {
+  display: none;
+  margin: 0 auto;
+
+}
+
+.project-card-title {
+  font-family: $font-family-unica;
+  font-weight: 500;
+  font-size: rempx(18);
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: rempx(2);
+
+}
+
+.project-card-type {
+  font-family: $font-family-opensans;
+  font-weight: 300;
+  font-size: rempx(14);
+  color: $white-500;
+  margin-top: rempx(98);
+  letter-spacing: rempx(1);
 }
 
 // logo
 .project-img {
-  position: relative;
+  position: absolute;
   z-index: 1;
   top: 0;
   left: 0;

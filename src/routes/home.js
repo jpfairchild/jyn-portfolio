@@ -83,9 +83,6 @@ function Home() {
     return getWindowDimensions();
   }
 
-  console.log(WindowDim())
-
-
   return (
     
     <div>
