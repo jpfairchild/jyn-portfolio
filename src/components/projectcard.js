@@ -10,7 +10,6 @@ export function ProjectCard({ projectName }) {
 
   //image
   const [reviewImage, setReviewImage] = useState(undefined);
-  console.log(projectName)
   
   // Animation
   const yUp = {
@@ -45,9 +44,6 @@ export function ProjectCard({ projectName }) {
   //Json -> Variables
   const title = projectMeta.projecttitle;
   const type = projectMeta.projecttype;
-
-  console.log(title);
-  console.log(type);
 
   return (
     <motion.div 

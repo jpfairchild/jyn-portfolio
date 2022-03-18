@@ -258,7 +258,12 @@ function Home() {
             <div className="mb-lg-80 mb-100">
               <motion.div className='headline ml-lg-30 mb-lg-30'>
 
-                <motion.h4 initial='hidden' animate='show' variants={containerAnimation} className='home-animation-text'>
+                <motion.h4 
+                  initial='hidden' 
+                  animate='show' 
+                  variants={containerAnimation} 
+                  className='home-animation-text'
+                >
                   <motion.span variants={childrenAnimation}>Creating</motion.span>&nbsp;
                   <motion.span variants={childrenAnimation}>dynamite</motion.span>&nbsp;
                   <motion.span variants={childrenAnimation}>products</motion.span>&nbsp;
@@ -339,9 +344,9 @@ function Home() {
                 <h6>02 - ENGINEERING</h6>
                 <hr className='hr-sm'/>
                 <p className='project-page-p'>
-                  With code proficiency in JS and Python, I have major impact in any product I touch front to back. 
-                  I implement most of the things I design for web myself. But deeper coding knowledge 
-                  lets me design efficiently for projects past my coding ability.
+                  With code proficiency in JS and Python, I have major impact in any product I touch 
+                  front to back. I implement most of the things I design for web myself. But deeper 
+                  coding knowledge lets me design efficiently for projects past my coding ability.
                 </p>
 
 
@@ -358,9 +363,9 @@ function Home() {
                 <h6>03 - LEADERSHIP</h6>
                 <hr className='hr-sm'/>
                 <p className='project-page-p'>
-                  Beyond co-founding a small design agency, I lead an 8 person design team at a mid sized agency, 
-                  growing the team from just me, while also nailing new clients becoming the liaison between design 
-                  and engineering.
+                  Beyond co-founding a small design agency, I lead an 8 person design team at a mid 
+                  sized agency, growing the team from just me, while also nailing new clients becoming 
+                  the liaison between design and engineering.
                 </p>
 
 
