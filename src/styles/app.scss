@@ -932,6 +932,22 @@ hr {
   width: 95%;
 }
 
+.image-width-100-project {
+  width: 100%;
+
+  &:first-child {
+    margin-right: rempx(30);
+  }
+
+  &:nth-child(2) {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .image-width-90 {
   width: 85%;
 }
