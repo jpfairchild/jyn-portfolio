@@ -23,17 +23,7 @@ import linklogo from "../logos/logo_linkedin.svg";
 function Resume() {
 
   // Animation
-  const container = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delay: .2
-      }
-    }
-  };
-
+  
   // These animation objects define how the animations display. 
   // n versions is currently only staggering animation timings using (delay: 1)
 
